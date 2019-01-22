@@ -72,6 +72,8 @@ $route['coba/user'] = 'tes/user';
 $route['coba/form'] = 'tes/user/form';
 $route['coba/tambah'] = 'tes/user/add';
 
+$route['coba/ubah'] = '';
+
 $route['spbe/admin'] = 'spbe/admin/admindashboard/index';
 
 $route['translate_uri_dashes'] = false;
