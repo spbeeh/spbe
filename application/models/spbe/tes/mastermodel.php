@@ -15,7 +15,7 @@ class Mastermodel extends CI_Model
 	{
 		$this->db->select('*');
 		$this->db->from('MASTER');
-		$this->db->join('APLIKASI_FUNGSIONAL', 'APLIKASI_FUNGSIONAL.ID_APLIKASI_FUNGSIONAL = MASTER.ID_MASTER', 'left');
+		$this->db->join('NAMA_APLIKASI', 'NAMA_APLIKASI.ID_NAMA_APLIKASI = MASTER.ID_MASTER', 'left');
 		$query = $this->db->get();
 		return $query;
 	}

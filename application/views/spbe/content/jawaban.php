@@ -31,19 +31,19 @@
 								                        <thead>
 								                        	
 								                            <tr align="center">
-								                                <th>ID</th>
-								                                <th>pertanyaan</th>                         
-								                                <td colspan="2" style="font-weight:bold" >Action</td>
+								                                <th>Nama Instansi</th>
+								                                <th>Nama Penanggung Jawab</th>                         
+								                                <td colspan="2" style="font-weight:bold">Action</td>
 								                            </tr>
 								                        </thead>
 								                        <tbody>
-								                        	<?php foreach ($pertanyaan as $pertanyaan):?>
+								                        	<?php foreach ($jawaban as $jawaban):?>
 									                       <tr>
 																<td>
-																	<?php echo $pertanyaan->id_pertanyaan_umum; ?>
+																	<?php echo $jawaban->NAMAINSTANSIPUSAT;  ?>
 																</td>
 																<td>
-																	<?php echo $pertanyaan->pertanyaan; ?>
+																	<?php echo $jawaban->NAMA_PENANGGUNGJAWAB; ?>
 																</td>
 															</tr>
 														<?php endforeach; ?>
