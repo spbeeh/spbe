@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title>Evaluasi SPBE</title>
 
   <!-- Bootstrap core CSS -->
   <link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
@@ -93,7 +93,7 @@
 
 
                     <!-- Smart Wizard -->
-                    <p>This is a basic form wizard example that inherits the colors from the selected scheme.</p>
+                    
                     <div id="wizard" class="form_wizard wizard_horizontal">
                       <ul class="wizard_steps">
                         <li>
@@ -289,6 +289,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -306,6 +309,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -323,6 +329,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -340,6 +349,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -357,6 +369,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -374,6 +389,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -391,6 +409,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -408,6 +429,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -425,6 +449,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -459,6 +486,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -476,6 +506,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -493,6 +526,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -510,6 +546,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -527,6 +566,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
 
                       <div class="form-group">
@@ -544,6 +586,9 @@
                         <div class="col-md-3 col-sm-2 col-xs-12">
                           <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                         </div>
+                        <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                       </div>
                     </form>
                   </div>
@@ -605,6 +650,9 @@
                       <div class="col-md-3 col-sm-2 col-xs-12">
                         <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                       </div>
+                      <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                     </div>
 
                     <div class="form-group">
@@ -622,6 +670,9 @@
                       <div class="col-md-3 col-sm-2 col-xs-12">
                         <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                       </div>
+                      <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                     </div>
 
                     <div class="form-group">
@@ -639,6 +690,9 @@
                       <div class="col-md-3 col-sm-2 col-xs-12">
                         <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                       </div>
+                      <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                     </div>
 
                     <div class="form-group">
@@ -656,6 +710,9 @@
                       <div class="col-md-3 col-sm-2 col-xs-12">
                         <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                       </div>
+                      <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                     </div>
 
                     <div class="form-group">
@@ -673,6 +730,9 @@
                       <div class="col-md-3 col-sm-2 col-xs-12">
                         <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                       </div>
+                      <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                     </div>
 
                     <div class="form-group">
@@ -690,6 +750,9 @@
                       <div class="col-md-3 col-sm-2 col-xs-12">
                         <input type="text" name="apps" class="form-control" placeholder="Nama Aplikasi">
                       </div>
+                      <div class="col-md-3 col-sm-2 col-xs-12" >
+                           <input id="sisi1" type="text" name="apps" class="form-control sisi1" placeholder="Unit Kerja">
+                         </div>
                     </div>
                   </form>
                 </div>
