@@ -65,7 +65,7 @@
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="<?php echo site_url('Asett/index.html') ?>">Beranda</a>
+/          <a href="<?php echo site_url('Asett/index.html') ?>">Beranda</a>
         </li>
         <li class="breadcrumb-item active">Isi Kuisioner SPBE</li>
       </ol>
