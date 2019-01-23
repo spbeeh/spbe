@@ -11,10 +11,10 @@
     <title>Modern Business - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
+    <link href=""<?php echo site_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
 
   </head>
 
@@ -30,24 +30,24 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="<?php echo site_url('Asett/about.html') ?> ">About</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('Asett/services.html') ?>">Services</a>
+              <a class="nav-link" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('Asett/contact.html') ?>">Contact</a>
+              <a class="nav-link" href="contact.html">Contact</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Portfolio
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-                <a class="dropdown-item" href="<?php echo site_url('Asett/portfolio-1-col.html') ?>">1 Column Portfolio</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/portfolio-2-col.html') ?>">2 Column Portfolio</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/portfolio-3-col.html') ?>">3 Column Portfolio</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/portfolio-4-col.html') ?>">4 Column Portfolio</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/portfolio-item.html')">Single Portfolio Item</a>
+                <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -55,9 +55,9 @@
                 Blog
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="<?php echo site_url('Asett/blog-home-1.html') ?>">Blog Home 1</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/blog-home-2.html') ?>">Blog Home 2</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/blog-post.html') ?>">Blog Post</a>
+                <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
+                <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
+                <a class="dropdown-item" href="blog-post.html">Blog Post</a>
               </div>
             </li>
             <li class="nav-item dropdown">
@@ -65,11 +65,11 @@
                 Other Pages
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="<?php echo site_url('Asett/full-width.html') ?>">Full Width Page</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/sidebar.html') ?>">Sidebar Page</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/faq.html') ?>">FAQ</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/404.html') ?>">404</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/pricing.html') ?>">Pricing Table</a>
+                <a class="dropdown-item" href="full-width.html">Full Width Page</a>
+                <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
+                <a class="dropdown-item" href="faq.html">FAQ</a>
+                <a class="dropdown-item" href="404.html">404</a>
+                <a class="dropdown-item" href="pricing.html">Pricing Table</a>
               </div>
             </li>
           </ul>
@@ -188,7 +188,7 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
