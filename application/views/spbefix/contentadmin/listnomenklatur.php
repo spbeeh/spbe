@@ -1,4 +1,4 @@
-<!-- page content -->
+page content -->
 <div class="right_col" role="main">
 	<div class="">
 		<div class="page-title">
@@ -42,6 +42,8 @@
 						</ul> -->
 						<div class="clearfix"></div>
 					</div>
+					<div class="row">	
+
 					<div class="x_content">
 						<button class="btn btn-default"><span class=""></span> Tambah data</button>
 						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
@@ -64,4 +66,4 @@
 		</div>
 	</div>
 </div>
-<!-- /page content -->
+<!-- /page content
