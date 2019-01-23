@@ -19,12 +19,7 @@ class Nomenklaturkontroller extends CI_Controller {
 	}
 
 	public function listnomenklatur()
-	{
-		$this->load->view('spbefix/_partialadmin/header');
-		$this->load->view('spbefix/_partialadmin/navigasi');
-		$this->load->view('spbefix/contentadmin/listnomenklatur');
-		$this->load->view('spbefix/_partialadmin/footer');
-		$this->load->view('spbefix/_partialadmin/js');	
+	{	
 	}
 
 }
