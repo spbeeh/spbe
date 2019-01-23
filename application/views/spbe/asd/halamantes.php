@@ -96,7 +96,7 @@
 		<?php foreach ($MASTER as $key => $no) { ?>
 			<tr bgcolor="cyan">
 				<td><?php echo ($key + 1) ?></td>
-				<td><?php echo $no->APLIKASI_FUNGSIONAL ?></td>
+				<td><?php echo $no->NAMA_APLIKASI ?></td>
 				<td><?php echo $no->JAWAB ?></td>
 				<td><?php echo $no->NAMA_APLIKASI ?></td>
 				<td><?php echo $no->UNIT_KERJA ?></td>
@@ -117,6 +117,5 @@
 <br>
 <hr>
 <a href="<?php echo base_url('tes/halaman2') ?>">halaman 2</a>
-<a href="<?php echo base_url('tes/halaman3') ?>">halaman 3</a>
 </body>
 </html>

@@ -13,7 +13,6 @@ class admindashboard extends CI_Controller
 
 	public function index()
 	{
-
 		$this->load->view('spbefix/_partialadmin/header');
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/dashboard');
