@@ -8,12 +8,6 @@
 
 			<div class="title_right">
 				<div class="col-md-5 col-sm-5 col-xs-12 form-group">
-					<!-- <div class="input-group">
-						<input type="text" class="form-control" placeholder="Search for...">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">Go!</button>
-						</span>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -24,7 +18,7 @@
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="x_panel">
 					<div class="x_title">
-						<h2>Responsive example<small>Users</small></h2>
+						<h2>Data user<small></small></h2>
 						<div class="clearfix"></div>
 					</div>
 					<div class="x_content">
@@ -34,13 +28,13 @@
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title">Tambah data</h4>
+										<h4 class="modal-title">Tambah user</h4>
 									</div>
 									<div class="modal-body">
 										<form class="form-horizontal form-label-left" novalidate>
 
 											<div class="item form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nama Instansi Pusat <span class="required">*</span></label>
+												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Aplikasi Fungsional <span class="required">*</span></label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
 													<input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
 													 data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
@@ -50,37 +44,6 @@
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Penanggung Jawab <span class="required">*</span></label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
 													<input type="text" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
-												</div>
-											</div>
-											<div class="item form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">NIP Penanggung jawab <span class="required">*</span></label>
-												<div class="col-md-6 col-sm-6 col-xs-12">
-													<input type="text" id="email2" name="confirm_email" data-validate-linked="email" required="required" class="form-control col-md-7 col-xs-12">
-												</div>
-											</div>
-											<div class="item form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Jabatan <span class="required">*</span></label>
-												<div class="col-md-6 col-sm-6 col-xs-12">
-													<input type="text" id="number" name="number" required="required" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12">
-												</div>
-											</div>
-											<div class="item form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">Nama Operator <span class="required">*</span></label>
-												<div class="col-md-6 col-sm-6 col-xs-12">
-													<input type="text" id="website" name="website" required="required" placeholder="www.website.com" class="form-control col-md-7 col-xs-12">
-												</div>
-											</div>
-											<div class="item form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="occupation">NIP Operator <span class="required">*</span></label>
-												<div class="col-md-6 col-sm-6 col-xs-12">
-													<input id="occupation" type="text" name="occupation" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
-												</div>
-											</div>
-											<div class="item form-group">
-												<label for="password" class="control-label col-md-3">Jabatan Operator</label>
-												<div class="col-md-6 col-sm-6 col-xs-12">
-													<input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12"
-													 required="required">
 												</div>
 											</div>
 											<div class="ln_solid"></div>
