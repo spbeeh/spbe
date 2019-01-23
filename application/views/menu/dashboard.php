@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="<?php echo site_url('Asett/about.html') ?>">Beranda</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="<?php echo site_url('Asett/services.html') ?>">Isi Kuisioner SPBE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="<?php echo site_url('Asett/contact.html') ?>">Laporan</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -188,8 +188,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js')?> "></script>
+    <script src="<?php echo site_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js')?> "></script>
 
   </body>
 

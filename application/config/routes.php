@@ -95,8 +95,7 @@ $route['menu/hal1']='hal1/index';
 $route['menu/hal2']='hal2/index';
 $route['menu/dashboard']='tes/dashboard/index';
 
-
-//Fix VVVV
+//Fix VVVVV
 
 $route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
