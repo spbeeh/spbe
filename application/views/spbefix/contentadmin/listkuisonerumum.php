@@ -69,8 +69,8 @@
 							<thead>
 								<tr>
 									<th>No</th>
-									<th>Aplikasi Fungsional</th>
-									<th>Jenis</th>
+									<th>Pertanyaan umum</th>
+									<th>Khusus</th>
 									<th>action</th>
 								</tr>
 							</thead>
