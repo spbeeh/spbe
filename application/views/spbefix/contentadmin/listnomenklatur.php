@@ -87,7 +87,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($aa as $key => $value) : ?>
+								<?php foreach ($aa as $key => $value) { ?>
 								<tr>
 									<td>
 										<?php echo ($key + 1) ?>
@@ -96,12 +96,13 @@
 										<?php echo $value->aplikasi_fungsional ?>
 									</td>
 									<td>
-										<?php echo $value->jenis ?>
+										<?php echo $value->id_jenis ?>
 									</td>
 									<td><button type="">Edit</button>
 										<button type="">Delete</button></td>
 								</tr>
-								<?php endforeach; ?>
+								<?php 
+						} ?>
 							</tbody>
 						</table>
 

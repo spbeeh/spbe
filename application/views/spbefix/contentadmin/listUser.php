@@ -119,9 +119,14 @@
 									<thead>
 										<tr>
 											<th>No</th>
-											<th>Aplikasi Fungsional</th>
-											<th>Jenis</th>
-											<th>action</th>
+											<th>Nama Instansi Pusat</th>
+											<th>Penanggung Jawab</th>
+											<th>NIP penanggung jawab</th>
+											<th>Jabatan penanggung jawab</th>
+											<th>Nama Operator</th>
+											<th>NIP operator</th>
+											<th>Jabatan operator</th>
+											<th>Action</th>
 										</tr>
 									</thead>
 									<tbody>

@@ -33,48 +33,27 @@
 										<h4 class="modal-title">Tambah user</h4>
 									</div>
 									<div class="modal-body">
-										<form class="form-horizontal form-label-left" novalidate>
-
-											<div class="item form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Aplikasi Fungsional <span class="required">*</span></label>
-												<div class="col-md-6 col-sm-6 col-xs-12">
-													<input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
-													 data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
-												</div>
-											</div>
+										<form class="form-horizontal form-label-left" action="<?php echo base_url('sistem/admin/datapertanyaanumum/store') ?>"
+										 method="post" enctype="multipart/form-data" novalidate>
 											<div class="form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12">Select Custom</label>
 												<div class="col-sm-7 col-xs-12">
-													<select class="select2_single form-control" tabindex="-1">
+													<select name="id_jenis_pertanyaan_umum" class="select2_single form-control" tabindex="-1">
 														<option></option>
-														<option value="AK">Alaska</option>
-														<option value="HI">Hawaii</option>
-														<option value="CA">California</option>
-														<option value="NV">Nevada</option>
-														<option value="OR">Oregon</option>
-														<option value="WA">Washington</option>
-														<option value="AZ">Arizona</option>
-														<option value="CO">Colorado</option>
-														<option value="ID">Idaho</option>
-														<option value="MT">Montana</option>
-														<option value="NE">Nebraska</option>
-														<option value="NM">New Mexico</option>
-														<option value="ND">North Dakota</option>
-														<option value="UT">Utah</option>
-														<option value="WY">Wyoming</option>
-														<option value="AR">Arkansas</option>
-														<option value="IL">Illinois</option>
-														<option value="IA">Iowa</option>
-														<option value="KS">Kansas</option>
-														<option value="KY">Kentucky</option>
-														<option value="LA">Louisiana</option>
-														<option value="MN">Minnesota</option>
-														<option value="MS">Mississippi</option>
-														<option value="MO">Missouri</option>
-														<option value="OK">Oklahoma</option>
-														<option value="SD">South Dakota</option>
-														<option value="TX">Texas</option>
+														<?php foreach ($jenisumum as $key) : ?>
+														<option value="<?php echo $key->id_jenis_pertanyaan_umum ?>">
+															<?php echo $key->jenis_pertanyaan_umum ?>
+														</option>
+														<?php endforeach; ?>
+
 													</select>
+												</div>
+											</div>
+											<div class="item form-group">
+												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name"> Pertanyaan Umum <span class="required">*</span></label>
+												<div class="col-md-6 col-sm-6 col-xs-12">
+													<textarea id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
+													 data-validate-words="2" name="pertanyaan_umum" placeholder="" required="required" type="text"></textarea>
 												</div>
 											</div>
 											<div class="ln_solid"></div>
@@ -104,6 +83,22 @@
 								</tr>
 							</thead>
 							<tbody>
+								<?php foreach ($pertanyaanumum as $key => $value) : ?>
+								<tr>
+									<td>
+										<?php echo ($key + 1) ?>
+									</td>
+									<td>
+										<?php echo $value->pertanyaan_umum ?>
+									</td>
+									<td>
+										<?php echo $value->id_jenis_pertanyaan_umum ?>
+									</td>
+									<td><button type="">edit</button>
+										<button type="">delete</button>
+									</td>
+								</tr>
+								<?php endforeach; ?>
 							</tbody>
 						</table>
 

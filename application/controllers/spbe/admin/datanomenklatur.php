@@ -10,16 +10,16 @@ class Datanomenklatur extends CI_Controller
 		//Do your magic here
 
 		$this->load->model('spbe/jenis_model');
-		$this->load->model('spbe/jenisnomenklatur_model');
+		$this->load->model('spbe/pertanyaan_model');
 		$this->load->library('form_validation');
 
 	}
 	public function index()
 	{
 		$data['jenis'] = $this->jenis_model->getAll();
-		$aa['aa'] = $this->jenisnomenklatur_model->getAll();
+		$data['aa'] = $this->pertanyaan_model->getAll();
 		$this->load->view('spbefix/_partialadmin/header', $data);
-		$this->load->view('spbefix/_partialadmin/navigasi', $aa);
+		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/listnomenklatur');
 		$this->load->view('spbefix/_partialadmin/footer');
 		$this->load->view('spbefix/_partialadmin/js');
@@ -31,7 +31,7 @@ class Datanomenklatur extends CI_Controller
 		$_POST['aplikasi_fungsional'] = $this->input->post('aplikasi_fungsional');
 		$_POST['id_jenis'] = $this->input->post('id_jenis');
 
-		$this->jenisnomenklatur_model->save('aplikasi_fungsional', $_POST);
+		$this->pertanyaan_model->save('aplikasi_fungsional', $_POST);
 
 		redirect('sistem/admin/datanomenklatur', 'refresh');
 

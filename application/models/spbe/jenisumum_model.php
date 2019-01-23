@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class user_model extends CI_Model
+class jenisumum_model extends CI_Model
 {
 
 
@@ -14,9 +14,8 @@ class user_model extends CI_Model
 	public function getAll()
 	{
 	# code...
-		return $this->db->get('user')->result();
+		return $this->db->get('jenis_pertanyaan_umum')->result();
 	}
-
 }
 
-/* End of file user_model.php */
+/* End of file jenisumum_model.php */
