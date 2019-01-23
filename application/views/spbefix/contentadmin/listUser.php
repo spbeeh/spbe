@@ -8,12 +8,6 @@
 
 			<div class="title_right">
 				<div class="col-md-5 col-sm-5 col-xs-12 form-group">
-					<!-- <div class="input-group">
-						<input type="text" class="form-control" placeholder="Search for...">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">Go!</button>
-						</span>
-					</div> -->
 				</div>
 			</div>
 		</div>
@@ -42,7 +36,8 @@
 											<div class="item form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nama Instansi Pusat <span class="required">*</span></label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
-													<input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
+													<input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
+													 data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
 												</div>
 											</div>
 											<div class="item form-group">
@@ -78,7 +73,8 @@
 											<div class="item form-group">
 												<label for="password" class="control-label col-md-3">Jabatan Operator</label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
-													<input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
+													<input id="password" type="text" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12"
+													 required="required">
 												</div>
 											</div>
 											<div class="ln_solid"></div>
@@ -95,9 +91,10 @@
 									</div> -->
 								</div>
 							</div>
-						</div>	
+						</div>
 						<div class="clearfix"></div>
-						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
+						 width="100%">
 							<thead>
 								<tr>
 									<th>No</th>
