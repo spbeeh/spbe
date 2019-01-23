@@ -87,7 +87,7 @@ $route['menu/hal1'] = 'hal1/index';
 $route['menu/hal2'] = 'hal2/index';
 
 //Fix VVVV
-//d6d5e7aa9253e48e29031f939683025f3dc63410
+
 $route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
 $route['sistem/admin/User'] = 'spbe/admin/admindashboard/index';
