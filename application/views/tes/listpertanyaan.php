@@ -16,7 +16,7 @@
 		<tr>
 			<td>No</td>
 			<td>Aplikasi Fungsional</td>
-			<td>Jenis</td>
+			<td>Je</td>
 		</tr>
 		<?php foreach ($aplikasi_fungsional as $key => $value) { ?>
 		# code...
