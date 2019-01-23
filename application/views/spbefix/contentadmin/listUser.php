@@ -22,7 +22,8 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="x_content">
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahuser">Tambah User</button>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahuser"><span class="fa fa-plus"></span>Tambah
+							User</button>
 						<div id="tambahuser" class="modal fade" role="dialog">
 							<div class="modal-dialog">
 								<div class="modal-content">
