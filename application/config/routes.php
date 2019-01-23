@@ -78,8 +78,12 @@ $route['coba/pertanyaantambah'] = 'tes/pertanyaan/add';
 $route['coba/user'] = 'tes/user';
 $route['coba/form'] = 'tes/user/form';
 $route['coba/tambah'] = 'tes/user/add';
-$route['spbe/admin'] = 'spbe/admin/admindashboard/index';
 
+//Fix VVVV
+$route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
+$route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
+$route['sistem/admin/User'] = 'spbe/admin/admindashboard/index';
+$route['sistem/admin/datanomenklatur'] = 'spbe/admin/datanomenklatur/index';
 // $route['tes'] = 'tes/tescontroller/index';
 // $route['tes/halaman2'] = 'tes/halaman2/index';
 

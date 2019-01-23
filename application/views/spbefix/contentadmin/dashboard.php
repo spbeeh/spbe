@@ -34,17 +34,7 @@
 		</div>
 	</div>
 	<!-- /top tiles -->
-
 	<br />
-
-
-
-
-
-
-
-
-
 </div>
 </div>
 </div>
