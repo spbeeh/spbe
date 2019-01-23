@@ -8,9 +8,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<<<<<<< HEAD
+
     <title><?php echo ucfirst($this->uri->segment(1)) . " - " . ucfirst($this->uri->segment(2)) ?></title>
-=======
+
 	<title>
 		<?php echo ucfirst($this->uri->segment(1)) . " - " . ucfirst($this->uri->segment(2)) ?>
 	</title>
@@ -23,7 +23,6 @@
 	<link href="<?php echo base_url('gentelella/vendors/nprogress/nprogress.css') ?>" rel="stylesheet">
 	<!-- iCheck -->
 	<link href="<?php echo base_url('gentelella/vendors/iCheck/skins/flat/green.css') ?>" rel="stylesheet">
->>>>>>> 4f525936671c38ad23705c9072578d3cef8c1277
 
 	<!-- bootstrap-progressbar -->
 	<link href="<?php echo base_url('gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css') ?>"
@@ -38,14 +37,13 @@
 
 	<script src="<?php echo base_url('gentelella/vendors/jquery/dist/jquery.min.js') ?>"></script>
 
-<<<<<<< HEAD
     <!-- Datatables -->
     <link href="<?php echo base_url('gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('gentelella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('gentelella/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('gentelella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') ?>" rel="stylesheet">
     <link href="<?php echo base_url('gentelella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') ?>" rel="stylesheet">
-=======
+
 	<!-- Datatables -->
 	<link href="<?php echo base_url('gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') ?>" rel="stylesheet">
 	<link href="<?php echo base_url('gentelella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') ?>" rel="stylesheet">
@@ -55,7 +53,7 @@
 	 rel="stylesheet">
 	<link href="<?php echo base_url('gentelella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') ?>"
 	 rel="stylesheet">
->>>>>>> 4f525936671c38ad23705c9072578d3cef8c1277
+
 
 	<!-- bootstrap-progressbar -->
 	<link href="<?php echo base_url('gentelella/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css') ?>"
