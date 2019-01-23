@@ -4,7 +4,8 @@
 			<div class="col-md-3 left_col">
 				<div class="left_col scroll-view">
 					<div class="navbar nav_title" style="border: 0;">
-						<a href="<?php base_url('sistem/admin/dashboard') ?>" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+						<a href="<?php base_url('sistem/admin/dashboard') ?>" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella
+								Alela!</span></a>
 					</div>
 
 					<div class="clearfix"></div>
@@ -47,7 +48,7 @@
 								<li><a><i class="fa fa-table"></i> Data Pertanyaan <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
 										<li><a href="<?php echo base_url('sistem/admin/datanomenklatur') ?>">list nomenklatur</a></li>
-										<li><a href="">list pertanyaan umum</a></li>
+										<li><a href="<?php echo base_url('sistem/admin/datapertanyaanumum') ?>">list pertanyaan umum</a></li>
 									</ul>
 								</li>
 							</ul>

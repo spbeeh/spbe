@@ -74,10 +74,6 @@
         </li>
         <li class="breadcrumb-item active">Isi Kuisioner SPBE</li>
       </ol>
-
-
-
-
             <div class="page-title">
               <div class="title_left">
                 <h3>NOMENKLATUR (INSTANSI PUSAT/PEMERINTAH DAERAH) :  </h3>
@@ -90,8 +86,6 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_content">
-
-
                     <!-- Smart Wizard -->
                     
                     <div id="wizard" class="form_wizard wizard_horizontal">
