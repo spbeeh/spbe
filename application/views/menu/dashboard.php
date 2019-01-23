@@ -98,16 +98,19 @@
           <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
         </div>
         <div class="col-lg-6">
-          <h2>About Modern Business</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+          <h2>EVALUASI SPBE</h2>
+          <Font align="midle">
+          <p>Pelaksanaan Sistem Pemerintahan Berbasis Elektronik, yang selanjutnya disingkat SPBE, di Instansi Pusat dan Pemerintah Daerah ditujukan untuk mewujudkan proses kerja yang efisien, efektif, transparan, dan akuntabel serta meningkatkan kualitas pelayanan publik. Agar pelaksanaan SPBE dapat berjalan untuk mencapai tujuannya, maka perlu dilakukan evaluasi secara berkala untuk mengetahui sejauh mana kemajuan dari pelaksanaan SPBE di setiap Instansi Pusat dan Pemerintah Daerah.</p>
+          <p>Evaluasi SPBE merupakan proses penilaian terhadap pelaksanaan SPBE di Instansi Pusat dan Pemerintah Daerah untuk menghasilkan suatu nilai Indeks SPBE yang menggambarkan tingkat kematangan (maturity level) dari pelaksanaan SPBE di Instansi Pusat dan Pemerintah Daerah. Agar penilaian ini dilaksanakan secara efektif dan obyektif, maka perlu disusun pedoman evaluasi yang dapat dipahami oleh semua pemangku kepentingan evaluasi SPBE.</p>
+          <p>Pedoman Evaluasi SPBE disusun untuk memberikan petunjuk dalam rangka melaksanakan evaluasi atas pelaksanaan SPBE di Instansi Pusat dan Pemerintah Daerah. Pedoman evaluasi ini mengatur tentang perencanaan, pelaksanaan, dan pelaporan hasil evaluasi SPBE. Ruang lingkup penyelenggaraan SPBE di Instansi Pusat dan Pemerintah Daerah yang akan dievaluasi sedikitnya mencakup tata kelola SPBE, layanan SPBE, dan kebijakan SPBE. </p>
+          </Font>
+          
         </div>
       </div>
       <!-- /.row -->
 
       <!-- Team Members -->
-      <h2>Our Team</h2>
+      <h2>TUJUAN EVALUASI SPBE</h2>
 
       <div class="row">
         <div class="col-lg-4 mb-4">
