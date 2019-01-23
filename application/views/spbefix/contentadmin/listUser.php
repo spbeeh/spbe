@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-page content -->
-=======
 <!-- page content -->
->>>>>>> f6531eda904c04f01d354248b3bddd2e16755332
 <div class="right_col" role="main">
 	<div class="">
 		<div class="page-title">
@@ -22,7 +18,6 @@ page content -->
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="x_panel">
 					<div class="x_title">
-<<<<<<< HEAD
 						<h2>Responsive example<small>Users</small></h2>
 						<!-- <ul class="nav navbar-right panel_toolbox">
 							<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -45,7 +40,6 @@ page content -->
 
 					<div class="x_content">
 						<button class="btn btn-default"><span class=""></span> Tambah data</button>
-=======
 						<h2>Data user<small></small></h2>
 						<div class="clearfix"></div>
 					</div>
@@ -122,13 +116,7 @@ page content -->
 							</div>
 						</div>
 						<div class="clearfix"></div>
-<<<<<<< HEAD
-						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
-						 width="100%">
-=======
->>>>>>> f6531eda904c04f01d354248b3bddd2e16755332
 						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
->>>>>>> 02ab25be501e310f28a04c4fb706f1b4e5d63854
 							<thead>
 								<tr>
 									<th>No</th>
@@ -148,8 +136,4 @@ page content -->
 		</div>
 	</div>
 </div>
-<<<<<<< HEAD
-<!-- /page content
-=======
 <!-- /page content -->
->>>>>>> f6531eda904c04f01d354248b3bddd2e16755332
