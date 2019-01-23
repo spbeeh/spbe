@@ -79,12 +79,31 @@ $route['coba/user'] = 'tes/user';
 $route['coba/form'] = 'tes/user/form';
 $route['coba/tambah'] = 'tes/user/add';
 
+<<<<<<< HEAD
 //Fix VVVV 
 
 //frontend
 $route['menu/form'] = 'form/index';
 $route['menu/hal1'] = 'hal1/index';
 $route['menu/hal2'] = 'hal2/index';
+=======
+// HEAD
+$route['coba/ubah'] = '';
+
+$route['spbe/admin'] = 'spbe/admin/admindashboard/index';
+
+
+
+//Fix VVVV 
+
+
+//frontend
+$route['menu/form']='form/index';
+$route['menu/hal1']='hal1/index';
+$route['menu/hal2']='hal2/index';
+$route['menu/dashboard']='tes/dashboard/index';
+
+>>>>>>> 02ab25be501e310f28a04c4fb706f1b4e5d63854
 
 //Fix VVVV
 
@@ -92,10 +111,21 @@ $route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
 $route['sistem/admin/User'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/datanomenklatur'] = 'spbe/admin/datanomenklatur/index';
+<<<<<<< HEAD
 $route['sistem/admin/datapertanyaanumum'] = 'spbe/admin/datapertanyaanumum/index';
+=======
+
+$route['tes'] = 'tes/tescontroller/index';
+>>>>>>> 02ab25be501e310f28a04c4fb706f1b4e5d63854
 $route['sistem/admin/datauser'] = 'spbe/admin/userkontroller/index';
 
 // $route['tes'] = 'tes/tescontroller/index';
+
 // $route['tes/halaman2'] = 'tes/halaman2/index';
 
+<<<<<<< HEAD
 $route['translate_uri_dashes'] = false;
+=======
+
+$route['translate_uri_dashes'] = FALSE;
+>>>>>>> 02ab25be501e310f28a04c4fb706f1b4e5d63854

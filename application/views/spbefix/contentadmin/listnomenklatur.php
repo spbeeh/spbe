@@ -1,4 +1,4 @@
-<!-- page content -->
+page content -->
 <div class="right_col" role="main">
 	<div class="">
 		<div class="page-title">
@@ -27,6 +27,8 @@
 						<h2>Responsive example<small>Users</small></h2>
 						<div class="clearfix"></div>
 					</div>
+					<div class="row">	
+
 					<div class="x_content">
 						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahuser"><span class="fa fa-plus"></span>Tambah
 							data</button>
@@ -121,4 +123,4 @@
 		</div>
 	</div>
 </div>
-<!-- /page content -->
+<!-- /page content
