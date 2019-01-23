@@ -1,20 +1,40 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Datanomenklatur extends CI_Controller {
+class Datanomenklatur extends CI_Controller
+{
 
 	public function __construct()
 	{
 		parent::__construct();
-	//Do your magic here
+		//Do your magic here
+
+		$this->load->model('spbe/jenis_model');
+		$this->load->model('spbe/jenisnomenklatur_model');
+		$this->load->library('form_validation');
+
 	}
 	public function index()
 	{
-		$this->load->view('spbefix/_partialadmin/header');
-		$this->load->view('spbefix/_partialadmin/navigasi');
+		$data['jenis'] = $this->jenis_model->getAll();
+		$aa['aa'] = $this->jenisnomenklatur_model->getAll();
+		$this->load->view('spbefix/_partialadmin/header', $data);
+		$this->load->view('spbefix/_partialadmin/navigasi', $aa);
 		$this->load->view('spbefix/contentadmin/listnomenklatur');
 		$this->load->view('spbefix/_partialadmin/footer');
 		$this->load->view('spbefix/_partialadmin/js');
+	}
+
+	public function store()
+	{
+		# code...
+		$_POST['aplikasi_fungsional'] = $this->input->post('aplikasi_fungsional');
+		$_POST['id_jenis'] = $this->input->post('id_jenis');
+
+		$this->jenisnomenklatur_model->save('aplikasi_fungsional', $_POST);
+
+		redirect('sistem/admin/datanomenklatur', 'refresh');
+
 	}
 
 }

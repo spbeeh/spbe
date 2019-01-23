@@ -94,6 +94,7 @@ $route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
 $route['sistem/admin/User'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/datanomenklatur'] = 'spbe/admin/datanomenklatur/index';
+$route['sistem/admin/datanomenklatur/store'] = 'spbe/admin/datanomenklatur/store';
 $route['sistem/admin/datapertanyaanumum'] = 'spbe/admin/datapertanyaanumum/index';
 $route['sistem/admin/datauser'] = 'spbe/admin/userkontroller/index';
 
