@@ -30,26 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('Asett/about.html') ?>">Beranda</a>
+              <a class="nav-link" href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="<?php echo site_url('Asett/services.html') ?>">Isi Kuisioner SPBE</a>
+              <a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner SPBE</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('Asett/contact.html') ?>">Laporan</a>
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Other Pages
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="<?php echo site_url('Asett/full-width.html') ?>">Full Width Page</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/sidebar.html') ?>">Sidebar Page</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/faq.html') ?>">FAQ</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/404.html') ?>">404</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/pricing.html') ?>">Pricing Table</a>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
@@ -88,7 +75,7 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Quistionare Daftar 
+            <h4 class="card-header">Kuisionare Daftar 
             Aplikasi </h4>
             <div class="card-body">
               <p class="card-text">Berisi Quistionare Aplikasi yang digunakan pada instansi tersebut</p>

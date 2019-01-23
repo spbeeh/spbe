@@ -30,14 +30,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-            <a class="nav-link" href="<?php echo site_url('Asett/about.html') ?>">Beranda</a>
+            <a class="nav-link" href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="<?php echo site_url('Asett/services.html') ?>">Isi Kuisioner SPBE</a>
+              <a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner SPBE</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('Asett/contact.html') ?>">Laporan</a>
             </li>
+            
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!-- Page Content -->
