@@ -84,11 +84,11 @@ $route['coba/ubah'] = '';
 
 $route['spbe/admin'] = 'spbe/admin/admindashboard/index';
 
-//
-// HEAD
+
+
 //Fix VVVV 
-//=======
-//>>>>>>> 3fc85f08ccc70e36f05053bb1e996d08fa78af49
+
+
 //frontend
 $route['menu/form']='form/index';
 $route['menu/hal1']='hal1/index';
@@ -97,7 +97,7 @@ $route['menu/dashboard']='tes/dashboard/index';
 
 
 //Fix VVVV
-//>>>>>>> d6d5e7aa9253e48e29031f939683025f3dc63410
+
 $route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
 $route['sistem/admin/User'] = 'spbe/admin/admindashboard/index';
@@ -108,8 +108,8 @@ $route['tes'] = 'tes/tescontroller/index';
 $route['sistem/admin/datauser'] = 'spbe/admin/userkontroller/index';
 
 // $route['tes'] = 'tes/tescontroller/index';
-//>>>>>>> 3fc85f08ccc70e36f05053bb1e996d08fa78af49
+
 // $route['tes/halaman2'] = 'tes/halaman2/index';
-//d6d5e7aa9253e48e29031f939683025f3dc63410
+
 
 $route['translate_uri_dashes'] = FALSE;
