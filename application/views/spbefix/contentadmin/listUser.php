@@ -38,13 +38,6 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="row">
-
-						<div class="x_content">
-							<button class="btn btn-default"><span class=""></span> Tambah data</button>
-
-							<h2>Data user<small></small></h2>
-							<div class="clearfix"></div>
-						</div>
 						<div class="x_content">
 							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahuser"><span class="fa fa-plus"></span>Tambah
 								User</button>
@@ -135,8 +128,6 @@
 									<tbody>
 									</tbody>
 								</table>
-
-
 						</div>
 					</div>
 				</div>
