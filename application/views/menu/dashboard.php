@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Evaluasi SPBE</title>
+    <title><?php echo ucfirst($this->uri->segment(1)) . " - " . ucfirst($this->uri->segment(2)) ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
