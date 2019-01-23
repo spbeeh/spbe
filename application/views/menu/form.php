@@ -75,13 +75,13 @@
         </div>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Kuisionare Daftar 
+            <h4 class="card-header">Kuisioner Daftar 
             Aplikasi </h4>
             <div class="card-body">
-              <p class="card-text">Berisi Quistionare Aplikasi yang digunakan pada instansi tersebut</p>
+              <p class="card-text">Berisi Kuisioner Aplikasi yang digunakan pada instansi tersebut</p>
             </div>
             <div class="card-footer">
-              <a href="<?php echo site_url('menu/hal2') ?>" class="btn btn-primary">Quistionare</a>
+              <a href="<?php echo site_url('menu/hal2') ?>" class="btn btn-primary">Kuisioner</a>
             </div>
           </div>
         </div>
