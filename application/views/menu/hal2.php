@@ -904,8 +904,7 @@
 <script src="<?php echo site_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
      
     <!-- jQuery -->
-    <!-- Bootstrap -->
-    <script src="<?php echo base_url('aaa/vendors/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+   <script src="<?php echo base_url('aaa/vendors/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
     <!-- FastClick -->
     <script src="<?php echo base_url('aaa/vendors/fastclick/lib/fastclick.js') ?>"></script>
     <!-- NProgress -->
@@ -954,6 +953,7 @@
     <script src="<?php echo base_url('aaa/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js') ?>"></script>
     <!-- Custom Theme Scripts -->
     <script src="<?php echo base_url('aaa/build/js/custom.min.js') ?>"></script>
+
     <script>
         $(document).ready(function(){
            $(".ada1").click(function(){

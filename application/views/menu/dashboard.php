@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="<?php echo site_url('Asett/about.html') ?>">Beranda</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="<?php echo site_url('Asett/services.html') ?>">Isi Kuisioner SPBE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="<?php echo site_url('Asett/contact.html') ?>">Laporan</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -44,7 +44,7 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
                 <a class="dropdown-item" href="portfolio-1-col.html">1 Column Portfolio</a>
-                <a class="dropdown-item" href="portfolio-2-col.html">2 Column Portfolio</a>
+                <a class="dropdown-item" href="portfolio-2-col.html">2 Colmn Portfolio</a>
                 <a class="dropdown-item" href="portfolio-3-col.html">3 Column Portfolio</a>
                 <a class="dropdown-item" href="portfolio-4-col.html">4 Column Portfolio</a>
                 <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
@@ -95,85 +95,31 @@
       <!-- Intro Content -->
       <div class="row">
         <div class="col-lg-6">
-          <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
+        <img class="Image" src="<?php echo site_url('Asett/Image/logo.png')?>" style="width:500px;height:500px;" alt="">
         </div>
         <div class="col-lg-6">
-          <h2>About Modern Business</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit dolorum!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus perspiciatis quis?</p>
+          <h2>EVALUASI SPBE</h2>
+          <Font align="midle">
+          <p>Pelaksanaan Sistem Pemerintahan Berbasis Elektronik, yang selanjutnya disingkat SPBE, di Instansi Pusat dan Pemerintah Daerah ditujukan untuk mewujudkan proses kerja yang efisien, efektif, transparan, dan akuntabel serta meningkatkan kualitas pelayanan publik. Agar pelaksanaan SPBE dapat berjalan untuk mencapai tujuannya, maka perlu dilakukan evaluasi secara berkala untuk mengetahui sejauh mana kemajuan dari pelaksanaan SPBE di setiap Instansi Pusat dan Pemerintah Daerah.</p>
+          <p>Evaluasi SPBE merupakan proses penilaian terhadap pelaksanaan SPBE di Instansi Pusat dan Pemerintah Daerah untuk menghasilkan suatu nilai Indeks SPBE yang menggambarkan tingkat kematangan (maturity level) dari pelaksanaan SPBE di Instansi Pusat dan Pemerintah Daerah. Agar penilaian ini dilaksanakan secara efektif dan obyektif, maka perlu disusun pedoman evaluasi yang dapat dipahami oleh semua pemangku kepentingan evaluasi SPBE.</p>
+          <p>Pedoman Evaluasi SPBE disusun untuk memberikan petunjuk dalam rangka melaksanakan evaluasi atas pelaksanaan SPBE di Instansi Pusat dan Pemerintah Daerah. Pedoman evaluasi ini mengatur tentang perencanaan, pelaksanaan, dan pelaporan hasil evaluasi SPBE. Ruang lingkup penyelenggaraan SPBE di Instansi Pusat dan Pemerintah Daerah yang akan dievaluasi sedikitnya mencakup tata kelola SPBE, layanan SPBE, dan kebijakan SPBE. </p>
+          </Font>
+          
         </div>
       </div>
       <!-- /.row -->
 
       <!-- Team Members -->
-      <h2>Our Team</h2>
+      <h2>TUJUAN EVALUASI SPBE</h2>
 
-      <div class="row">
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100 text-center">
-            <img class="card-img-top" src="http://placehold.it/750x450" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Team Member</h4>
-              <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#">name@example.com</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100 text-center">
-            <img class="card-img-top" src="http://placehold.it/750x450" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Team Member</h4>
-              <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#">name@example.com</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100 text-center">
-            <img class="card-img-top" src="http://placehold.it/750x450" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Team Member</h4>
-              <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia eum ipsum fugiat odio officiis odit.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#">name@example.com</a>
-            </div>
-          </div>
-        </div>
-      </div>
       <!-- /.row -->
 
       <!-- Our Customers -->
-      <h2>Our Customers</h2>
       <div class="row">
         <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
+          <img class="Image" src="<?php echo site_url('Asett/Image/tujuan.png')?>" style="width:1200px;height:300px;" alt="">
         </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-        <div class="col-lg-2 col-sm-4 mb-4">
-          <img class="img-fluid" src="http://placehold.it/500x300" alt="">
-        </div>
-      </div>
+
       <!-- /.row -->
 
     </div>
@@ -188,8 +134,8 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js')?> "></script>
+    <script src="<?php echo site_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js')?> "></script>
 
   </body>
 
