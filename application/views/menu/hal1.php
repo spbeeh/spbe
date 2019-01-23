@@ -62,14 +62,6 @@
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Other Pages
               </a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                <a class="dropdown-item" href="<?php echo site_url('Asett/full-width.html') ?>">Full Width Page</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/sidebar.html') ?>">Sidebar Page</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/faq.html') ?>">FAQ</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/404.html') ?>">404</a>
-                <a class="dropdown-item" href="<?php echo site_url('Asett/pricing.html') ?>">Pricing Table</a>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
