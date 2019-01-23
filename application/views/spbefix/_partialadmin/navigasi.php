@@ -41,7 +41,7 @@
 								</li>
 								<li><a><i class="fa fa-desktop"></i> List User <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="#">Data User</a></li>
+										<li><a href="<?php echo base_url('sistem/admin/datauser') ?>">Data User</a></li>
 									</ul>
 								</li>
 								<li><a><i class="fa fa-table"></i> Data Pertanyaan <span class="fa fa-chevron-down"></span></a>
