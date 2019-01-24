@@ -34,8 +34,9 @@
 											<h4 class="modal-title">Tambah user</h4>
 										</div>
 										<div class="modal-body">
-											<form class="form-horizontal form-label-left" novalidate>
-
+											<form class="form-horizontal form-label-left"
+												action="<?php echo base_url('sistem/admin/datauser/store') ?>"
+												method="post" enctype="multipart/form-data" novalidate>
 												<div class="item form-group">
 													<label class="control-label col-md-3 col-sm-3 col-xs-12"
 														for="name">Nama Instansi Pusat <span
@@ -43,8 +44,9 @@
 													<div class="col-md-6 col-sm-6 col-xs-12">
 														<input id="name" class="form-control col-md-7 col-xs-12"
 															data-validate-length-range="6" data-validate-words="2"
-															name="name" placeholder="both name(s) e.g Jon Doe"
-															required="required" type="text">
+															name="namainstansipusat"
+															placeholder="both name(s) e.g Jon Doe" required="required"
+															type="text">
 													</div>
 												</div>
 												<div class="item form-group">
@@ -52,8 +54,8 @@
 														for="email">Penanggung Jawab <span
 															class="required">*</span></label>
 													<div class="col-md-6 col-sm-6 col-xs-12">
-														<input type="text" id="email" name="email" required="required"
-															class="form-control col-md-7 col-xs-12">
+														<input type="text" id="" name="nama_penanggungjawab"
+															required="required" class="form-control col-md-7 col-xs-12">
 													</div>
 												</div>
 												<div class="item form-group">
@@ -61,7 +63,7 @@
 														for="email">NIP Penanggung jawab <span
 															class="required">*</span></label>
 													<div class="col-md-6 col-sm-6 col-xs-12">
-														<input type="text" id="email2" name="confirm_email"
+														<input type="text" id="email2" name="nip_pj"
 															data-validate-linked="email" required="required"
 															class="form-control col-md-7 col-xs-12">
 													</div>
@@ -70,8 +72,8 @@
 													<label class="control-label col-md-3 col-sm-3 col-xs-12"
 														for="number">Jabatan <span class="required">*</span></label>
 													<div class="col-md-6 col-sm-6 col-xs-12">
-														<input type="text" id="number" name="number" required="required"
-															data-validate-minmax="10,100"
+														<input type="text" id="number" name="jabatan_pj"
+															required="required" data-validate-minmax="10,100"
 															class="form-control col-md-7 col-xs-12">
 													</div>
 												</div>
@@ -80,7 +82,7 @@
 														for="website">Nama Operator <span
 															class="required">*</span></label>
 													<div class="col-md-6 col-sm-6 col-xs-12">
-														<input type="text" id="website" name="website"
+														<input type="text" id="website" name="nama_operator"
 															required="required" placeholder="www.website.com"
 															class="form-control col-md-7 col-xs-12">
 													</div>
@@ -90,7 +92,7 @@
 														for="occupation">NIP Operator <span
 															class="required">*</span></label>
 													<div class="col-md-6 col-sm-6 col-xs-12">
-														<input id="occupation" type="text" name="occupation"
+														<input id="occupation" type="text" name="nip_op"
 															data-validate-length-range="5,20"
 															class="optional form-control col-md-7 col-xs-12">
 													</div>
@@ -99,7 +101,7 @@
 													<label for="password" class="control-label col-md-3">Jabatan
 														Operator</label>
 													<div class="col-md-6 col-sm-6 col-xs-12">
-														<input id="password" type="text" name="password"
+														<input id="password" type="text" name="jabatan_op"
 															data-validate-length="6,8"
 															class="form-control col-md-7 col-xs-12" required="required">
 													</div>
@@ -142,6 +144,27 @@
 										</tr>
 									</thead>
 									<tbody>
+										<?php foreach ($user as $key => $value) : ?>
+										<tr>
+											<td><?php echo ($key + 1) ?></td>
+											<td><?php echo $value->namainstansipusat ?></td>
+											<td><?php echo $value->nama_penanggungjawab ?></td>
+											<td><?php echo $value->nip_pj ?></td>
+											<td><?php echo $value->jabatan_pj ?></td>
+											<td><?php echo $value->nama_operator ?></td>
+											<td><?php echo $value->nip_op ?></td>
+											<td><?php echo $value->jabatan_op ?></td>
+											<td>
+												<table>
+													<tr>
+														<td><button type="">preview</button></td>
+														<td><button type="">edit</button></td>
+														<td></td>
+													</tr>
+												</table>
+											</td>
+										</tr>
+										<?php endforeach; ?>
 									</tbody>
 								</table>
 						</div>

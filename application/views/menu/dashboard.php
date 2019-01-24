@@ -36,7 +36,7 @@
               <a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner SPBE</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('Asett/contact.html') ?>">Laporan</a>
+              <a class="nav-link" href="<?php echo site_url('menu/laporan') ?>">Laporan</a>
             </li>
             
           </ul>
@@ -54,9 +54,9 @@
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="index.html">Beranda</a>
+          <a href="menu/dashboard">Beranda</a>
         </li>
-        <li class="breadcrumb-item active">Isi Kuisoner SPBE</li>
+        <li class="breadcrumb-item active">Beranda</li>
       </ol>
 
       <!-- Intro Content -->
