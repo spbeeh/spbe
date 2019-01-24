@@ -1,0 +1,46 @@
+/* print themes */
+body {
+  font-size: 10px!important;
+}
+.noprint {
+  display: none;
+}
+.table-print {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-print, .table-print th, .table-print td {
+    border: 1px solid black;
+    padding: 5px;
+}
+.table-print thead td, .table-print thead th {
+	background-color: #eee!important;
+	color: #000!important;
+	-webkit-print-color-adjust:exact;
+}
+.table-print thead, .table-print tbody, .table-print tfoot {
+  border-style: none!important;
+  border-size: 0px;
+} 
+.p-width-90 {
+	width: 90px;
+}
+@page{
+	margin:5px;
+	size:Legal portrait !important;
+}
+#header, #secondary_bar, #sidebar, .module header, .nodis{
+		display: none;
+	}
+	@page Legal{
+	size: 8.5in 14in !important;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+h4 {
+	padding: 0px!important;
+	margin: 0px!important;
+	font-size: 13px;
+}
