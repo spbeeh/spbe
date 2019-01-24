@@ -138,13 +138,13 @@
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Layanan Publikr</td>
-									<span style="color:red">Belum Mengisi</span> </td>
+									<td>Evaluasi Aplikasi</td>
+									<td><span style="color:red">Belum Mengisi</span> </td>
 								</tr>
-								<tr>
+								<!-- <tr>
 									<td>3</td>
 									<td>Administrasi Dan Manajemen Umum</td>
-									<span style="color:green">Sudah Mengisi</span> </td>
+									<td> <span style="color:green">Sudah Mengisi</span> </td>
 								</tr>
 								<tr>
 									<td>4</td>
@@ -161,14 +161,13 @@
 								<tr>
 									<td>6</td>
 									<td>Sistem Informasi Keuangan Daerah</td>
-									<td>
-										<span style="color:green">Sudah Mengisi</span> </td>
+									<td> <span style="color:green">Sudah Mengisi</span> </td>
 								</tr>
 								<tr>
 									<td>7</td>
 									<td>Manajemen Keuangan</td>
 									<td>
-										<span style="color:green">Sudah Mengisi</span> </td>
+										<span style="color:green">Sudah Mengisi</span> </td> -->
 								</tr>
 							</tbody>
 						</table>
