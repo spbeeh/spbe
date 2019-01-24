@@ -73,7 +73,7 @@
                 <table class="pad5">
                   <tbody><tr>
                     <td>
-                      <img src="Asett/Image/logo.png" alt="hitam_putih_logo" height="80" width="80">
+                      <img src="<?php echo site_url('Asett/Image/logo.png')?>" height="80" width="80">
                     </td>
                     <td width="30">&nbsp;</td>
                     <td align="center">

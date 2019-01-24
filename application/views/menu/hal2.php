@@ -955,7 +955,7 @@
     <!-- Custom Theme Scripts -->
     <script src="<?php echo base_url('aaa/build/js/custom.min.js') ?>"></script>
 
-    <script>
+    <!-- <script>
 $(document).ready(function() {
   $(".ada1").click(function() {
     //alert("yeah");
@@ -1308,7 +1308,7 @@ $(document).ready(function() {
     $('.a36').hide();
   });
 });
-</script>
+</script> -->
 =======
 	<!-- Navigation -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -1424,12 +1424,12 @@ $(document).ready(function() {
 											Kerja</label>
 										<div class="col-md-3 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
-												<!-- copy --><label class="ada1 btn btn-default"
+												<label class="ada1 btn btn-default"
 													data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
 													<input type="radio" name="gender" value="male"> &nbsp; Ada &nbsp;
 												</label>
-												<!-- copy --><label class="tidak1 btn btn-primary"
+												<label class="tidak1 btn btn-primary"
 													data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
 													<input type="radio" name="gender" value="female"> Tidak Ada
@@ -1437,11 +1437,11 @@ $(document).ready(function() {
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="sisi1" type="text" name="apps" class="form-control sisi1"
+											<input id="a1" type="text" name="apps" class="form-control a1"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="sisi1" type="text" name="apps" class="form-control sisi1"
+											<input id="a1" type="text" name="apps" class="form-control a1"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
@@ -1451,11 +1451,11 @@ $(document).ready(function() {
 											Pendidikan</label>
 										<div class="col-md-3 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
-												<label class="ada2 btn btn-default ada2" data-toggle-class="btn-primary"
+												<label class="ada2 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
 													<input type="radio" name="gender" value="male"> &nbsp; Ada &nbsp;
 												</label>
-												<label class="tidak2 btn btn-primary tidak2"
+												<label class="tidak2 btn btn-primary"
 													data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
 													<input type="radio" name="gender" value="female"> Tidak Ada
@@ -1463,11 +1463,11 @@ $(document).ready(function() {
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="sisi2" type="text" name="apps" class="form-control sisi2 "
+											<input id="a2" type="text" name="apps" class="form-control a2 "
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="sisi2" type="text" name="apps" class="form-control sisi2 "
+											<input id="a2" type="text" name="apps" class="form-control a2 "
 												placeholder="Unit Kerja">
 										</div>
 									</div>
