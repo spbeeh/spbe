@@ -32,13 +32,13 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner SPBE</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/laporan') ?>">Laporan</a>
 					</li>
 				</ul>

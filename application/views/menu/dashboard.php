@@ -13,10 +13,10 @@
 	</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
-	<link href="<?php echo site_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
 </head>
 
 <body>
@@ -31,13 +31,13 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner SPBE</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/laporan') ?>">Laporan</a>
 					</li>
 				</ul>
@@ -97,12 +97,7 @@
 	</div>
 	<!-- /.container -->
 	<!-- Footer -->
-	<footer class="py-5 bg-dark">
-		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; 2019</p>
-		</div>
-		<!-- /.container -->
-	</footer>
+
 	<!-- Bootstrap core JavaScript -->
 	<script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js') ?> "></script>
 	<script src="<?php echo site_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?> "></script>
