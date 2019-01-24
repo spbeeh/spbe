@@ -42,6 +42,7 @@
 <body>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -1310,6 +1311,8 @@ $(document).ready(function() {
 });
 </script> -->
 =======
+=======
+>>>>>>> 36c32af45eef047e00a84318a647b747456c6610
 	<!-- Navigation -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
@@ -2768,7 +2771,6 @@ $(document).ready(function() {
 							});
 						});
 					</script>
->>>>>>> f77aa57af017f9d16b5ca6eb4f9612415c66e37d
 </body>
 
 </html>

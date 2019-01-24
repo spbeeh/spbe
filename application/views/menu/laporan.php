@@ -46,8 +46,8 @@
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Contact
-        <small>Subheading</small>
+      <h1 class="mt-4 mb-3">Evaluasi SPBE
+        <small></small>
       </h1>
 
       <ol class="breadcrumb">
