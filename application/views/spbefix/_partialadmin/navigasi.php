@@ -4,7 +4,8 @@
 			<div class="col-md-3 left_col">
 				<div class="left_col scroll-view">
 					<div class="navbar nav_title" style="border: 0;">
-						<a href="<?php base_url('sistem/admin/dashboard') ?>" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella
+						<a href="<?php base_url('sistem/admin/dashboard') ?>" class="site_title"><i
+								class="fa fa-paw"></i> <span>Gentelella
 								Alela!</span></a>
 					</div>
 
@@ -31,24 +32,31 @@
 							<ul class="nav side-menu">
 								<li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="<?php echo base_url('sistem/admin/dashboard') ?>">Dashboard</a></li>
+										<li><a href="<?php echo base_url('sistem/admin/dashboard') ?>">Dashboard</a>
+										</li>
 									</ul>
 								</li>
 								<li><a><i class="fa fa-edit"></i> Evaluasi <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="#">Kuisioner Umum</a></li>
-										<li><a href="<?php echo base_url('sistem/admin/nomenklatur') ?>">Nomenklatur</a></li>
+										<li><a href="<?php echo base_url('sistem/admin/kuisonerumum') ?>">Kuisioner
+												Umum</a></li>
+										<li><a href="<?php echo base_url('sistem/admin/nomenklatur') ?>">Nomenklatur</a>
+										</li>
 									</ul>
 								</li>
-								<li><a><i class="fa fa-desktop"></i> List User <span class="fa fa-chevron-down"></span></a>
+								<li><a><i class="fa fa-desktop"></i> List User <span
+											class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
 										<li><a href="<?php echo base_url('sistem/admin/datauser') ?>">Data User</a></li>
 									</ul>
 								</li>
-								<li><a><i class="fa fa-table"></i> Data Pertanyaan <span class="fa fa-chevron-down"></span></a>
+								<li><a><i class="fa fa-table"></i> Data Pertanyaan <span
+											class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="<?php echo base_url('sistem/admin/datanomenklatur') ?>">list nomenklatur</a></li>
-										<li><a href="<?php echo base_url('sistem/admin/datapertanyaanumum') ?>">list pertanyaan umum</a></li>
+										<li><a href="<?php echo base_url('sistem/admin/datanomenklatur') ?>">list
+												nomenklatur</a></li>
+										<li><a href="<?php echo base_url('sistem/admin/datapertanyaanumum') ?>">list
+												pertanyaan umum</a></li>
 									</ul>
 								</li>
 							</ul>
@@ -85,7 +93,8 @@
 
 						<ul class="nav navbar-nav navbar-right">
 							<li class="">
-								<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
+									aria-expanded="false">
 									<img src="images/img.jpg" alt="">John Doe
 									<span class=" fa fa-angle-down"></span>
 								</a>
@@ -103,7 +112,8 @@
 							</li>
 
 							<li role="presentation" class="dropdown">
-								<a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+								<a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown"
+									aria-expanded="false">
 									<i class="fa fa-envelope-o"></i>
 									<span class="badge bg-green">6</span>
 								</a>
@@ -116,7 +126,8 @@
 												<span class="time">3 mins ago</span>
 											</span>
 											<span class="message">
-												Film festivals used to be do-or-die moments for movie makers. They were where...
+												Film festivals used to be do-or-die moments for movie makers. They were
+												where...
 											</span>
 										</a>
 									</li>
@@ -128,7 +139,8 @@
 												<span class="time">3 mins ago</span>
 											</span>
 											<span class="message">
-												Film festivals used to be do-or-die moments for movie makers. They were where...
+												Film festivals used to be do-or-die moments for movie makers. They were
+												where...
 											</span>
 										</a>
 									</li>
@@ -140,7 +152,8 @@
 												<span class="time">3 mins ago</span>
 											</span>
 											<span class="message">
-												Film festivals used to be do-or-die moments for movie makers. They were where...
+												Film festivals used to be do-or-die moments for movie makers. They were
+												where...
 											</span>
 										</a>
 									</li>
@@ -152,7 +165,8 @@
 												<span class="time">3 mins ago</span>
 											</span>
 											<span class="message">
-												Film festivals used to be do-or-die moments for movie makers. They were where...
+												Film festivals used to be do-or-die moments for movie makers. They were
+												where...
 											</span>
 										</a>
 									</li>
