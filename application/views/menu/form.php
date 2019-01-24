@@ -72,20 +72,20 @@
 						<p class="card-text">evaluasi umum</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary">Buka</a>
+						<a href="<?php echo site_url('menu/hal1') ?>" class="btn btn-primary">Buka</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 mb-4">
 				<div class="card h-100">
-					<h4 class="card-header">Pertanyaan Nomunklatur</h4>
+					<h4 class="card-header">Evaluasi Aplikasi</h4>
 					<div class="card-body">
 						<p class="card-text">Evaluasi aplikasi yang dipergunakan untuk melaksanakan manajemen internal
 							birokrasi dan pelayanan publik
 						</p>
 					</div>
 					<div class="card-footer">
-						<a href="#" class="btn btn-primary">Buka</a>
+						<a href="<?php echo site_url('menu/hal2') ?>" class="btn btn-primary">Buka</a>
 					</div>
 				</div>
 			</div>
