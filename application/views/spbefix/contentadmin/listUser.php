@@ -1,8 +1,4 @@
 <!-- page content -->
-<<<<<<< HEAD
-=======
-
->>>>>>> 4f525936671c38ad23705c9072578d3cef8c1277
 <div class="right_col" role="main">
 	<div class="">
 		<div class="page-title">
