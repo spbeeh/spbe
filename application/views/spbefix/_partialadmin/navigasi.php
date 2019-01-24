@@ -36,14 +36,14 @@
 										</li>
 									</ul>
 								</li>
-								<li><a><i class="fa fa-edit"></i> Evaluasi <span class="fa fa-chevron-down"></span></a>
+								<!-- <li><a><i class="fa fa-edit"></i> Evaluasi <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
 										<li><a href="<?php echo base_url('sistem/admin/kuisonerumum') ?>">Kuisioner
 												Umum</a></li>
 										<li><a href="<?php echo base_url('sistem/admin/nomenklatur') ?>">Nomenklatur</a>
 										</li>
 									</ul>
-								</li>
+								</li> -->
 								<li><a><i class="fa fa-desktop"></i> List User <span
 											class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
