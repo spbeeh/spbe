@@ -86,6 +86,7 @@ $route['menu/form'] = 'form/index';
 $route['menu/hal1'] = 'hal1/index';
 $route['menu/hal2'] = 'hal2/index';
 $route['menu/dashboard'] = 'tes/dashboard/index';
+$route['menu/laporan']='laporan/index';
 
 
 //Fix VVVVV
