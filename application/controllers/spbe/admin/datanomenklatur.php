@@ -13,6 +13,7 @@ class Datanomenklatur extends CI_Controller
 		$this->load->model('spbe/pertanyaan_model');
 		$this->load->library('form_validation');
 
+
 	}
 	public function index()
 	{

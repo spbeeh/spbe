@@ -6,31 +6,31 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="<?php echo site_url('Asset/images/icons/favicon.ico') ?>" />
+	<link rel="icon" type="image/png" href="<?php echo base_url('Asset/images/icons/favicon.ico') ?>" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?= site_url('Asset/vendor/bootstrap/css/bootstrap.css'); ?>">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css"
-		href="<?php echo site_url('Asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?= base_url('Asset/vendor/bootstrap/css/bootstrap.css'); ?>">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css"
-		href="<?php echo site_url('Asset/fonts/Linearicons-Free-v1.0.0/icon-font.min.css') ?>">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo site_url('Asset/vendor/animate/animate.css') ?>">
+		href="<?php echo base_url('Asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css') ?>">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css"
-		href="<?php echo site_url('Asset/vendor/css-hamburgers/hamburgers.min.css') ?>">
+		href="<?php echo base_url('Asset/fonts/Linearicons-Free-v1.0.0/icon-font.min.css') ?>">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('Asset/vendor/animate/animate.css') ?>">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css"
-		href="<?php echo site_url('Asset/vendor/animsition/css/animsition.min.css') ?>">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo site_url('Asset/vendor/select2/select2.min.css') ?>">
+		href="<?php echo base_url('Asset/vendor/css-hamburgers/hamburgers.min.css') ?>">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css"
-		href="<?php echo site_url('Asset/vendor/daterangepicker/daterangepicker.css') ?>">
+		href="<?php echo base_url('Asset/vendor/animsition/css/animsition.min.css') ?>">
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo site_url('Asset/css/util.css') ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo site_url('Asset/css/main.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('Asset/vendor/select2/select2.min.css') ?>">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css"
+		href="<?php echo base_url('Asset/vendor/daterangepicker/daterangepicker.css') ?>">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('Asset/css/util.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('Asset/css/main.css') ?>">
 	<!--===============================================================================================-->
 </head>
 
@@ -75,7 +75,7 @@
 
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" a href="<?php echo site_url('menu/dashboard') ?>">
+						<button class="login100-form-btn" name="login">">
 							Login </a></button>
 
 					</div>

@@ -29,6 +29,19 @@ class user_model extends CI_Model
 		$this->db->delete('user');
 
 	}
+
+	function auth_admin($username, $password) //cek nip dan password admin
+	{
+		$query = $this->db->query("SELECT * FROM dosen WHERE nip='$username' AND pass=MD5('$password') LIMIT 1");
+		return $query;
+	}
+
+	//cek nim dan password mahasiswa
+	function auth_user($username, $password) //cek nip dan password userbiasa
+	{
+		$query = $this->db->query("SELECT * FROM mahasiswa WHERE nim='$username' AND pass=MD5('$password') LIMIT 1");
+		return $query;
+	}
 }
 
 /* End of file user_model.php */

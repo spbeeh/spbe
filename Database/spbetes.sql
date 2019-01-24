@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 22, 2019 at 04:27 PM
+-- Generation Time: Jan 24, 2019 at 04:56 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -33,6 +33,14 @@ CREATE TABLE `aplikasi_fungsional` (
   `id_jenis` int(11) DEFAULT NULL,
   `aplikasi_fungsional` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `aplikasi_fungsional`
+--
+
+INSERT INTO `aplikasi_fungsional` (`id_aplikasi_fungsional`, `id_jenis`, `aplikasi_fungsional`) VALUES
+(3, 1, 'Sistem Tenaga KerJa'),
+(4, 1, 'Sistem Informasi Tenaga Kerja');
 
 -- --------------------------------------------------------
 
@@ -73,7 +81,8 @@ CREATE TABLE `jenis_pertanyaan_umum` (
 --
 
 INSERT INTO `jenis_pertanyaan_umum` (`id_jenis_pertanyaan_umum`, `jenis_pertanyaan_umum`) VALUES
-(1, 'Pertanyaan khusus Pemerintah Daerah');
+(1, 'Pertanyaan khusus Pemerintah Daerah'),
+(2, 'umum');
 
 -- --------------------------------------------------------
 
@@ -119,6 +128,13 @@ CREATE TABLE `pertanyaan_umum` (
   `pertanyaan_umum` varchar(500) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `pertanyaan_umum`
+--
+
+INSERT INTO `pertanyaan_umum` (`id_pertanyaan_umum`, `id_jenis_pertanyaan_umum`, `pertanyaan_umum`) VALUES
+(1, 2, '1.	Jelaskan misi/sasaran pelaksanaan SPBE di Instansi Pusat/Pemerintah Daerah masing-masing?');
+
 -- --------------------------------------------------------
 
 --
@@ -134,8 +150,16 @@ CREATE TABLE `user` (
   `nama_operator` varchar(200) DEFAULT NULL,
   `nip_op` varchar(200) DEFAULT NULL,
   `jabatan_op` varchar(200) DEFAULT NULL,
-  `password` varchar(200) DEFAULT NULL
+  `password` varchar(200) DEFAULT NULL,
+  `role` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `namainstansipusat`, `nama_penanggungjawab`, `nip_pj`, `jabatan_pj`, `nama_operator`, `nip_op`, `jabatan_op`, `password`) VALUES
+(1, 'lnlnsd', 'lknlkn', 'lkn', 'lknlk', 'nlkn', 'lkn', 'lkn', NULL);
 
 --
 -- Indexes for dumped tables
@@ -199,7 +223,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `aplikasi_fungsional`
 --
 ALTER TABLE `aplikasi_fungsional`
-  MODIFY `id_aplikasi_fungsional` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_aplikasi_fungsional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `jenis`
@@ -211,7 +235,7 @@ ALTER TABLE `jenis`
 -- AUTO_INCREMENT for table `jenis_pertanyaan_umum`
 --
 ALTER TABLE `jenis_pertanyaan_umum`
-  MODIFY `id_jenis_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_jenis_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `master`
@@ -229,13 +253,13 @@ ALTER TABLE `master_pertanyaan_umum`
 -- AUTO_INCREMENT for table `pertanyaan_umum`
 --
 ALTER TABLE `pertanyaan_umum`
-  MODIFY `id_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

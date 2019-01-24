@@ -1,16 +1,3 @@
-﻿.sisi1,
-.sisi2,
-.sisi23,
-.sisi24,
-.sisi31,
-.sisi32,
-.sisi33,
-.sisi34,
-.sisi35,
-.sisi36 {
-	display: none;
-}
-
 .x_title h2,
 table.tile_info td p {
 	white-space: nowrap;
@@ -620,7 +607,7 @@ body .container.body .right_col {
 
 body {
 	color: #73879C;
-	background: #2A3F54;
+	background: #fff;
 	font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
 	font-size: 13px;
 	font-weight: 400;
@@ -2036,7 +2023,9 @@ span.right {
 }
 
 @media (min-width:992px) {
-	footer {}
+	footer {
+		margin-left: 230px
+	}
 
 	.tile_count .tile_stats_count {
 		margin-bottom: 10px;
@@ -3814,12 +3803,12 @@ ul.project_files li a i {
 }
 
 /*!
-* bootstrap-vertical-tabs - v1.2.1
-* https://dbtek.github.io/bootstrap-vertical-tabs
-* 2014-11-07
-* Copyright (c) 2014 İsmail Demirbilek
-* License: MIT
-*/
+ * bootstrap-vertical-tabs - v1.2.1
+ * https://dbtek.github.io/bootstrap-vertical-tabs
+ * 2014-11-07
+ * Copyright (c) 2014 İsmail Demirbilek
+ * License: MIT
+ */
 .tabs-left,
 .tabs-right {
 	border-bottom: none;

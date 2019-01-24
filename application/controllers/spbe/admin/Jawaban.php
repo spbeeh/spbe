@@ -1,22 +1,22 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 class Jawaban extends CI_Controller
 {
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->model('jawaban_model');
-        $this->load->library('form_validation');
-    }
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('jawaban_model');
+		$this->load->library('form_validation');
+	}
 
-    public function index()
-    {
-        $data['jawaban'] = $this->jawaban_model->getAll();
-        $data['test'] = "hehe";
-        $this->load->view("spbe/content/jawaban", $data);
-    }
+	public function index()
+	{
+		$data['jawaban'] = $this->jawaban_model->getAll();
+		$data['test'] = "hehe";
+		$this->load->view("spbe/content/jawaban", $data);
+	}
 
     // public function add()
     // {
@@ -60,5 +60,5 @@ class Jawaban extends CI_Controller
     //     }
     // }
 
-    
+
 }
