@@ -46,8 +46,8 @@
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">Contact
-        <small>Subheading</small>
+      <h1 class="mt-4 mb-3">Evaluasi SPBE
+        <small></small>
       </h1>
 
       <ol class="breadcrumb">
@@ -73,7 +73,7 @@
                 <table class="pad5">
                   <tbody><tr>
                     <td>
-                      <img src="Asett/Image/logo.png" alt="hitam_putih_logo" height="80" width="80">
+                      <img src="<?php echo site_url('Asett/Image/logo.png')?>" height="80" width="80">
                     </td>
                     <td width="30">&nbsp;</td>
                     <td align="center">

@@ -56,7 +56,7 @@
         <li class="breadcrumb-item">
           <a href="menu/dashboard">Beranda</a>
         </li>
-        <li class="breadcrumb-item active">Isi Kuisoner SPBE</li>
+        <li class="breadcrumb-item active">Beranda</li>
       </ol>
 
       <!-- Intro Content -->
