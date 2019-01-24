@@ -23,7 +23,7 @@
 	<!-- Navigation -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">Beranda</a>
+			<a class="navbar-brand" href="<?php echo site_url('menu/dashboard') ?>">SPBE</a>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -99,7 +99,7 @@
 	<!-- Footer -->
 	<footer class="py-5 bg-dark">
 		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+			<p class="m-0 text-center text-white">Copyright &copy; 2019</p>
 		</div>
 		<!-- /.container -->
 	</footer>
