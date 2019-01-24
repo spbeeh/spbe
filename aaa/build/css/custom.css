@@ -491,7 +491,7 @@ body .container.body .right_col {
     background: #D9DEE4
 }
 body {
-    color: #73879C;
+    color: #ffff;
     background: #fff;
     font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
     font-size: 13px;
@@ -3670,7 +3670,7 @@ div[data-role="editor-toolbar"] {
     min-height: 38px
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-    color: #73879C;
+    color: #ffff;
     padding-top: 5px
 }
 .select2-container--default .select2-selection--multiple .select2-selection__rendered {

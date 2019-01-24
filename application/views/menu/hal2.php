@@ -955,12 +955,12 @@
 
     <script>
 $(document).ready(function() {
-  $(".sisi1").click(function() {
+  $(".ada1").click(function() {
     //alert("yeah");
-    $('.sisi1').show();
+    $('.a1').show();
   });
   $(".tidak1").click(function() {
-    $('.sisi1').hide();
+    $('.a1').hide();
   });
 });
 $(document).ready(function() {
