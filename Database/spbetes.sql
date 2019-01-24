@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2019 at 04:56 PM
+-- Generation Time: Jan 24, 2019 at 08:05 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -153,13 +153,6 @@ CREATE TABLE `user` (
   `password` varchar(200) DEFAULT NULL,
   `role` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id_user`, `namainstansipusat`, `nama_penanggungjawab`, `nip_pj`, `jabatan_pj`, `nama_operator`, `nip_op`, `jabatan_op`, `password`) VALUES
-(1, 'lnlnsd', 'lknlkn', 'lkn', 'lknlk', 'nlkn', 'lkn', 'lkn', NULL);
 
 --
 -- Indexes for dumped tables
