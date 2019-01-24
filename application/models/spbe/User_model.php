@@ -17,11 +17,18 @@ class user_model extends CI_Model
 		return $this->db->get('user')->result();
 	}
 
-	function save($table, $data)
+	public function save($table, $data)
 	{
 		$this->db->insert($table, $data);
 	}
 
+	public function delete($id)
+	{
+		# code...
+		$this->db->where('id_user', $id);
+		$this->db->delete('user');
+
+	}
 }
 
 /* End of file user_model.php */

@@ -101,7 +101,7 @@ $route['sistem/admin/datapertanyaanumum'] = 'spbe/admin/datapertanyaanumum/index
 $route['sistem/admin/datapertanyaanumum/store'] = 'spbe/admin/datapertanyaanumum/index';
 $route['sistem/admin/datauser'] = 'spbe/admin/userkontroller/index';
 $route['sistem/admin/datauser/store'] = 'spbe/admin/userkontroller/store';
-
+$route['sistem/admin/datauser/destroy/(:num)'] = 'spbe/admin/userkontroller/destroy/$1';
 // $route['tes'] = 'tes/tescontroller/index';
 
 // $route['tes/halaman2'] = 'tes/halaman2/index';

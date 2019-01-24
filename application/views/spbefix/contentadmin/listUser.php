@@ -154,8 +154,15 @@
 											<td><?php echo $value->nama_operator ?></td>
 											<td><?php echo $value->nip_op ?></td>
 											<td><?php echo $value->jabatan_op ?></td>
-											<td><button type="">preview</button><button type="">edit</button><button
-													type="">delete</button></td>
+											<td>
+												<table>
+													<tr>
+														<td><button type="">preview</button></td>
+														<td><button type="">edit</button></td>
+														<td></td>
+													</tr>
+												</table>
+											</td>
 										</tr>
 										<?php endforeach; ?>
 									</tbody>

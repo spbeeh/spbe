@@ -38,6 +38,15 @@ class Userkontroller extends CI_Controller
 	}
 
 
+	public function destroy($id = null)
+	{
+		if (!isset($id)) {
+			show_404();
+		}
+		$this->user_model->delete($id);
+		redirect('sistem/admin/datauser', 'refresh');
+
+	}
 }
 
 /* End of file userkontroller.php */
