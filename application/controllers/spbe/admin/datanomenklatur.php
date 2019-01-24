@@ -37,6 +37,34 @@ class Datanomenklatur extends CI_Controller
 
 	}
 
+	public function edit($id = null)
+    {
+        if (!isset($id)) redirect('admin/datanomenklatur');
+       
+        $datanomenklatur = $this->product_model;
+        $validation = $this->form_validation;
+        $validation->set_rules($datanomenklatur->rules());
+
+        if ($validation->run()) {
+            $datanomenklatur->update();
+            $this->session->set_flashdata('success', 'Berhasil disimpan');
+        }
+
+        $data["datanomenklatur"] = $datanomenklatur->getById($id);
+        if (!$data["datanomenklatur"]) show_404();
+        
+        $this->load->view("admin/product/edit_form", $data);
+    }
+
+    public function delete($id=null)
+    {
+        if (!isset($id)) show_404();
+        
+        if ($this->product_model->delete($id)) {
+            redirect(site_url('admin/products'));
+        }
+    }
+
 }
 
 /* End of file datanomenklatur.php */

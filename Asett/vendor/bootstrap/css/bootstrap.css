@@ -2617,7 +2617,7 @@ fieldset:disabled a.btn {
 
 .btn-dark.disabled, .btn-dark:disabled {
   color: #fff;
-  background-color: #343a40;
+  background-color: #fff;
   border-color: #343a40;
 }
 
@@ -2880,7 +2880,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-dark:hover {
   color: #fff;
-  background-color: #343a40;
+  background-color: #fff;
   border-color: #343a40;
 }
 
@@ -6094,7 +6094,7 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: #fff !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
