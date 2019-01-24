@@ -91,7 +91,7 @@ $route['menu/dashboard'] = 'tes/dashboard/index';
 //Fix VVVVV
 
 $route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
-$route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
+// $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
 $route['sistem/admin/User'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/datanomenklatur'] = 'spbe/admin/datanomenklatur/index';
 $route['sistem/admin/datanomenklatur/store'] = 'spbe/admin/datanomenklatur/store';
