@@ -8,7 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title><?php echo ucfirst($this->uri->segment(1)) . " - " . ucfirst($this->uri->segment(2)) ?>
+  </title>
 
   <!-- Bootstrap core CSS -->
   <link href="<?php echo site_url ('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
@@ -80,7 +81,7 @@
                       <h4 class="uppercase">Kementerian Pendayagunaan Aparatur Negara dan Reformasi Birokrasi</h4>
                       <h4 class="uppercase">Evaluasi SPBE</h4>
                       Jalan Jenderal Sudirman Kavling 69 Jakarta Selatan - 12190  Telp. (+6221) 7398381 - 89 Ext. 2111 <br>
-                     email : asdep2balaks[at]menpan[dot]go[dot]id
+                     email : asdep2balaks@menpan.go.id
                     </td>
                   </tr> 
                 </tbody></table>
