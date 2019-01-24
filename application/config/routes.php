@@ -81,12 +81,11 @@ $route['coba/tambah'] = 'tes/user/add';
 
 //Fix VVVV ====
 
-//frontend
-$route['menu/form'] = 'form/index';
+//frontend$route['menu/form'] = 'form/index';
 $route['menu/hal1'] = 'hal1/index';
 $route['menu/hal2'] = 'hal2/index';
 $route['menu/dashboard'] = 'tes/dashboard/index';
-$route['menu/laporan']='laporan/index';
+$route['menu/laporan'] = 'laporan/index';
 
 
 //Fix VVVVV
@@ -101,6 +100,7 @@ $route['sistem/admin/datanomenklatur/store'] = 'spbe/admin/datanomenklatur/store
 $route['sistem/admin/datapertanyaanumum'] = 'spbe/admin/datapertanyaanumum/index';
 $route['sistem/admin/datapertanyaanumum/store'] = 'spbe/admin/datapertanyaanumum/index';
 $route['sistem/admin/datauser'] = 'spbe/admin/userkontroller/index';
+$route['sistem/admin/datauser/store'] = 'spbe/admin/userkontroller/store';
 
 // $route['tes'] = 'tes/tescontroller/index';
 
