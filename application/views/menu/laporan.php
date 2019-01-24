@@ -8,7 +8,8 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Modern Business - Start Bootstrap Template</title>
+	<title><?php echo ucfirst($this->uri->segment(1)) . " - " . ucfirst($this->uri->segment(2)) ?>
+	</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
@@ -105,6 +106,7 @@
 									<td style="width:10px">:</td>
 									<td> </td>
 								</tr>
+
 							<tbody>
 								<tr>
 									<td style="width: 200px">NIP</td>
@@ -136,13 +138,13 @@
 								</tr>
 								<tr>
 									<td>2</td>
-									<td>Evaluasi aplikasi</td>
-									<td><span style="color:red">Belum Mengisi</span> </td>
+									<td>Layanan Publikr</td>
+									<span style="color:red">Belum Mengisi</span> </td>
 								</tr>
-								<!-- <tr>
+								<tr>
 									<td>3</td>
 									<td>Administrasi Dan Manajemen Umum</td>
-									<td><span style="color:green">Sudah Mengisi</span> </td>
+									<span style="color:green">Sudah Mengisi</span> </td>
 								</tr>
 								<tr>
 									<td>4</td>
@@ -166,7 +168,7 @@
 									<td>7</td>
 									<td>Manajemen Keuangan</td>
 									<td>
-										<span style="color:green">Sudah Mengisi</span> </td> -->
+										<span style="color:green">Sudah Mengisi</span> </td>
 								</tr>
 							</tbody>
 						</table>
@@ -175,7 +177,6 @@
 			</div>
 		</div>
 	</div>
-
 	<!-- Content Row -->
 
 	<!-- /.container -->

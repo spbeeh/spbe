@@ -54,7 +54,7 @@
 			<li class="breadcrumb-item">
 				<a href="menu/dashboard">Beranda</a>
 			</li>
-			<li class="breadcrumb-item active">Beranda</li>
+			<li class="breadcrumb-item active">Isi Kuisoner SPBE</li>
 		</ol>
 		<!-- Intro Content -->
 		<div class="row">
