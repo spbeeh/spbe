@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Evaluasi SPBE</title>
+    <title><?php echo ucfirst($this->uri->segment(1)) . " - " . ucfirst($this->uri->segment(2)) ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand" href="index.html">Beranda</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,15 +48,15 @@
     <div class="container">
 
       <!-- Page Heading/Breadcrumbs -->
-      <h1 class="mt-4 mb-3">About
-        <small>Subheading</small>
+      <h1 class="mt-4 mb-3">Beranda
+        <small></small>
       </h1>
 
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
-          <a href="index.html">Home</a>
+          <a href="index.html">Beranda</a>
         </li>
-        <li class="breadcrumb-item active">About</li>
+        <li class="breadcrumb-item active">Isi Kuisoner SPBE</li>
       </ol>
 
       <!-- Intro Content -->
@@ -78,7 +78,7 @@
 
       <!-- Team Members -->
       <h2>TUJUAN EVALUASI SPBE</h2>
-
+      
       <!-- /.row -->
 
       <!-- Our Customers -->
