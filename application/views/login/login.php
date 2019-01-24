@@ -68,9 +68,9 @@
 			
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
+						<button class="login100-form-btn" a href="<?php echo site_url('menu/dashboard') ?>" >
+							Login </a></button>
+
 					</div>
 					
 					<div class="text-center p-t-46 p-b-20">

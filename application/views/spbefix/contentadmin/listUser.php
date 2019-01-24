@@ -158,14 +158,22 @@
 							 width="100%">
 								<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
 								 width="100%">
+<<<<<<< HEAD
 >>>>>>> 4f525936671c38ad23705c9072578d3cef8c1277
 
+=======
+>>>>>>> d3758a4a1515482ee87376267bcbeeaf7a08ff69
 									<thead>
 										<tr>
 											<th>No</th>
-											<th>Aplikasi Fungsional</th>
-											<th>Jenis</th>
-											<th>action</th>
+											<th>Nama Instansi Pusat</th>
+											<th>Penanggung Jawab</th>
+											<th>NIP penanggung jawab</th>
+											<th>Jabatan penanggung jawab</th>
+											<th>Nama Operator</th>
+											<th>NIP operator</th>
+											<th>Jabatan operator</th>
+											<th>Action</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -177,9 +185,14 @@
 			</div>
 		</div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	</div>
 </div>
 <!-- /page content -->
 =======
 	</div>
 >>>>>>> 4f525936671c38ad23705c9072578d3cef8c1277
+=======
+	</div>
+</div>
+>>>>>>> d3758a4a1515482ee87376267bcbeeaf7a08ff69

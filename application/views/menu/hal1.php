@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Modern Business - Start Bootstrap Template</title>
+  <title>Evaluasi SPBE</title>
 
   <!-- Bootstrap core CSS -->
   <link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
@@ -50,18 +50,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('Asett/about.html') ?>">Beranda</a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="<?php echo site_url('Asett/services.html') ?>">Isi Kuisioner SPBE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?php echo site_url('Asett/contact.html') ?>">Laporan</a>
-            
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Other Pages
-              </a>
+             <a class="nav-link" href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner SPBE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<?php echo site_url('Asett/contact.html') ?>">Laporan</a>
           </ul>
         </div>
       </div>
