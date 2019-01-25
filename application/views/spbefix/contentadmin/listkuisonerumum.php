@@ -22,7 +22,8 @@
 						<div class="clearfix"></div>
 					</div>
 					<div class="x_content">
-						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambahuser"><span class="fa fa-plus"></span>
+						<button type="button" class="btn btn-primary" data-toggle="modal"
+							data-target="#tambahuser"><span class="fa fa-plus"></span>
 							Tambah
 							data</button>
 						<div id="tambahuser" class="modal fade" role="dialog">
@@ -33,12 +34,15 @@
 										<h4 class="modal-title">Tambah user</h4>
 									</div>
 									<div class="modal-body">
-										<form class="form-horizontal form-label-left" action="<?php echo base_url('sistem/admin/datapertanyaanumum/store') ?>"
-										 method="post" enctype="multipart/form-data" novalidate>
+										<form class="form-horizontal form-label-left"
+											action="<?php echo base_url('sistem/admin/datapertanyaanumum/store') ?>"
+											method="post" enctype="multipart/form-data" novalidate>
 											<div class="form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12">Select Custom</label>
+												<label class="control-label col-md-3 col-sm-3 col-xs-12">Select
+													Custom</label>
 												<div class="col-sm-7 col-xs-12">
-													<select name="id_jenis_pertanyaan_umum" class="select2_single form-control" tabindex="-1">
+													<select name="id_jenis_pertanyaan_umum"
+														class="select2_single form-control" tabindex="-1">
 														<option></option>
 														<?php foreach ($jenisumum as $key) : ?>
 														<option value="<?php echo $key->id_jenis_pertanyaan_umum ?>">
@@ -50,17 +54,22 @@
 												</div>
 											</div>
 											<div class="item form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name"> Pertanyaan Umum <span class="required">*</span></label>
+												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+													Pertanyaan Umum <span class="required">*</span></label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
-													<textarea id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6"
-													 data-validate-words="2" name="pertanyaan_umum" placeholder="" required="required" type="text"></textarea>
+													<textarea id="name" class="form-control col-md-7 col-xs-12"
+														data-validate-length-range="6" data-validate-words="2"
+														name="pertanyaan_umum" placeholder="" required="required"
+														type="text"></textarea>
 												</div>
 											</div>
 											<div class="ln_solid"></div>
 											<div class="form-group">
 												<div class="col-md-6 col-md-offset-3 col-xs-12">
-													<button type="submit" class="btn btn-primary" data-dismiss="modal">Cancel</button>
-													<button id="send" type="submit" class="btn btn-success">Submit</button>
+													<button type="submit" class="btn btn-primary"
+														data-dismiss="modal">Cancel</button>
+													<button id="send" type="submit"
+														class="btn btn-success">Submit</button>
 												</div>
 											</div>
 										</form>
@@ -72,8 +81,8 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
-						 width="100%">
+						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+							cellspacing="0" width="100%">
 							<thead>
 								<tr>
 									<th>No</th>
@@ -101,8 +110,6 @@
 								<?php endforeach; ?>
 							</tbody>
 						</table>
-
-
 					</div>
 				</div>
 			</div>

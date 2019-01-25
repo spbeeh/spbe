@@ -20,8 +20,13 @@ class admindashboard extends My_Controller    /// ini extend di ambil dari folde
 
 	public function index()
 	{
-		$jumlah['jumlah'] = $this->pertanyaanumum_model->getAll();
-		$this->load->view('spbefix/_partialadmin/header', $jumlah);
+		$site = $this->Konfigurasi_model->listing();
+		$data = array(
+			'title' => 'Dashboard | ' . $site['nama_website'],
+			'favicon' => $site['favicon'],
+			'site' => $site,
+		);
+		$this->load->view('spbefix/_partialadmin/header');
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/dashboard');
 		$this->load->view('spbefix/_partialadmin/footer');

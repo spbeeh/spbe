@@ -41,7 +41,7 @@
 			<div class="wrap-login100">
 				<form class="login100-form validate-form">
 					<span class="login100-form-title p-b-43">
-						Login
+						SPBE
 					</span>
 
 
@@ -58,7 +58,7 @@
 						<span class="label-input100">Password</span>
 					</div>
 
-					<div class="flex-sb-m w-full p-t-3 p-b-32">
+					<!-- <div class="flex-sb-m w-full p-t-3 p-b-32">
 						<div class="contact100-form-checkbox">
 							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 							<label class="label-checkbox100" for="ckb1">
@@ -71,11 +71,11 @@
 								Forgot Password?
 							</a>
 						</div>
-					</div>
+					</div> -->
 
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" name="login">">
+						<button class="login100-form-btn" name="login">
 							Login </a></button>
 
 					</div>
@@ -94,11 +94,6 @@
 			</div>
 		</div>
 	</div>
-
-
-
-
-
 	<!--===============================================================================================-->
 	<script src="<?php echo base_url('Assets/vendor/jquery/jquery-3.2.1.min.js') ?>"></script>
 	<!--===============================================================================================-->
@@ -115,7 +110,6 @@
 	<script src="<?php echo base_url('Asset/vendor/countdowntime/countdowntime.js') ?>"></script>
 	<!--===============================================================================================-->
 	<script src="<?php echo base_url('Asset/js/main.js') ?>"></script>
-
 </body>
 
 </html>

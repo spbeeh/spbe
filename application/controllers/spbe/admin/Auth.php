@@ -6,7 +6,7 @@ class Auth extends MY_Controller
 	{
 		parent::__construct();
 		$this->load->database();
-		$this->load->model('Auth_model');
+		$this->load->model('spbe/Auth_model');
 	}
 
 	public function check_account()
@@ -54,9 +54,15 @@ class Auth extends MY_Controller
             //membuat session dengan nama userData yang artinya nanti data ini bisa di ambil sesuai dengan data yang login
 			$userdata = array(
 				'is_login' => true,
-				'id_user' => $query->id,
+				'id_user' => $query->id_user,
 				'password' => $query->password,
 				'nip_pj' => $query->username,
+				'role' => $query->role,
+				'nama_instansi_pusat' => $query->nama_instansi_pusat,
+				'jabatan_pj' => $query->jabatan_pj,
+				'nama_operator' => $query->nama_operator,
+				'nip_op' => $query->nip_op,
+				'jabatan_op' => $query->jabatan_op
 			);
 			$this->session->set_userdata($userdata);
 			return true;
@@ -67,7 +73,6 @@ class Auth extends MY_Controller
 		$site = $this->user_model->listing();
 		$data = array(
 			'title' => 'Login | ' . $site[''],
-			'favicon' => $site['favicon'],
 			'site' => $site
 		);
         //melakukan pengalihan halaman sesuai dengan levelnya

@@ -32,7 +32,7 @@ class user_model extends CI_Model
 
 	function auth_admin($username, $password) //cek nip dan password admin
 	{
-		$query = $this->db->query("SELECT * FROM dosen WHERE nip='$username' AND pass=MD5('$password') LIMIT 1");
+		$query = $this->db->query("SELECT * FROM user WHERE nip_pj='$username' AND pass=MD5('$password') LIMIT 1");
 		return $query;
 	}
 

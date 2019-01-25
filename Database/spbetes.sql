@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 24, 2019 at 08:05 PM
+-- Generation Time: Jan 25, 2019 at 12:05 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -39,8 +39,42 @@ CREATE TABLE `aplikasi_fungsional` (
 --
 
 INSERT INTO `aplikasi_fungsional` (`id_aplikasi_fungsional`, `id_jenis`, `aplikasi_fungsional`) VALUES
-(3, 1, 'Sistem Tenaga KerJa'),
-(4, 1, 'Sistem Informasi Tenaga Kerja');
+(4, 1, 'Sistem Informasi Tenaga Kerja'),
+(5, 1, 'Sistem Informasi Pendidikan'),
+(6, 1, 'Sistem Informasi Kepemudaan'),
+(7, 1, 'Sistem Informasi Kesehatan'),
+(8, 1, 'Sistem Informasi Kemiskinan dan Penyandang Masalah Kemiskinan'),
+(9, 1, 'Sistem Informasi Koperasi dan UMKM '),
+(10, 1, 'Sistem Informasi Perinda'),
+(11, 1, 'Sistem Informasi EXIM'),
+(12, 1, 'Sistem Informasi Pertanian'),
+(13, 1, 'Sistem Informasi Peternakan'),
+(14, 1, 'Sistem Informasi Perkebunan '),
+(15, 1, 'Sistem Informasi Perikanan'),
+(16, 1, 'Sistem Informasi Kehutanan'),
+(17, 1, 'Sistem Informasi Tanam Pangan'),
+(18, 1, 'Sistem Informasi Wisata dan Budaya'),
+(19, 1, 'Sistem Informasi Investasi'),
+(20, 1, 'Sistem Informasi Pembangunan Daerah'),
+(21, 1, 'Sistem Informasi Pendayagunaan Air'),
+(22, 1, 'Sistem Informasi Infrastruktur Teknologi Informasi dan Komunikasi'),
+(23, 1, 'Sistem Informasi Tata Ruang, Jalan dan Jembatan'),
+(24, 1, 'Sistem Informasi Energi Terbarukan'),
+(25, 1, 'Sistem Informasi Lingkungan Hidup'),
+(26, 2, 'Sistem Informasi Aset dan Barang Daerah'),
+(27, 2, 'Sistem Informasi Keuangan (E-Budgeting)'),
+(28, 2, 'Sistem Informasi Pengadaan'),
+(29, 2, 'Sistem Informasi Pembangunan'),
+(30, 2, 'Sistem Informasi Legislasi'),
+(31, 2, 'Sistem Informasi Kearsipan'),
+(32, 2, 'Sistem Informasi Kebencanaan'),
+(33, 2, 'Sistem Informasi Pengawasan'),
+(34, 3, 'Sistem Informasi Jaringan dan Dokumentasi Hukum'),
+(35, 3, 'Sistem Informasi Legislatif'),
+(36, 4, 'Sistem Informasi Keuangan (E-Budgeting) '),
+(37, 4, 'BPKAD, Bappeda, Biro AP, Biro Organisasi dan Dispenda'),
+(38, 4, 'Sistem Informasi Keuangan (E-Budgeting)'),
+(39, 6, 'Sistem Informasi Kepegawaian');
 
 -- --------------------------------------------------------
 
@@ -216,7 +250,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `aplikasi_fungsional`
 --
 ALTER TABLE `aplikasi_fungsional`
-  MODIFY `id_aplikasi_fungsional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_aplikasi_fungsional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `jenis`
@@ -252,7 +286,7 @@ ALTER TABLE `pertanyaan_umum`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

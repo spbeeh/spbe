@@ -90,7 +90,7 @@ $route['menu/laporan'] = 'laporan/index';
 
 
 //Fix VVVVV
-
+$route['login'] = 'spbe/login/login/index';
 $route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
 $route['sistem/admin/kuisonerumum'] = 'spbe/admin/kuisonerumum/index';

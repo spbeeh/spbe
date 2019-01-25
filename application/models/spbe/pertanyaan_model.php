@@ -28,15 +28,16 @@ class pertanyaan_model extends CI_Model
 	}
 
 	public function update()
-    {
-        $post = $this->input->post();
-        $this->id_aplikasi_fungsional = $post["id_aplikasi_fungsional"];
-        $this->aplikasi_fungsional = $post["aplikasi_fungsional"];
-        $this->id_jenis = $post["id_jenis"];
-        return $this->db->update('aplikasi_fungsional', $this, array('id_aplikasi_fungsional' => $post['id_aplikasi_fungsional']));
-    }
+	{
+		$post = $this->input->post();
+		$this->id_aplikasi_fungsional = $post["id_aplikasi_fungsional"];
+		$this->aplikasi_fungsional = $post["aplikasi_fungsional"];
+		$this->id_jenis = $post["id_jenis"];
+		return $this->db->update('aplikasi_fungsional', $this, array('id_aplikasi_fungsional' => $post['id_aplikasi_fungsional']));
+	}
 
-	public function delete($table, $id){
+	public function delete($table, $id)
+	{
 		return $this->db->delete($table, array("id_aplikasi_fungsional" => $id));
 	}
 

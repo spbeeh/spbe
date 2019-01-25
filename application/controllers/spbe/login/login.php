@@ -10,7 +10,7 @@ class login extends CI_Controller
 
 	public function index()
 	{
-		$this->load->view('spbe/login/login');
+		$this->load->view('login/login');
 	}
 
 	// function index()
