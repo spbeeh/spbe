@@ -29,9 +29,9 @@ class Auth_model extends CI_Model
 			return 1;
 		}
         //jika bernilai 2 maka user tidak aktif
-		if ($query->active == 0) {
-			return 2;
-		}
+		// if ($query->active == 0) {
+		// 	return 2;
+		// }
         //jika bernilai 3 maka password salah
 		if (!hash_verified($this->input->post('password'), $query->password)) {
 			return 3;
@@ -48,11 +48,15 @@ class Auth_model extends CI_Model
 
 	public function reg()
 	{
-		date_default_timezone_set('ASIA/JAKARTA');
 		$data = array(
-			'username' => $this->input->post('username'),
-			'email' => $this->input->post('email'),
-			'id_role' => '2',
+			'nip_pj' => $this->input->post('nip_pj'),
+			'namainstansipusat ' => $this->input->post('namainstansipusat'),
+			'nama_penanggungjawab ' => $this->input->post('namainstansipusat'),
+			'jabatan_pj ' => $this->input->post('namainstansipusat'),
+			'nama_operator ' => $this->input->post('namainstansipusat'),
+			'nip_op ' => $this->input->post('namainstansipusat'),
+			'jabatan_op ' => $this->input->post('namainstansipusat'),
+			'role ' => $this->input->post('role'),
 			'password' => get_hash($this->input->post('password'))
 		);
 		return $this->db->insert('user', $data);

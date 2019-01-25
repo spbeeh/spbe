@@ -92,9 +92,9 @@ class Auth extends MY_Controller
 				$data = $this->Auth_model->check_account($this->input->post('nip_pj'), $this->input->post('password'));
 
                 //jika bernilai TRUE maka alihkan halaman sesuai dengan level nya
-				if ($data->id_role == 'Admin') {
+				if ($data->role == 'Admin') {
 					redirect('sistem/admin/dashboard');
-				} elseif ($data->id_role == 'User') {
+				} elseif ($data->role == 'User') {
 					redirect('member/home');
 				}
 			} else {
@@ -118,9 +118,15 @@ class Auth extends MY_Controller
 		// 	'favicon' => $site['favicon'],
 		// 	'site' => $site
 		// );
-		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[50]');
-		$this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[5]|max_length[50]');
+		$this->form_validation->set_rules('namainstansipusat', 'namainstansipusat', 'trim|required|min_length[5]|max_length[50]');
+		$this->form_validation->set_rules('nama_penanggungjawab', 'nama_penanggungjawab', 'trim|required|min_length[5]|max_length[50]');
+		$this->form_validation->set_rules('jabatan_pj', 'jabatan_pj', 'trim|required|min_length[5]|max_length[50]');
+		$this->form_validation->set_rules('nama_operator', 'nama_operator', 'trim|required|min_length[5]|max_length[50]');
+		$this->form_validation->set_rules('nip_op', 'nip_op', 'trim|required|min_length[5]|max_length[50]');
+		$this->form_validation->set_rules('jabatan_op', 'jabatan_op', 'trim|required|min_length[5]|max_length[50]');
+		$this->form_validation->set_rules('nip_pj', 'nip_pj', 'trim|required|min_length[5]|max_length[50]');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]|max_length[20]');
+		$this->form_validation->set_rules('role', 'role', 'trim|required|min_length[5]|max_length[50]');
 		if ($this->form_validation->run() == false) {
 			// $this->template->load('authentication/layout/template', 'authentication/register', $data);
 		} else {
@@ -135,7 +141,7 @@ class Auth extends MY_Controller
           </div>
           </p>
         ');
-			redirect('login/login', 'refresh');
+			redirect('login', 'refresh');
 		}
 	}
 }

@@ -18,7 +18,11 @@
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="x_panel">
 					<div class="x_title">
-						<h2>Responsive example<small>Users</small></h2>
+						<h2>Responsive example<small>
+								<font color="green">
+									<?php echo $this->session->flashdata('pesan'); ?>
+								</font>
+							</small></h2>
 						<div class="clearfix"></div>
 					</div>
 					<div class="row">
@@ -34,7 +38,153 @@
 											<h4 class="modal-title">Tambah user</h4>
 										</div>
 										<div class="modal-body">
-											<form class="form-horizontal form-label-left"
+
+											<?php echo form_open('login/check_register', ''); ?>
+											<table>
+												<tr>
+													<td>
+														<div class="item form-group">
+															<label class="control-label col-md-3 col-sm-3 col-xs-12"
+																for="name">Nama
+																Instansi Pusat <span class="required">*</span></label>
+															<div class="col-md-6 col-sm-6 col-xs-12">
+																<input id="name" class="form-control col-md-7 col-xs-12"
+																	data-validate-length-range="6"
+																	data-validate-words="2" name="namainstansipusat"
+																	placeholder="both name(s) e.g Jon Doe"
+																	required="required" type="text">
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="item form-group">
+															<label class="control-label col-md-3 col-sm-3 col-xs-12"
+																for="email">Penanggung Jawab <span
+																	class="required">*</span></label>
+															<div class="col-md-6 col-sm-6 col-xs-12">
+																<input type="text" id="" name="nama_penanggungjawab"
+																	required="required"
+																	class="form-control col-md-7 col-xs-12">
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="item form-group">
+															<label class="control-label col-md-3 col-sm-3 col-xs-12"
+																for="email">NIP
+																Penanggung jawab <span class="required">*</span></label>
+															<div class="col-md-6 col-sm-6 col-xs-12">
+																<input type="text" id="email2" name="nip_pj"
+																	data-validate-linked="email" required="required"
+																	class="form-control col-md-7 col-xs-12">
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="item form-group">
+															<label class="control-label col-md-3 col-sm-3 col-xs-12"
+																for="email">Password <span
+																	class="required">*</span></label>
+															<div class="col-md-6 col-sm-6 col-xs-12">
+																<input type="password" id="" name="password"
+																	required="required"
+																	class="form-control col-md-7 col-xs-12">
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="item form-group">
+															<label class="control-label col-md-3 col-sm-3 col-xs-12"
+																for="number">Jabatan <span
+																	class="required">*</span></label>
+															<div class="col-md-6 col-sm-6 col-xs-12">
+																<input type="text" id="number" name="jabatan_pj"
+																	required="required" data-validate-minmax="10,100"
+																	class="form-control col-md-7 col-xs-12">
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="item form-group">
+															<label class="control-label col-md-3 col-sm-3 col-xs-12"
+																for="website">Nama
+																Operator <span class="required">*</span></label>
+															<div class="col-md-6 col-sm-6 col-xs-12">
+																<input type="text" id="website" name="nama_operator"
+																	required="required" placeholder="www.website.com"
+																	class="form-control col-md-7 col-xs-12">
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="item form-group">
+															<label class="control-label col-md-3 col-sm-3 col-xs-12"
+																for="occupation">NIP Operator <span
+																	class="required">*</span></label>
+															<div class="col-md-6 col-sm-6 col-xs-12">
+																<input id="occupation" type="text" name="nip_op"
+																	data-validate-length-range="5,20"
+																	class="optional form-control col-md-7 col-xs-12">
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="item form-group">
+															<label for="password" class="control-label col-md-3">Jabatan
+																Operator</label>
+															<div class="col-md-6 col-sm-6 col-xs-12">
+																<input id="password" type="text" name="jabatan_op"
+																	data-validate-length="6,8"
+																	class="form-control col-md-7 col-xs-12"
+																	required="required">
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="item form-group">
+															<label class="control-label col-md-3 col-sm-3 col-xs-12"
+																for="email">
+																Role <span class="required">*</span></label>
+															<div class="col-md-6 col-sm-6 col-xs-12">
+																<input type="text" id="" name="role" required="required"
+																	class="form-control col-md-7 col-xs-12">
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="ln_solid"></div>
+														<div class="form-group">
+															<div class="col-md-6 col-md-offset-3 col-xs-12">
+																<button type="submit" class="btn btn-primary"
+																	data-dismiss="modal">Cancel</button>
+																<button id="send" type="submit"
+																	class="btn btn-success">Submit</button>
+																<?php echo form_close(); ?>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</table>
+
+											<!-- <form class="form-horizontal form-label-left"
 												action="<?php echo base_url('sistem/admin/datauser/store') ?>"
 												method="post" enctype="multipart/form-data" novalidate>
 												<div class="item form-group">
@@ -115,7 +265,7 @@
 															class="btn btn-success">Submit</button>
 													</div>
 												</div>
-											</form>
+											</form> -->
 										</div>
 										<!-- <div class="modal-footer">
 										<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>

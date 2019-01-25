@@ -11,7 +11,7 @@ class MY_Controller extends CI_Controller
 	}
 	public function check_login()
 	{
-        // pengecekan jika tidak ada email dari session maka diarahkan untuk login
+        // pengecekan jika tidak ada username dari session maka diarahkan untuk login
 		if (!$this->session->userdata('is_login')) {
 			redirect('login');
 		}
