@@ -11,6 +11,11 @@ class admindashboard extends My_Controller    /// ini extend di ambil dari folde
 		$this->load->model('spbe/user_model');
 		$this->load->model('spbe/pertanyaanumum_model');
 		$this->load->library('form_validation');
+
+		$this->check_login();
+		if ($this->session->userdata('id_role') != "1") {
+			redirect('', 'refresh');
+		}
 	// 	$this->check_login();
 	// 	if ($this->session->userdata('role') != "1") {
 	// 		redirect('sistem/admin/datauser', 'refresh');
@@ -20,13 +25,11 @@ class admindashboard extends My_Controller    /// ini extend di ambil dari folde
 
 	public function index()
 	{
-		$site = $this->Konfigurasi_model->listing();
+		//$site = $this->Konfigurasi_model->listing();
 		$data = array(
-			'title' => 'Dashboard | ' . $site['nama_website'],
-			'favicon' => $site['favicon'],
-			'site' => $site,
+			'title' => 'Dashboard | '
 		);
-		$this->load->view('spbefix/_partialadmin/header');
+		$this->load->view('spbefix/_partialadmin/header', $data);
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/dashboard');
 		$this->load->view('spbefix/_partialadmin/footer');

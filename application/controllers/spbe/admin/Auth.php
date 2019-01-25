@@ -7,6 +7,7 @@ class Auth extends MY_Controller
 		parent::__construct();
 		$this->load->database();
 		$this->load->model('spbe/Auth_model');
+		$this->load->model('user_model');
 	}
 
 	public function check_account()
@@ -70,11 +71,9 @@ class Auth extends MY_Controller
 	}
 	public function login()
 	{
-		$site = $this->user_model->listing();
-		$data = array(
-			'title' => 'Login | ' . $site[''],
-			'site' => $site
-		);
+		// $site = $this->user_model->listing();
+
+		$data = $this->db->get('user')->result();
         //melakukan pengalihan halaman sesuai dengan levelnya
 		if ($this->session->userdata('role') == "Admin") {
 			redirect('sistem/admin/dashboard');
@@ -99,15 +98,44 @@ class Auth extends MY_Controller
 					redirect('member/home');
 				}
 			} else {
-				$this->template->load('', 'login/login', $data);
+				$this->load->view('login/login', $data);
 			}
 		} else {
-			$this->template->load('', 'login/login', $data);
+			$this->load->view('login/login', $data);
 		}
 	}
 	public function logout()
 	{
 		$this->session->sess_destroy();
 		redirect('login');
+	}
+
+	public function check_register()
+	{
+		// $site = $this->Konfigurasi_model->listing();
+		// $data = array(
+		// 	'title' => 'Register | ' . $site['nama_website'],
+		// 	'favicon' => $site['favicon'],
+		// 	'site' => $site
+		// );
+		$this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[50]');
+		$this->form_validation->set_rules('email', 'Email', 'trim|required|min_length[5]|max_length[50]');
+		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[5]|max_length[20]');
+		if ($this->form_validation->run() == false) {
+			// $this->template->load('authentication/layout/template', 'authentication/register', $data);
+		} else {
+			$this->Auth_model->reg();
+			$this->session->set_flashdata('alert', '<p class="box-msg">
+          <div class="info-box alert-success">
+          <div class="info-box-icon">
+          <i class="fa fa-check-circle"></i>
+          </div>
+          <div class="info-box-content" style="font-size:14">
+          <b style="font-size: 20px">SUKSES</b><br>Pendaftaran berhasil, silakan login.</div>
+          </div>
+          </p>
+        ');
+			redirect('login/login', 'refresh');
+		}
 	}
 }

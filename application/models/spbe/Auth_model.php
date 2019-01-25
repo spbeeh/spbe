@@ -45,4 +45,18 @@ class Auth_model extends CI_Model
 		$this->db->where('user.id_user', $id);
 		$this->db->update('user', $date);
 	}
+
+	public function reg()
+	{
+		date_default_timezone_set('ASIA/JAKARTA');
+		$data = array(
+			'username' => $this->input->post('username'),
+			'email' => $this->input->post('email'),
+			'id_role' => '2',
+			'created_on' => date('Y-m-d H:i:s'),
+			'password' => get_hash($this->input->post('password'))
+		);
+		return $this->db->insert('tbl_user', $data);
+	}
+
 }
