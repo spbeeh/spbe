@@ -8,42 +8,31 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Evaluasi SPBE</title>
+	<title><?php echo ucfirst($this->uri->segment(1)) . " - " . ucfirst($this->uri->segment(2)) ?>
+	</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
-	<link href="<?php echo site_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
+
 	<!-- Bootstrap -->
-	<link href="<?php echo base_url('aaa/vendors/bootstrap/dist/css/bootstrap.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('gentelella/vendors/bootstrap/dist/css/bootstrap.min.1.css') ?>" rel="stylesheet">
 	<!-- Font Awesome -->
-	<link href="<?php echo base_url('aaa/vendors/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('gentelella/vendors/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet">
 	<!-- NProgress -->
-	<link href="<?php echo base_url('aaa/vendors/nprogress/nprogress.css') ?>" rel="stylesheet">
-	<!-- iCheck -->
-	<link href="<?php echo base_url('aaa/vendors/iCheck/skins/flat/green.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('gentelella/vendors/nprogress/nprogress.css') ?>" rel="stylesheet">
 
-	<!-- bootstrap-progressbar -->
-	<link href="<?php echo base_url('aaa/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css') ?>"
-		rel="stylesheet">
-	<!-- JQVMap -->
-	<link href="<?php echo base_url('aaa/vendors/jqvmap/dist/jqvmap.min.css') ?>" rel="stylesheet" />
-	<!-- bootstrap-daterangepicker -->
-	<link href="<?php echo base_url('aaa/vendors/bootstrap-daterangepicker/daterangepicker.css') ?>" rel="stylesheet">
-
-	<!-- Custom Theme Style -->
-	<link href="<?php echo base_url('aaa/build/css/custom2.min.css') ?>" rel="stylesheet">
-
-	<script src="<?php echo base_url('aaa/vendors/jquery/dist/jquery.min.js') ?>"></script>
-
+	<link href="<?php echo base_url('gentelella/build/css/custom.min.1.css') ?>" rel="stylesheet">
 </head>
 
 <body>
+
 	<!-- Navigation -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="<?php echo site_url('Asett/index.html') ?>">Evaluasi SPBE</a>
+			<a class="navbar-brand" href="<?php echo site_url('menu/dashboard') ?>">SPBE</a>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -51,52 +40,52 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link" href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner
-							SPBE</a>
+						<a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner SPBE</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo site_url('Asett/contact.html') ?>">Laporan</a>
+						<a class="nav-link" href="<?php echo site_url('menu/laporan') ?>">Laporan</a>
+					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
+	<!-- Page Content -->
 	<div class="container">
 
 		<!-- Page Heading/Breadcrumbs -->
-		<h1 class="mt-4 mb-3">Evaluasi SPBE</h1>
+		<h1 class="mt-4 mb-3">Jenis Form Evaluasi
+			<small></small>
+		</h1>
 
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
-				<a href="<?php echo site_url('Asett/index.html') ?>">Beranda</a>
+				<a href="<?php echo base_url('menu/dashboard') ?>">Beranda</a>
 			</li>
-			<li class="breadcrumb-item active">Isi Kuisioner SPBE</li>
+			<li class="breadcrumb-item active">Jenis Evaluasi Form</li>
 		</ol>
-		<div class="page-title">
-			<div class="title_left">
-				<h3>NOMENKLATUR (INSTANSI PUSAT/PEMERINTAH DAERAH) : </h3>
-			</div>
-		</div>
-		<div class="clearfix"></div>
 
+		<!-- Image Header -->
+		<!-- <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt=""> -->
+
+		<!-- Marketing Icons Section -->
 		<div class="row">
-
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="x_panel">
 					<div class="x_content">
 						<!-- Smart Wizard -->
-
+						<p>This is a basic form wizard example that inherits the colors from the selected scheme.</p>
 						<div id="wizard" class="form_wizard wizard_horizontal">
 							<ul class="wizard_steps">
 								<li>
 									<a href="#step-1">
 										<span class="step_no">1</span>
-										<span class="step_descr">
-											Step 1<br />
+										<span class="step_descr">Step 1
+											<br>
 											<small>Layanan publik</small>
 										</span>
 									</a>
@@ -105,7 +94,7 @@
 									<a href="#step-2">
 										<span class="step_no">2</span>
 										<span class="step_descr">
-											Step 2<br />
+											Step 2<br>
 											<small>Administrasi dan Manajemen Umum</small>
 										</span>
 									</a>
@@ -151,20 +140,19 @@
 							<div id="step-1">
 								<form class="form-horizontal form-label-left">
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi Tenaga
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi Tenaga
 											Kerja</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
-												<label class="ada1 btn btn-default" data-toggle-class="btn-primary"
+												<!-- copy --><label class="ada1 btn btn-default"
+													data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="tidak1 btn btn-primary" data-toggle-class="btn-primary"
+												<!-- copy --><label class="tidak1 btn btn-primary"
+													data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -179,20 +167,18 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Pendidikan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
-												<label class="ada2 btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada2 btn btn-default ada2" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="tidak2 btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak2 btn btn-primary tidak2"
+													data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -207,580 +193,516 @@
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Kepemudaan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
 												<label class="btn btn-default ada3" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
 												<label class="btn btn-primary tidak3" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a2" type="text" name="apps" class="form-control a3 "
+											<input id="a3" type="text" name="apps" class="form-control a3 "
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a2" type="text" name="apps" class="form-control a3 "
+											<input id="a3" type="text" name="apps" class="form-control a3 "
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Kesehatan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="btn btn-default ada4" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="btn btn-primary tidak4" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a4" type="text" name="apps" class="form-control a4"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a2" type="text" name="apps" class="form-control a2 "
+											<input id="a4" type="text" name="apps" class="form-control a4"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
-											Kemiskinan dan Penyandangan Masalah Kemiskinan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
+											Kemiskinan dan Penyandangan Masalah
+											Kemiskinan</label>
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada5 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak5 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a5" type="text" name="apps" class="form-control a5"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a2" type="text" name="apps" class="form-control a2 "
+											<input id="a5" type="text" name="apps" class="form-control a5"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Koperasi dan UMKM</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada6 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak6 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a6" type="text" name="apps" class="form-control a6"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a2" type="text" name="apps" class="form-control a2 "
+											<input id="a6" type="text" name="apps" class="form-control a6"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Perindag</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class=" ada7 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak7 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a7" type="text" name="apps" class="form-control a7"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a7" type="text" name="apps" class="form-control a7"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											EXIM</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada8 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak8 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a8" type="text" name="apps" class="form-control a8"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a8" type="text" name="apps" class="form-control a8"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Pertanian</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada9 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak9 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a9" type="text" name="apps" class="form-control a9"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a9" type="text" name="apps" class="form-control a9"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Peternakan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada10 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak10 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a10" type="text" name="apps" class="form-control a10"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a10" type="text" name="apps" class="form-control a10"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Perkebunan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada11 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak11 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a11" type="text" name="apps" class="form-control a11"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a11" type="text" name="apps" class="form-control a11"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Perikanan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada12 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak12 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a12" type="text" name="apps" class="form-control a12"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a12" type="text" name="apps" class="form-control a12"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Kehutanan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada13 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak13 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a13" type="text" name="apps" class="form-control a13"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a13" type="text" name="apps" class="form-control a13"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi Tanam
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi Tanam
 											Pangan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada14 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak14 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a14" type="text" name="apps" class="form-control a14"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a14" type="text" name="apps" class="form-control a14"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi Wisata
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi Wisata
 											dan Budaya</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada15 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak15 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a15" type="text" name="apps" class="form-control a15"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a15" type="text" name="apps" class="form-control a15"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Investasi</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada16 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak16 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a16" type="text" name="apps" class="form-control a16"
 												placeholder="Nama Aplikasi">
 										</div>
+										<div class="col-md-3 col-sm-2 col-xs-12">
+											<input id="a16" type="text" name="apps" class="form-control a16"
+												placeholder="Unit Kerja">
+										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Pembangunan Daerah</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada17 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak17 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a17" type="text" name="apps" class="form-control a17"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a17" type="text" name="apps" class="form-control a17"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Pendayagunaan Air</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada18 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak18 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a18" type="text" name="apps" class="form-control a18"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a18" type="text" name="apps" class="form-control a18"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
-											Infrastruktur Teknologi Informasi dan Komunikasi</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
+											Infrastruktur Teknologi Informasi
+											dan Komunikasi</label>
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada19 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak19 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a19" type="text" name="apps" class="form-control a19"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a19" type="text" name="apps" class="form-control a19"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi Tata
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi Tata
 											Ruang, Jalan dan Jembatan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada20 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak20 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a20" type="text" name="apps" class="form-control a20"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a20" type="text" name="apps" class="form-control a20"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi Energi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi Energi
 											Terbarukan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada21 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak21 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a21" type="text" name="apps" class="form-control a21"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a21" type="text" name="apps" class="form-control a21"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Lingkungan Hidup</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada22 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak22 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a22" type="text" name="apps" class="form-control a22"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a22" type="text" name="apps" class="form-control a22"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 								</form>
 							</div>
-
 							<div id="step-2">
 								<form class="form-horizontal form-label-left">
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi Aset
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi Aset
 											dan Barang Daerah</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
 												<label class="ada23 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
 												<label class="tidak23 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -793,22 +715,18 @@
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Keuangan (E-Budgeting)</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
 												<label class="ada24 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
 												<label class="tidak24 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -821,194 +739,166 @@
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Pengadaan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada25 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak25 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a25" type="text" name="apps" class="form-control a25"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a25" type="text" name="apps" class="form-control a25"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Pembangunan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada26 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak26 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a26" type="text" name="apps" class="form-control a26"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a26" type="text" name="apps" class="form-control a26"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Legislasi</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada27 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak27  btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a27" type="text" name="apps" class="form-control a27"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a27" type="text" name="apps" class="form-control a27"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Kearsipan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada28 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak28 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a28" type="text" name="apps" class="form-control a28"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a28" type="text" name="apps" class="form-control a28"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Kebencanaan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada29 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak29 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a29" type="text" name="apps" class="form-control a29"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a29" type="text" name="apps" class="form-control a29"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Pengawasan</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div id="gender" class="btn-group" data-toggle="buttons">
-												<label class="btn btn-default" data-toggle-class="btn-primary"
+												<label class="ada30 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
-												<label class="btn btn-primary" data-toggle-class="btn-primary"
+												<label class="tidak30 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input type="text" name="apps" class="form-control"
+											<input id="a30" type="text" name="apps" class="form-control a30"
 												placeholder="Nama Aplikasi">
 										</div>
 										<div class="col-md-3 col-sm-2 col-xs-12">
-											<input id="a1" type="text" name="apps" class="form-control a1"
+											<input id="a30" type="text" name="apps" class="form-control a30"
 												placeholder="Unit Kerja">
 										</div>
 									</div>
 								</form>
 							</div>
-
 							<div id="step-3">
 								<form class="form-horizontal form-label-left">
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Jaringan dan Dokumentasi Hukum</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
 												<label class="ada31 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
 												<label class="tidak31 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -1021,22 +911,18 @@
 												placeholder="Unit Kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Legislatif</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
 												<label class="ada32 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
 												<label class="tidak32 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -1051,24 +937,20 @@
 									</div>
 								</form>
 							</div>
-
 							<div id="step-4">
 								<form class="form-horizontal form-label-left">
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Keuangan (E-Budgeting)</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
 												<label class="ada33 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
 												<label class="tidak33 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -1081,22 +963,18 @@
 												placeholder="Unit kerja">
 										</div>
 									</div>
-
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">BPKAD,
-											Bappeda, Biro
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">BPKAD, Bappeda, Biro
 											AP, Biro Organisasi dan Dispenda</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
 												<label class="ada34 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
 												<label class="tidak34 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -1111,24 +989,20 @@
 									</div>
 								</form>
 							</div>
-
 							<div id="step-5">
 								<form class="form-horizontal form-label-left">
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Keuangan (E-Budgeting)</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
 												<label class="ada35 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
 												<label class="tidak35 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -1143,24 +1017,20 @@
 									</div>
 								</form>
 							</div>
-
 							<div id="step-6">
 								<form class="form-horizontal form-label-left">
 									<div class="form-group">
-										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem
-											Informasi
+										<label class="control-label col-md-3 col-sm-3 col-xs-12">Sistem Informasi
 											Kepegawaian</label>
-										<div class="col-md-3 col-sm-3 col-xs-12">
+										<div class="col-md-2 col-sm-3 col-xs-12">
 											<div class="btn-group" data-toggle="buttons">
 												<label class="ada36 btn btn-default" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="male">
-													&nbsp; Ada &nbsp;
+													<input type="radio" name="gender" value="male"> &nbsp;Ada&nbsp;
 												</label>
 												<label class="tidak36 btn btn-primary" data-toggle-class="btn-primary"
 													data-toggle-passive-class="btn-default">
-													<input type="radio" name="gender" value="female">
-													Tidak Ada
+													<input type="radio" name="gender" value="female"> Tidak Ada
 												</label>
 											</div>
 										</div>
@@ -1179,447 +1049,32 @@
 							<!-- Tabs -->
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.row -->
 
-					<!-- Footer -->
-					<footer class="py-5 bg-dark">
-						<div class="container">
-							<p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-						</div>
-						<!-- /.container -->
-					</footer>
+	</div>
+	<!-- /.container -->
 
-					<!-- Bootstrap core JavaScript -->
-					<script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js') ?>"></script>
-					<script src="<?php echo site_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>">
-					</script>
+	<!-- Footer -->
+	<!-- <footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; 2019</p>
+		</div> -->
+	<!-- /.container -->
+	<!-- </footer> -->
 
-					<!-- jQuery -->
-					<script src="<?php echo base_url('aaa/vendors/bootstrap/dist/js/bootstrap.min.js') ?>">
-					</script>
-					<!-- FastClick -->
-					<script src="<?php echo base_url('aaa/vendors/fastclick/lib/fastclick.js') ?>">
-					</script>
-					<!-- NProgress -->
-					<script src="<?php echo base_url('aaa/vendors/nprogress/nprogress.js') ?>"></script>
-					<!-- Chart.js -->
-					<script src="<?php echo base_url('aaa/vendors/Chart.js/dist/Chart.min.js') ?>">
-					</script>
-					<!-- gauge.js -->
-					<script src="<?php echo base_url('aaa/vendors/gauge.js/dist/gauge.min.js') ?>">
-					</script>
-					<!-- bootstrap-progressbar -->
-					<script
-						src="<?php echo base_url('aaa/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js') ?>">
-					</script>
-					<!-- iCheck -->
-					<script src="<?php echo base_url('aaa/vendors/iCheck/icheck.min.js') ?>"></script>
-					<!-- Skycons -->
-					<script src="<?php echo base_url('aaa/vendors/skycons/skycons.js') ?>"></script>
-					<!-- Flot -->
-					<script src="<?php echo base_url('aaa/vendors/Flot/jquery.flot.js') ?>"></script>
-					<script src="<?php echo base_url('aaa/vendors/Flot/jquery.flot.pie.js') ?>">
-					</script>
-					<script src="<?php echo base_url('aaa/vendors/Flot/jquery.flot.time.js') ?>">
-					</script>
-					<script src="<?php echo base_url('aaa/vendors/Flot/jquery.flot.stack.js') ?>">
-					</script>
-					<script src="<?php echo base_url('aaa/vendors/Flot/jquery.flot.resize.js') ?>">
-					</script>
-					<!-- Flot plugins -->
-					<script src="<?php echo base_url('aaa/vendors/flot.orderbars/js/jquery.flot.orderBars.js') ?>">
-					</script>
-					<script src="<?php echo base_url('aaa/vendors/flot-spline/js/jquery.flot.spline.min.js') ?>">
-					</script>
-					<script src="<?php echo base_url('aaa/vendors/flot.curvedlines/curvedLines.js') ?>">
-					</script>
-					<!-- DateJS -->
-					<script src="<?php echo base_url('aaa/vendors/DateJS/build/date.js') ?>"></script>
-					<!-- JQVMap -->
-					<script src="<?php echo base_url('aaa/vendors/jqvmap/dist/jquery.vmap.js') ?>">
-					</script>
-					<script src="<?php echo base_url('aaa/vendors/jqvmap/dist/maps/jquery.vmap.world.js') ?>">
-					</script>
-					<script src="<?php echo base_url('aaa/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') ?>">
-					</script>
-					<!-- bootstrap-daterangepicker -->
-					<script src="<?php echo base_url('aaa/vendors/moment/min/moment.min.js') ?>">
-					</script>
-					<script src="<?php echo base_url('aaa/vendors/bootstrap-daterangepicker/daterangepicker.js') ?>">
-					</script>
+	<!-- Bootstrap core JavaScript -->
+	<script src="<?php echo base_url('Asett/vendor/jquery/jquery.min.js') ?>"></script>
+	<script src="<?php echo base_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-					<!-- Custom Theme Scripts -->
-					<script src="<?php echo base_url('aaa/build/js/custom.min.js') ?>"></script>
+	<script src="<?php echo base_url('gentelella/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js') ?>"></script>
+	<script src="<?php echo base_url('gentelella/vendors/fastclick/lib/fastclick.js') ?>"></script>
+	<script src="<?php echo base_url('gentelella/vendors/bootstrap/dist/js/bootstrap.min.js') ?>"></script>
+	<script src="<?php echo base_url('gentelella/vendors/jquery/dist/jquery.min.js') ?>"></script>
+	<script src="<?php echo base_url('gentelella/vendors/nprogress/nprogress.js') ?>"></script>
 
-					<script src="<?php echo base_url('aaa/vendors/jquery/dist/jquery.min.js') ?>">
-					</script>
-					<!-- Bootstrap -->
-					<script src="<?php echo base_url('aaa/vendors/bootstrap/dist/js/bootstrap.min.js') ?>">
-					</script>
-					<!-- FastClick -->
-					<script src="<?php echo base_url('aaa/vendors/fastclick/lib/fastclick.js') ?>">
-					</script>
-					<!-- NProgress -->
-					<script src="<?php echo base_url('aaa/vendors/nprogress/nprogress.js') ?>"></script>
-					<!-- jQuery Smart Wizard -->
-					<script src="<?php echo base_url('aaa/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js') ?>">
-					</script>
-					<!-- Custom Theme Scripts -->
-					<script src="<?php echo base_url('aaa/build/js/custom.min.js') ?>"></script>
-
-					<script>
-						$(document).ready(function() {
-							$(".a1").click(function() {
-								//alert("yeah");
-								$('.a1').show();
-							});
-							$(".tidak1").click(function() {
-								$('.a1').hide();
-							});
-						});
-						$(document).ready(function() {
-							$(".ada2").click(function() {
-								//alert("yeah");
-								$('.a2').show();
-							});
-							$(".tidak2").click(function() {
-								$('.a2').hide();
-							});
-						});
-						$(document).ready(function() {
-							$(".ada3").click(function() {
-								//alert("yeah");
-								$('.a3').show();
-							});
-							$(".tidak3").click(function() {
-								$('.a3').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada4").click(function() {
-								//alert("yeah");
-								$('.a4').show();
-							});
-							$(".tidak4").click(function() {
-								$('.a4').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada5").click(function() {
-								//alert("yeah");
-								$('.a5').show();
-							});
-							$(".tidak5").click(function() {
-								$('.a5').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada6").click(function() {
-								//alert("yeah");
-								$('.a6').show();
-							});
-							$(".tidak6").click(function() {
-								$('.a6').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada7").click(function() {
-								//alert("yeah");
-								$('.a7').show();
-							});
-							$(".tidak7").click(function() {
-								$('.a7').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada8").click(function() {
-								//alert("yeah");
-								$('.a8').show();
-							});
-							$(".tidak8").click(function() {
-								$('.a8').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada9").click(function() {
-								//alert("yeah");
-								$('.a9').show();
-							});
-							$(".tidak9").click(function() {
-								$('.a9').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada10").click(function() {
-								//alert("yeah");
-								$('.a10').show();
-							});
-							$(".tidak10").click(function() {
-								$('.a10').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada11").click(function() {
-								//alert("yeah");
-								$('.a11').show();
-							});
-							$(".tidak11").click(function() {
-								$('.a11').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada12").click(function() {
-								//alert("yeah");
-								$('.a12').show();
-							});
-							$(".tidak12").click(function() {
-								$('.a12').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada13").click(function() {
-								//alert("yeah");
-								$('.a13').show();
-							});
-							$(".tidak13").click(function() {
-								$('.a13').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada14").click(function() {
-								//alert("yeah");
-								$('.a14').show();
-							});
-							$(".tidak14").click(function() {
-								$('.a14').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada15").click(function() {
-								//alert("yeah");
-								$('.a15').show();
-							});
-							$(".tidak15").click(function() {
-								$('.a15').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada16").click(function() {
-								//alert("yeah");
-								$('.a16').show();
-							});
-							$(".tidak16").click(function() {
-								$('.a16').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada17").click(function() {
-								//alert("yeah");
-								$('.a17').show();
-							});
-							$(".tidak17").click(function() {
-								$('.a17').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada18").click(function() {
-								//alert("yeah");
-								$('.a18').show();
-							});
-							$(".tidak18").click(function() {
-								$('.a18').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada19").click(function() {
-								//alert("yeah");
-								$('.a19').show();
-							});
-							$(".tidak19").click(function() {
-								$('.a19').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada20").click(function() {
-								//alert("yeah");
-								$('.a20').show();
-							});
-							$(".tidak20").click(function() {
-								$('.a20').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada21").click(function() {
-								//alert("yeah");
-								$('.a21').show();
-							});
-							$(".tidak21").click(function() {
-								$('.a21').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada22").click(function() {
-								//alert("yeah");
-								$('.a22').show();
-							});
-							$(".tidak22").click(function() {
-								$('.a22').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada23").click(function() {
-								//alert("yeah");
-								$('.a23').show();
-							});
-							$(".tidak23").click(function() {
-								$('.a23').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada24").click(function() {
-								//alert("yeah");
-								$('.a24').show();
-							});
-							$(".tidak24").click(function() {
-								$('.a24').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada25").click(function() {
-								//alert("yeah");
-								$('.a25').show();
-							});
-							$(".tidak25").click(function() {
-								$('.a25').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada26").click(function() {
-								//alert("yeah");
-								$('.a26').show();
-							});
-							$(".tidak26").click(function() {
-								$('.a26').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada27").click(function() {
-								//alert("yeah");
-								$('.a27').show();
-							});
-							$(".tidak27").click(function() {
-								$('.a27').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada28").click(function() {
-								//alert("yeah");
-								$('.a28').show();
-							});
-							$(".tidak28").click(function() {
-								$('.a28').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada29").click(function() {
-								//alert("yeah");
-								$('.a29').show();
-							});
-							$(".tidak29").click(function() {
-								$('.a29').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada30").click(function() {
-								//alert("yeah");
-								$('.a30').show();
-							});
-							$(".tidak30").click(function() {
-								$('.a30').hide();
-							});
-						});
-
-						$(document).ready(function() {
-							$(".ada31").click(function() {
-								//alert("yeah");
-								$('.a31').show();
-							});
-							$(".tidak31").click(function() {
-								$('.a31').hide();
-							});
-						});
-						$(document).ready(function() {
-							$(".ada32").click(function() {
-								//alert("yeah");
-								$('.a32').show();
-							});
-							$(".tidak32").click(function() {
-								$('.a32').hide();
-							});
-						});
-						$(document).ready(function() {
-							$(".ada33").click(function() {
-								//alert("yeah");
-								$('.a33').show();
-							});
-							$(".tidak33").click(function() {
-								$('.a33').hide();
-							});
-						});
-						$(document).ready(function() {
-							$(".ada34").click(function() {
-								//alert("yeah");
-								$('.a34').show();
-							});
-							$(".tidak34").click(function() {
-								$('.a34').hide();
-							});
-						});
-						$(document).ready(function() {
-							$(".ada35").click(function() {
-								//alert("yeah");
-								$('.a35').show();
-							});
-							$(".tidak35").click(function() {
-								$('.a35').hide();
-							});
-						});
-						$(document).ready(function() {
-							$(".ada36").click(function() {
-								//alert("yeah");
-								$('.a36').show();
-							});
-							$(".tidak36").click(function() {
-								$('.a36').hide();
-							});
-						});
-					</script>
 </body>
 
 </html>

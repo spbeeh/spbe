@@ -13,17 +13,17 @@
 	</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
-	<link href="<?php echo site_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
 </head>
 
 <body>
 	<!-- Navigation -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">Beranda</a>
+			<a class="navbar-brand" href="<?php echo site_url('menu/dashboard') ?>">SPBE</a>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -31,13 +31,13 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner SPBE</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/laporan') ?>">Laporan</a>
 					</li>
 				</ul>
@@ -54,7 +54,7 @@
 			<li class="breadcrumb-item">
 				<a href="menu/dashboard">Beranda</a>
 			</li>
-			<li class="breadcrumb-item active">Beranda</li>
+			<li class="breadcrumb-item active">Isi Kuisoner SPBE</li>
 		</ol>
 		<!-- Intro Content -->
 		<div class="row">
@@ -97,12 +97,7 @@
 	</div>
 	<!-- /.container -->
 	<!-- Footer -->
-	<footer class="py-5 bg-dark">
-		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-		</div>
-		<!-- /.container -->
-	</footer>
+
 	<!-- Bootstrap core JavaScript -->
 	<script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js') ?> "></script>
 	<script src="<?php echo site_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?> "></script>

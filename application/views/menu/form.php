@@ -8,13 +8,14 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>Modern Business - Start Bootstrap Template</title>
+	<title><?php echo ucfirst($this->uri->segment(1)) . " - " . ucfirst($this->uri->segment(2)) ?>
+	</title>
 
 	<!-- Bootstrap core CSS -->
-	<link href="<?php echo site_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('Asett/vendor/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 
 	<!-- Custom styles for this template -->
-	<link href="<?php echo site_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
+	<link href="<?php echo base_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
 
 </head>
 
@@ -23,7 +24,7 @@
 	<!-- Navigation -->
 	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">Evaluasi SPBE</a>
+			<a class="navbar-brand" href="<?php echo site_url('menu/dashboard') ?>">SPBE</a>
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -31,14 +32,15 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/form') ?>">Isi Kuisioner SPBE</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/laporan') ?>">Laporan</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -48,19 +50,19 @@
 	<div class="container">
 
 		<!-- Page Heading/Breadcrumbs -->
-		<h1 class="mt-4 mb-3">Evaluasi SPBE
-			<small>
+		<h1 class="mt-4 mb-3">Jenis Form Evaluasi
+			<small></small>
 		</h1>
 
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
-				/ <a href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
+				<a href="<?php echo base_url('menu/dashboard') ?>">Beranda</a>
 			</li>
-			<li class="breadcrumb-item active">Isi Kuisioner SPBE</li>
+			<li class="breadcrumb-item active">Jenis Evaluasi Form</li>
 		</ol>
 
 		<!-- Image Header -->
-
+		<!-- <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt=""> -->
 
 		<!-- Marketing Icons Section -->
 		<div class="row">
@@ -68,42 +70,55 @@
 				<div class="card h-100">
 					<h4 class="card-header">Pertanyaan Umum</h4>
 					<div class="card-body">
-						<p class="card-text">Berisikan Pertanyaan Umum seputar Aplikasi dengan Jawaban Uraian tentang
-							Aplikasi</p>
+						<p class="card-text">evaluasi umum</p>
 					</div>
 					<div class="card-footer">
-						<a href="<?php echo site_url('menu/hal1') ?>" class="btn btn-primary">Pertanyaan Umum</a>
+						<a href="<?php echo site_url('menu/hal1') ?>" class="btn btn-primary">Buka</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 mb-4">
 				<div class="card h-100">
-					<h4 class="card-header">Kuisioner Daftar
-						Aplikasi </h4>
+					<h4 class="card-header">Evaluasi Aplikasi</h4>
 					<div class="card-body">
-						<p class="card-text">Berisi Kuisioner Aplikasi yang digunakan pada instansi tersebut</p>
+						<p class="card-text">Evaluasi aplikasi yang dipergunakan untuk melaksanakan manajemen internal
+							birokrasi dan pelayanan publik
+						</p>
 					</div>
 					<div class="card-footer">
-						<a href="<?php echo site_url('menu/hal2') ?>" class="btn btn-primary">Kuisioner</a>
+						<a href="<?php echo site_url('menu/hal2') ?>" class="btn btn-primary">Buka</a>
 					</div>
 				</div>
 			</div>
-			<!-- /.row -->
-
+			<!-- <div class="col-lg-4 mb-4">
+				<div class="card h-100">
+					<h4 class="card-header">Card Title</h4>
+					<div class="card-body">
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse
+							necessitatibus neque.</p>
+					</div>
+					<div class="card-footer">
+						<a href="#" class="btn btn-primary">Learn More</a>
+					</div>
+				</div>
+			</div> -->
 		</div>
-		<!-- /.container -->
+		<!-- /.row -->
 
-		<!-- Footer -->
-		<footer class="py-5 bg-dark">
-			<div class="container">
-				<p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-			</div>
-			<!-- /.container -->
-		</footer>
+	</div>
+	<!-- /.container -->
 
-		<!-- Bootstrap core JavaScript -->
-		<script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js') ?>"></script>
-		<script src="<?php echo site_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+	<!-- Footer -->
+	<!-- <footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; 2019</p>
+		</div> -->
+	<!-- /.container -->
+	<!-- </footer> -->
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="<?php echo base_url('Asett/vendor/jquery/jquery.min.js') ?>"></script>
+	<script src="<?php echo base_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
 </body>
 

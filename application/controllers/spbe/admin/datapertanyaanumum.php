@@ -12,8 +12,6 @@ class datapertanyaanumum extends CI_Controller
 		$this->load->model('spbe/jenisumum_model');
 		$this->load->model('spbe/pertanyaanumum_model');
 		$this->load->library('form_validation');
-
-
 	}
 
 	public function index()

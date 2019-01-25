@@ -10,6 +10,7 @@ class Userkontroller extends CI_Controller
 	//Do your magic here
 		$this->load->model('spbe/user_model');
 		$this->load->library('form_validation');
+
 	}
 	public function index()
 	{
