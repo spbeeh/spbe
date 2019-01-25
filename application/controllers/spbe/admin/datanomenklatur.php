@@ -35,8 +35,23 @@ class Datanomenklatur extends CI_Controller
 		$this->pertanyaan_model->save('aplikasi_fungsional', $_POST);
 
 		redirect('sistem/admin/datanomenklatur', 'refresh');
-
 	}
+
+	public function edit($id = null)
+    {
+        if (!isset($id)) redirect('sistem/admin/datanomenklatur');
+		if ($this->pertanyaan_model->update()) {
+            redirect(site_url('sistem/admin/datanomenklatur'));
+        }
+    }
+
+	public function delete($id=null)
+    {
+        if (!isset($id)) show_404();
+        if ($this->pertanyaan_model->delete('aplikasi_fungsional', $id)) {
+            redirect(site_url('sistem/admin/datanomenklatur'));
+        }
+    }
 
 }
 
