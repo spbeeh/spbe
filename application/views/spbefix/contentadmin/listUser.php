@@ -24,7 +24,7 @@
 					<div class="row">
 						<div class="x_content">
 							<button type="button" class="btn btn-primary" data-toggle="modal"
-								data-target="#tambahuser"><span class="fa fa-plus"></span>Tambah
+								data-target="#tambahuser"><span class="fa fa-plus"></span> Tambah
 								User</button>
 							<div id="tambahuser" class="modal fade" role="dialog">
 								<div class="modal-dialog">
@@ -140,6 +140,7 @@
 											<th>Nama Operator</th>
 											<th>NIP operator</th>
 											<th>Jabatan operator</th>
+											<th>Role</th>
 											<th>Action</th>
 										</tr>
 									</thead>
@@ -154,6 +155,7 @@
 											<td><?php echo $value->nama_operator ?></td>
 											<td><?php echo $value->nip_op ?></td>
 											<td><?php echo $value->jabatan_op ?></td>
+											<td></td>
 											<td>
 												<table>
 													<tr>
