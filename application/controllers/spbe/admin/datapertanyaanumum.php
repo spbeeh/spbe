@@ -36,6 +36,23 @@ class datapertanyaanumum extends CI_Controller
 
 	}
 
+	public function edit($id = null)
+    {
+        if (!isset($id)) redirect('sistem/admin/datapertanyaanumum');
+		if ($this->pertanyaanumum_model->update()) {
+            redirect(site_url('sistem/admin/datapertanyaanumum'));
+        }
+    }
+
+	public function delete($id=null)
+    {
+        if (!isset($id)) show_404();
+        if ($this->pertanyaanumum_model->delete('pertanyaan_umum', $id)) {
+            redirect(site_url('sistem/admin/datapertanyaanumum'));
+        }
+    }
+
+
 }
 
 /* End of file Controllername.php */

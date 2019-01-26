@@ -22,6 +22,20 @@ class pertanyaanumum_model extends CI_Model
 		$this->db->insert($table, $data);
 
 	}
+
+	public function update()
+	{
+		$post = $this->input->post();
+		$this->id_pertanyaan_umum = $post["id_pertanyaan_umum"];
+		$this->id_jenis_pertanyaan_umum = $post["id_jenis_pertanyaan_umum"];
+		$this->pertanyaan_umum = $post["pertanyaan_umum"];
+		return $this->db->update('pertanyaan_umum', $this, array('id_pertanyaan_umum' => $post['id_pertanyaan_umum']));
+	}
+
+	public function delete($table, $id)
+	{
+		return $this->db->delete($table, array("id_pertanyaan_umum" => $id));
+	}
 }
 
 /* End of file pertanyaanumum.php */

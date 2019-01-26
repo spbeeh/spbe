@@ -27,8 +27,7 @@
 				<div class="row">
 					<div class="x_content">
 						<button type="button" class="btn btn-primary" data-toggle="modal"
-							data-target="#tambahuser"><span class="fa fa-plus"></span>&nbsp;&nbsp;Tambah
-							data</button>
+							data-target="#tambahuser"><span class="fa fa-plus"></span>&nbsp;&nbsp;Tambah data</button>
 						<div id="tambahuser" class="modal fade" role="dialog">
 							<div class="modal-dialog">
 								<div class="modal-content">
@@ -42,7 +41,7 @@
 											enctype="multipart/form-data" novalidate>
 											<div class="item form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nama
-													Instansi Pusat <span class="required">*</span></label>
+													Instansi Pusat <span class="required"></span></label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
 													<input id="name" class="form-control col-md-7 col-xs-12"
 														data-validate-length-range="6" data-validate-words="2"
@@ -92,7 +91,7 @@
 									<th>No</th>
 									<th>Aplikasi Fungsional</th>
 									<th>Jenis</th>
-									<th>action</th>
+									<th colspan="2" >action</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -140,7 +139,7 @@
 																				class="control-label col-md-3 col-sm-3 col-xs-12"
 																				for="name">Nama
 																				Instansi Pusat <span
-																					class="required">*</span></label>
+																					class="required"></span></label>
 																			<div class="col-md-6 col-sm-6 col-xs-12">
 																				<input id="name"
 																					class="form-control col-md-7 col-xs-12"
@@ -181,13 +180,14 @@
 																		</div>
 																		<div class="ln_solid"></div>
 																		<div class="form-group">
-																			<div
-																				class="col-md-6 col-md-offset-3 col-xs-12">
+																		<div class="form-group">
+																			<div class="col-md-6 col-md-offset-3 col-xs-12">
+																				<button type="submit" class="btn btn-primary"
+																					data-dismiss="modal">Cancel</button>
 																				<button id="send" type="submit"
 																					class="btn btn-success">Submit</button>
-																				<button class="btn btn-primary"
-																					data-dismiss="modal">Cancel</button>
 																			</div>
+																		</div>
 																		</div>
 																	</form>
 																</div>
