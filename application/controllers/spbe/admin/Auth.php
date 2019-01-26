@@ -92,16 +92,16 @@ class Auth extends MY_Controller
 				$data = $this->Auth_model->check_account($this->input->post('nip_pj'), $this->input->post('password'));
 
                 //jika bernilai TRUE maka alihkan halaman sesuai dengan level nya
-				if ($data->role == 'Admin') {
+				if ($data->role == 'Admin' && hash_verified($this->input->post('password'), $query->password)) {
 					redirect('sistem/admin/dashboard');
 				} elseif ($data->role == 'User') {
 					redirect('member/home');
 				}
 			} else {
-				$this->load->view('login/login', $data);
+				$this->load->view('', $data);
 			}
 		} else {
-			$this->load->view('login/login', $data);
+			$this->load->view('', $data);
 		}
 	}
 	public function logout()

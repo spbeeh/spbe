@@ -23,18 +23,19 @@ class Auth_model extends CI_Model
         //cari username lalu lakukan validasi
 		$this->db->where('nip_pj', $username);
 		$query = $this->db->get($this->table)->row();
-
+		
         //jika bernilai 1 maka user tidak ditemukan
 		if (!$query) {
-			return 1;
+			return redirect('login', 'refresh');
 		}
+		
         //jika bernilai 2 maka user tidak aktif
-		// if (isset($this->db->where('nip_pj', $username))) {
-		// 	return 2;
-		// }
+		if ($this->db->where('nip_pj', $username) == null) {
+			return redirect('login', 'refresh');
+		}
         //jika bernilai 3 maka password salah
 		if (!hash_verified($this->input->post('password'), $query->password)) {
-			return 3;
+			return redirect('login', 'refresh');
 		}
 
 		return $query;
