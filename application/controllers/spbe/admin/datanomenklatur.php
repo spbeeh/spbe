@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Datanomenklatur extends CI_Controller
+class Datanomenklatur extends MY_Controller
 {
 
 	public function __construct()
@@ -12,6 +12,11 @@ class Datanomenklatur extends CI_Controller
 		$this->load->model('spbe/jenis_model');
 		$this->load->model('spbe/pertanyaan_model');
 		$this->load->library('form_validation');
+
+		$this->check_login();
+		if ($this->session->userdata('role') != "Admin") {
+			redirect('login', 'refresh');
+		}
 
 
 	}

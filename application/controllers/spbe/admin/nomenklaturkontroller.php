@@ -1,12 +1,18 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Nomenklaturkontroller extends CI_Controller {
+class Nomenklaturkontroller extends MY_Controller
+{
 
 	public function __construct()
 	{
 		parent::__construct();
 		//Do your magic here
+
+		$this->check_login();
+		if ($this->session->userdata('role') != "Admin") {
+			redirect('login', 'refresh');
+		}
 	}
 
 	public function index()
@@ -15,11 +21,11 @@ class Nomenklaturkontroller extends CI_Controller {
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/Nomenklatur');
 		$this->load->view('spbefix/_partialadmin/footer');
-		$this->load->view('spbefix/_partialadmin/js');	
+		$this->load->view('spbefix/_partialadmin/js');
 	}
 
 	public function listnomenklatur()
-	{	
+	{
 	}
 
 }

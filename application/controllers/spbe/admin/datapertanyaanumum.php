@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class datapertanyaanumum extends CI_Controller
+class datapertanyaanumum extends MY_Controller
 {
 
 	public function __construct()
@@ -12,6 +12,11 @@ class datapertanyaanumum extends CI_Controller
 		$this->load->model('spbe/jenisumum_model');
 		$this->load->model('spbe/pertanyaanumum_model');
 		$this->load->library('form_validation');
+
+		$this->check_login();
+		if ($this->session->userdata('role') != "Admin") {
+			redirect('login', 'refresh');
+		}
 	}
 
 	public function index()
@@ -37,20 +42,20 @@ class datapertanyaanumum extends CI_Controller
 	}
 
 	public function edit($id = null)
-    {
-        if (!isset($id)) redirect('sistem/admin/datapertanyaanumum');
+	{
+		if (!isset($id)) redirect('sistem/admin/datapertanyaanumum');
 		if ($this->pertanyaanumum_model->update()) {
-            redirect(site_url('sistem/admin/datapertanyaanumum'));
-        }
-    }
+			redirect(site_url('sistem/admin/datapertanyaanumum'));
+		}
+	}
 
-	public function delete($id=null)
-    {
-        if (!isset($id)) show_404();
-        if ($this->pertanyaanumum_model->delete('pertanyaan_umum', $id)) {
-            redirect(site_url('sistem/admin/datapertanyaanumum'));
-        }
-    }
+	public function delete($id = null)
+	{
+		if (!isset($id)) show_404();
+		if ($this->pertanyaanumum_model->delete('pertanyaan_umum', $id)) {
+			redirect(site_url('sistem/admin/datapertanyaanumum'));
+		}
+	}
 
 
 }

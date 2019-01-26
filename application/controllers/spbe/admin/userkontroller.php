@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Userkontroller extends CI_Controller
+class Userkontroller extends MY_Controller
 {
 
 	public function __construct()
@@ -10,6 +10,11 @@ class Userkontroller extends CI_Controller
 	//Do your magic here
 		$this->load->model('spbe/user_model');
 		$this->load->library('form_validation');
+
+		$this->check_login();
+		if ($this->session->userdata('role') != "Admin") {
+			redirect('login', 'refresh');
+		}
 
 	}
 	public function index()

@@ -2,13 +2,15 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pertanyaan extends CI_Controller
+class Pertanyaan extends MY_Controller
 {
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->model('pertanyaan_model');
 		$this->load->library('form_validation');
+
+
 	}
 
 	public function index()

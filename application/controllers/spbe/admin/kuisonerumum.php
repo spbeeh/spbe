@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class kuisonerumum extends CI_Controller
+class kuisonerumum extends MY_Controller
 {
 
 
@@ -9,6 +9,11 @@ class kuisonerumum extends CI_Controller
 	{
 		parent::__construct();
 		//Do your magic here
+
+		$this->check_login();
+		if ($this->session->userdata('role') != "Admin") {
+			redirect('login', 'refresh');
+		}
 	}
 
 	public function index()
