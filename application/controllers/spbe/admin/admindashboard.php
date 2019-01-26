@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class admindashboard extends My_Controller    /// ini extend di ambil dari folder core karena bikin sendiri untuk cek login
+class admindashboard extends MY_Controller    /// ini extend di ambil dari folder core karena bikin sendiri untuk cek login
 {
 
 	public function __construct()

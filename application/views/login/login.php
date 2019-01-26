@@ -39,8 +39,8 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" method="Post" action="<?php echo base_url('login/auth') ?>"
-					roel="login">
+				<form class="login100-form validate-form" method="Post" action="<?php echo base_url('login') ?>"
+					role="login">
 					<span class="login100-form-title p-b-43">
 						SPBE
 					</span>
@@ -61,7 +61,6 @@
 						<button type="submit" class="login100-form-btn" name="submit" value="login">
 						</button>
 					</div>
-
 					<div class="text-center p-t-46 p-b-20">
 						<span class="txt2">
 							<!-- or sign up using -->
@@ -73,6 +72,7 @@
 					style="background-image: url('<?php echo base_url('Asset/images/teratai.jpg') ?>');">
 
 				</div>
+
 			</div>
 		</div>
 	</div>
@@ -92,6 +92,10 @@
 	<script src="<?php echo base_url('Asset/vendor/countdowntime/countdowntime.js') ?>"></script>
 	<!--===============================================================================================-->
 	<script src="<?php echo base_url('Asset/js/main.js') ?>"></script>
+	<script>
+	$('#myalert').delay('slow').slideDown('slow').delay(4100).slideUp(600);
+	</script>
+
 </body>
 
 </html>

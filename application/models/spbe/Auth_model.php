@@ -18,7 +18,7 @@ class Auth_model extends CI_Model
 		return $query->row_array();
 	}
 
-	public function check_account($username)
+	public function check_account($username, $password)
 	{
         //cari username lalu lakukan validasi
 		$this->db->where('nip_pj', $username);
@@ -26,17 +26,17 @@ class Auth_model extends CI_Model
 		
         //jika bernilai 1 maka user tidak ditemukan
 		if (!$query) {
-			return redirect('login', 'refresh');
+			return redirect('', 'refresh');
 		}
 		
         //jika bernilai 2 maka user tidak aktif
 		if ($this->db->where('nip_pj', $username) == null) {
-			return redirect('login', 'refresh');
+			return redirect('', 'refresh');
 		}
         //jika bernilai 3 maka password salah
-		if (!hash_verified($this->input->post('password'), $query->password)) {
-			return redirect('login', 'refresh');
-		}
+		// if (!hash_verified($this->input->post('password'), $query->password)) {
+		// 	return redirect('login', 'refresh');
+		// }
 
 		return $query;
 	}

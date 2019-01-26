@@ -90,12 +90,12 @@ $route['menu/laporan'] = 'laporan/index';
 
 
 //Fix VVVVV
-$route['login'] = 'spbe/login/login/index';
+// $route['login'] = 'spbe/login/login/index';
 
 ///// ini authnya
-$route['login/auth'] = 'spbe/admin/Auth/login';
-$route['login/check_register'] = 'spbe/admin/Auth/check_register';
+$route['login'] = 'spbe/admin/Auth/login';
 $route['logout'] = 'spbe/admin/Auth/logout';
+$route['login/check_register'] = 'spbe/admin/Auth/check_register';
 
 $route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';

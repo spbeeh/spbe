@@ -27,7 +27,6 @@ class user_model extends CI_Model
 		# code...
 		$this->db->where('id_user', $id);
 		$this->db->delete('user');
-
 	}
 }
 
