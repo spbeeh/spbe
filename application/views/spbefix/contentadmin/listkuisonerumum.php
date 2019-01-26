@@ -18,20 +18,19 @@
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="x_panel">
 					<div class="x_title">
-						<h2>Data user<small></small></h2>
+						<h2>List Data Pertanyaan Umum<small></small></h2>
 						<div class="clearfix"></div>
 					</div>
 					<div class="x_content">
 						<button type="button" class="btn btn-primary" data-toggle="modal"
 							data-target="#tambahuser"><span class="fa fa-plus"></span>
-							Tambah
-							data</button>
+							&nbsp;Tambah data</button>
 						<div id="tambahuser" class="modal fade" role="dialog">
 							<div class="modal-dialog">
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title">Tambah user</h4>
+										<h4 class="modal-title">Tambah data</h4>
 									</div>
 									<div class="modal-body">
 										<form class="form-horizontal form-label-left"
@@ -55,7 +54,7 @@
 											</div>
 											<div class="item form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
-													Pertanyaan Umum <span class="required">*</span></label>
+													Pertanyaan Umum <span class="required"></span></label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
 													<textarea id="name" class="form-control col-md-7 col-xs-12"
 														data-validate-length-range="6" data-validate-words="2"
@@ -88,7 +87,7 @@
 									<th>No</th>
 									<th>Pertanyaan umum</th>
 									<th>Khusus</th>
-									<th>action</th>
+									<th colspan ="2" >action</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -101,11 +100,101 @@
 										<?php echo $value->pertanyaan_umum ?>
 									</td>
 									<td>
-										<?php echo $value->id_jenis_pertanyaan_umum ?>
+									<?php foreach ($jenisumum as $ke1y) :
+										if ($value->id_jenis_pertanyaan_umum == $ke1y->id_jenis_pertanyaan_umum) {
+										echo $ke1y->jenis_pertanyaan_umum;
+									}
+								endforeach; ?>
 									</td>
-									<td><button type="">edit</button>
-										<button type="">delete</button>
-									</td>
+									<td>
+										<table>
+											<tr>
+												<td><button type="button" class="btn btn-primary" data-toggle="modal"
+																	data-target="#editdata<?php echo $key + 1 ?>">Edit</button>
+													<div id="editdata<?php echo $key + 1 ?>" class="modal fade"
+														role="dialog">
+														<div class="modal-dialog">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close"
+																		data-dismiss="modal">&times;</button>
+																	<h4 class="modal-title">Edit Data</h4>
+																</div>
+																<div class="modal-body">
+																	<form class="form-horizontal form-label-left"
+																		method="post"
+																		action="<?php echo base_url('sistem/admin/datapertanyaanumum/edit/' . $value->id_pertanyaan_umum) ?>"
+																		enctype="multipart/form-data" novalidate>
+																		<div>
+																			<input type="hidden"
+																				name="id_pertanyaan_umum"
+																				value="<?php echo $value->id_pertanyaan_umum ?>">
+																		</div>
+																		<div class="form-group">
+																			<label
+																				class="control-label col-md-3 col-sm-3 col-xs-12">Select
+																				Custom</label>
+																			<div class="col-sm-7 col-xs-12">
+																				<select
+																					class="select2_single form-control"
+																					name="id_jenis_pertanyaan_umum" tabindex="-1">
+																					<?php foreach ($jenisumum as $key) : ?>
+																					<?php if ($value->id_jenis_pertanyaan_umum == $key->id_jenis_pertanyaan_umum) { ?>
+																					<option
+																						value="<?php echo $key->id_jenis_pertanyaan_umum ?>"
+																						selected>
+																						<?php echo $key->jenis_pertanyaan_umum ?>
+																					</option>
+																					<?php	
+																			} else { ?>
+																					<option
+																						value="<?php echo $key->id_jenis_pertanyaan_umum ?>">
+																						<?php echo $key->jenis_pertanyaan_umum ?>
+																					</option>
+																					<?php	
+																			} ?>
+																					<?php endforeach; ?>
+																				</select>
+																			</div>
+																		</div>
+																		<div class="item form-group">
+																			<label
+																				class="control-label col-md-3 col-sm-3 col-xs-12"
+																				for="name">Pertanyaan Umum  <span
+																					class="required"></span></label>
+																			<div class="col-md-6 col-sm-6 col-xs-12">
+																				<textarea id="name" class="form-control col-md-7 col-xs-12"
+																					data-validate-length-range="6" data-validate-words="2"
+																					name="pertanyaan_umum" required="required"
+																					type="text" ><?php echo $value->pertanyaan_umum ?></textarea>
+																			</div>
+																		</div>
+																		
+																		<div class="ln_solid"></div>
+																		<div class="form-group">
+																		<div class="form-group">
+																			<div class="col-md-6 col-md-offset-3 col-xs-12">
+																				<button type="submit" class="btn btn-primary"
+																					data-dismiss="modal">Cancel</button>
+																				<button id="send" type="submit"
+																					class="btn btn-success">Submit</button>
+																			</div>
+																		</div>
+																		</div>
+																	</form>
+																</div>
+															</div>
+														</div>
+													</div>
+												</td>
+												<td>
+													<form method="post"
+														action="<?php echo base_url('sistem/admin/datapertanyaanumum/delete/' . $value->id_pertanyaan_umum) ?>">
+														<button type="submit" class="btn btn-danger">Delete</button>
+													</form>
+												</td>
+											</tr>
+										</table>
 								</tr>
 								<?php endforeach; ?>
 							</tbody>
