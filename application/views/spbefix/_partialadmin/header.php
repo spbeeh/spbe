@@ -68,20 +68,6 @@
 
 	<script src="<?php echo site_url('gentelella/vendors/jquery/dist/jquery.min.js') ?>"></script>
 
-	<!-- Datatables -->
-	<link href="<?php echo site_url('gentelella/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') ?>"
-		rel="stylesheet">
-	<link href="<?php echo site_url('gentelella/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css') ?>"
-		rel="stylesheet">
-	<link
-		href="<?php echo site_url('gentelella/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css') ?>"
-		rel="stylesheet">
-	<link
-		href="<?php echo site_url('gentelella/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css') ?>"
-		rel="stylesheet">
-	<link href="<?php echo site_url('gentelella/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css') ?>"
-		rel="stylesheet">
-
 	<!-- Custom styling plus plugins -->
 	<link href="<?php echo site_url('gentelella/build/css/custom.min.css') ?>" rel="stylesheet">
 

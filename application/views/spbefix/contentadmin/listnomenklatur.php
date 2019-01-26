@@ -91,7 +91,7 @@
 									<th>No</th>
 									<th>Aplikasi Fungsional</th>
 									<th>Jenis</th>
-									<th colspan="2" >action</th>
+									<th colspan="2">action</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -180,14 +180,16 @@
 																		</div>
 																		<div class="ln_solid"></div>
 																		<div class="form-group">
-																		<div class="form-group">
-																			<div class="col-md-6 col-md-offset-3 col-xs-12">
-																				<button type="submit" class="btn btn-primary"
-																					data-dismiss="modal">Cancel</button>
-																				<button id="send" type="submit"
-																					class="btn btn-success">Submit</button>
+																			<div class="form-group">
+																				<div
+																					class="col-md-6 col-md-offset-3 col-xs-12">
+																					<button type="submit"
+																						class="btn btn-primary"
+																						data-dismiss="modal">Cancel</button>
+																					<button id="send" type="submit"
+																						class="btn btn-success">Submit</button>
+																				</div>
 																			</div>
-																		</div>
 																		</div>
 																	</form>
 																</div>

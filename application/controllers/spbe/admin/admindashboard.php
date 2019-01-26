@@ -12,7 +12,7 @@ class admindashboard extends My_Controller    /// ini extend di ambil dari folde
 		$this->load->model('spbe/pertanyaanumum_model');
 		$this->load->library('form_validation');
 		$this->check_login();
-		if ($this->session->userdata('role') != "Admin") {
+		if ($this->session->userdata('role') != "User") {
 			redirect('login', 'refresh');
 		}
 	// 	$this->check_login();

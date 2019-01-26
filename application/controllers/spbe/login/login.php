@@ -13,13 +13,6 @@ class login extends CI_Controller
 		$this->load->view('login/login');
 	}
 
-	// function index()
-	// {
-	// 	$this->load->view('v_login');
-	// }
-
-
-
 }
 
 /* End of file login.php */

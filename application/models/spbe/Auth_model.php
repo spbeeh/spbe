@@ -29,7 +29,7 @@ class Auth_model extends CI_Model
 			return 1;
 		}
         //jika bernilai 2 maka user tidak aktif
-		// if ($query->active == 0) {
+		// if (isset($this->db->where('nip_pj', $username))) {
 		// 	return 2;
 		// }
         //jika bernilai 3 maka password salah
@@ -40,10 +40,10 @@ class Auth_model extends CI_Model
 		return $query;
 	}
 
-	public function logout($date, $id)
+	public function logout($id)
 	{
 		$this->db->where('user.id_user', $id);
-		$this->db->update('user', $date);
+		// $this->db->update('user');
 	}
 
 	public function reg()
