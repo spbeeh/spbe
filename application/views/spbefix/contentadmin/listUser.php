@@ -162,8 +162,14 @@
 																for="email">
 																Role <span class="required">*</span></label>
 															<div class="col-md-6 col-sm-6 col-xs-12">
-																<input type="text" id="" name="role" required="required"
-																	class="form-control col-md-7 col-xs-12">
+																<!-- <input type="text" id="" name="role" required="required"
+																	class="form-control col-md-7 col-xs-12"> -->
+																<select class="select2_single form-control" name="role"
+																	tabindex="-1">
+																	<option></option>
+																	<option value="Admin"> Admin </option>
+																	<option value="User"> User </option>
+																</select>
 															</div>
 														</div>
 													</td>
@@ -183,8 +189,8 @@
 													</td>
 												</tr>
 											</table>
-
-											<!-- <form class="form-horizontal form-label-left"
+										</div>
+										<!-- <form class="form-horizontal form-label-left"
 												action="<?php echo base_url('sistem/admin/datauser/store') ?>"
 												method="post" enctype="multipart/form-data" novalidate>
 												<div class="item form-group">
@@ -266,65 +272,68 @@
 													</div>
 												</div>
 											</form> -->
-										</div>
-										<!-- <div class="modal-footer">
+									</div>
+									<!-- <div class="modal-footer">
 										<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
 									</div> -->
-									</div>
 								</div>
 							</div>
-							<div class="clearfix"></div>
+						</div>
+						<div class="clearfix"></div>
+						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+							cellspacing="0" width="100%">
 							<table id="datatable-responsive"
 								class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
 								width="100%">
-								<table id="datatable-responsive"
-									class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
-									width="100%">
-									<thead>
-										<tr>
-											<th>No</th>
-											<th>Nama Instansi Pusat</th>
-											<th>Penanggung Jawab</th>
-											<th>NIP penanggung jawab</th>
-											<th>Jabatan penanggung jawab</th>
-											<th>Nama Operator</th>
-											<th>NIP operator</th>
-											<th>Jabatan operator</th>
-											<th>Role</th>
-											<th>Action</th>
-										</tr>
-									</thead>
-									<tbody>
-										<?php foreach ($user as $key => $value) : ?>
-										<tr>
-											<td><?php echo ($key + 1) ?></td>
-											<td><?php echo $value->namainstansipusat ?></td>
-											<td><?php echo $value->nama_penanggungjawab ?></td>
-											<td><?php echo $value->nip_pj ?></td>
-											<td><?php echo $value->jabatan_pj ?></td>
-											<td><?php echo $value->nama_operator ?></td>
-											<td><?php echo $value->nip_op ?></td>
-											<td><?php echo $value->jabatan_op ?></td>
-											<td></td>
-											<td>
-												<table>
-													<tr>
-														<td><button type="">preview</button></td>
-														<td><button type="">edit</button></td>
-														<td></td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-										<?php endforeach; ?>
-									</tbody>
-								</table>
-						</div>
+								<thead>
+									<tr>
+										<th>No</th>
+										<th>Nama Instansi Pusat</th>
+										<th>Penanggung Jawab</th>
+										<th>NIP penanggung jawab</th>
+										<th>Jabatan penanggung jawab</th>
+										<th>Nama Operator</th>
+										<th>NIP operator</th>
+										<th>Jabatan operator</th>
+										<th>Role</th>
+										<th>pas</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php foreach ($user as $key => $value) : ?>
+									<tr>
+										<td><?php echo ($key + 1) ?></td>
+										<td><?php echo $value->namainstansipusat ?></td>
+										<td><?php echo $value->nama_penanggungjawab ?></td>
+										<td><?php echo $value->nip_pj ?></td>
+										<td><?php echo $value->jabatan_pj ?></td>
+										<td><?php echo $value->nama_operator ?></td>
+										<td><?php echo $value->nip_op ?></td>
+										<td><?php echo $value->jabatan_op ?></td>
+										<td><?php echo $value->role ?></td>
+										<td><?php echo $value->password ?></td>
+										<td>
+											<table>
+												<tr>
+													<td><button type=""><a
+																href="<?php echo base_url('sistem/admin/datauser/report') ?>">preview</a></button>
+													</td>
+													<td><button type="">edit</button></td>
+													<td></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<?php endforeach; ?>
+								</tbody>
+							</table>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 </div> <!-- /page content -->
 
 </div>

@@ -39,6 +39,16 @@ class Userkontroller extends CI_Controller
 	}
 
 
+	public function report()
+	{
+		$this->load->view('spbefix/_partialadmin/header');
+		$this->load->view('spbefix/_partialadmin/navigasi');
+		$this->load->view('spbefix/contentadmin/priview');
+		$this->load->view('spbefix/_partialadmin/footer');
+		$this->load->view('spbefix/_partialadmin/js');
+	}
+
+
 	public function destroy($id = null)
 	{
 		if (!isset($id)) {

@@ -1,5 +1,5 @@
 <!-- footer content -->
-<footer>
+<footer class="footer_fixed">
 	<div class="pull-right ">
 		Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
 	</div>

@@ -13,7 +13,8 @@
 					<!-- menu profile quick info -->
 					<div class="profile clearfix">
 						<div class="profile_pic">
-							<img src="images/img.jpg" alt="..." class="img-circle profile_img">
+							<img src="<?php echo base_url('gentelella/images/img.jpg') ?>" alt="..."
+								class="img-circle profile_img">
 						</div>
 						<div class="profile_info">
 							<span>Welcome,</span>
@@ -29,11 +30,12 @@
 						<div class="menu_section">
 							<h3>General</h3>
 							<ul class="nav side-menu">
-								<li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
-									<ul class="nav child_menu">
+								<li><a href="<?php echo base_url('sistem/admin/dashboard') ?>"><i
+											class="fa fa-home"></i> Dashboard <span class=""></span></a>
+									<!-- <ul class="nav child_menu">
 										<li><a href="<?php echo base_url('sistem/admin/dashboard') ?>">Dashboard</a>
 										</li>
-									</ul>
+									</ul> -->
 								</li>
 								<li><a><i class="fa fa-edit"></i> Evaluasi <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
