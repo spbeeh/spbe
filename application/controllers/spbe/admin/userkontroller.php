@@ -44,11 +44,13 @@ class Userkontroller extends MY_Controller
 	}
 
 
-	public function report()
+	public function report($id = null)
 	{
+		$data['user'] = $this->user_model->getUser($id);
+		
 		$this->load->view('spbefix/_partialadmin/header');
 		$this->load->view('spbefix/_partialadmin/navigasi');
-		$this->load->view('spbefix/contentadmin/priview');
+		$this->load->view('spbefix/contentadmin/priview', $data);
 		$this->load->view('spbefix/_partialadmin/footer');
 		$this->load->view('spbefix/_partialadmin/js');
 	}

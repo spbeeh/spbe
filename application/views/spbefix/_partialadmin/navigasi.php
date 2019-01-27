@@ -66,7 +66,7 @@
 					<!-- /sidebar menu -->
 
 					<!-- /menu footer buttons -->
-					<div class="sidebar-footer hidden-small">
+					<!-- <div class="sidebar-footer hidden-small">
 						<a data-toggle="tooltip" data-placement="top" title="">
 							<i class="fa fa-bars"></i>
 						</a>
@@ -79,7 +79,7 @@
 						<a data-toggle="tooltip" data-placement="top" title="">
 							<i class="fa fa-bars"></i>
 						</a>
-					</div>
+					</div> -->
 					<!-- /menu footer buttons -->
 				</div>
 			</div>

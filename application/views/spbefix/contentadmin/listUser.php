@@ -191,7 +191,7 @@
 											</table>
 										</div>
 										<!-- <form class="form-horizontal form-label-left"
-												action="<?php echo base_url('sistem/admin/datauser/store') ?>"
+												action="<?php //echo base_url('sistem/admin/datauser/store') ?>"
 												method="post" enctype="multipart/form-data" novalidate>
 												<div class="item form-group">
 													<label class="control-label col-md-3 col-sm-3 col-xs-12"
@@ -280,11 +280,8 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+						<table id="datatable" class="table table-striped table-bordered nowrap"
 							cellspacing="0" width="100%">
-							<table id="datatable-responsive"
-								class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
-								width="100%">
 								<thead>
 									<tr>
 										<th>No</th>
@@ -296,7 +293,7 @@
 										<th>NIP operator</th>
 										<th>Jabatan operator</th>
 										<th>Role</th>
-										<th>pas</th>
+										<!-- <th>pas</th> -->
 										<th>Action</th>
 									</tr>
 								</thead>
@@ -312,14 +309,22 @@
 										<td><?php echo $value->nip_op ?></td>
 										<td><?php echo $value->jabatan_op ?></td>
 										<td><?php echo $value->role ?></td>
-										<td><?php echo $value->password ?></td>
+										<!-- <td><?php //echo $value->password ?></td> -->
 										<td>
 											<table>
 												<tr>
-													<td><button type=""><a
-																href="<?php echo base_url('sistem/admin/datauser/report') ?>">preview</a></button>
+													<td>
+															<form method="post"
+															action="<?php echo base_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
+															<button type="submit" class="btn btn-primary">Preview</button>
+														</form>
 													</td>
-													<td><button type="">edit</button></td>
+													<td>
+														<form method="post"
+															action="<?php echo base_url('sistem/admin/datauser/destroy/' . $value->id_user) ?>">
+															<button type="submit" class="btn btn-danger">Delete</button>
+														</form>
+													</td>
 													<td></td>
 												</tr>
 											</table>

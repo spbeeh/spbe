@@ -18,7 +18,7 @@
         			</div>
         		</div> -->
         		<!-- <div class="clearfix"></div> -->
-        		<div class="row">
+        		<div class="row" id="printableArea">
         			<div class="col-md-12">
         				<div class="x_panel">
         					<div class="x_title">
@@ -74,6 +74,7 @@
         							<div class="row invoice-info">
         								<div class="pull-left col-sm-4 invoice-col">
         									<table>
+											<?php foreach ($user as $key => $value) : ?>
         										<tr>
         											<td>
         												<h3><strong>Nama Instansi Pusat</strong></h3>
@@ -81,7 +82,7 @@
         											<td>&nbsp;</td>
         											<td>&nbsp;</td>
         											<td>
-        												<h3>:</h3>
+        												<h3>: <?php echo $value->namainstansipusat ?></h3>
         											</td>
         											<td>
         											</td>
@@ -96,7 +97,7 @@
         											<td>&nbsp;</td>
         											<td>&nbsp;</td>
         											<td>
-        												<h2>:</h2>
+        												<h2>: <?php echo $value->nama_penanggungjawab ?></h2>
         											</td>
         											<td>
         											</td>
@@ -108,7 +109,7 @@
         											<td>&nbsp;</td>
         											<td>&nbsp;</td>
         											<td>
-        												<h2>:</h2>
+        												<h2>: <?php echo $value->nip_pj ?></h2>
         											</td>
         											<td>
         											</td>
@@ -120,7 +121,7 @@
         											<td>&nbsp;</td>
         											<td>&nbsp;</td>
         											<td>
-        												<h2>:</h2>
+        												<h2>: <?php echo $value->jabatan_pj ?></h2>
         											</td>
         											<td>
         											</td>
@@ -155,7 +156,7 @@
         											<td>&nbsp;</td>
         											<td>&nbsp;</td>
         											<td>
-        												<h2>:</h2>
+        												<h2>: <?php echo $value->nama_operator ?></h2>
         											</td>
         											<td>
         											</td>
@@ -167,7 +168,7 @@
         											<td>&nbsp;</td>
         											<td>&nbsp;</td>
         											<td>
-        												<h2>:</h2>
+        												<h2>:<?php echo $value->nip_op ?></h2>
         											</td>
         											<td>
         											</td>
@@ -179,7 +180,7 @@
         											<td>&nbsp;</td>
         											<td>&nbsp;</td>
         											<td>
-        												<h2>:</h2>
+        												<h2>:<?php echo $value->jabatan_op ?></h2>
         											</td>
         											<td>
         											</td>
@@ -267,13 +268,14 @@
         									</div>
         								</div> -->
         							<!-- /.col -->
-        					</div>
+							</div>
+							<?php endforeach; ?>
         					<!-- /.row -->
 
         					<!-- this row will not appear when printing -->
         					<div class="row no-print">
         						<div class="col-xs-12">
-        							<button class="btn btn-default" onclick="window.print();"><i
+        							<button onclick="printDiv('printableArea')" class="btn btn-default btn-print"><i
         									class="fa fa-print"></i> Print</button>
         							<button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i>
         								Submit Payment</button>
@@ -284,7 +286,8 @@
         					</section>
         				</div>
         			</div>
-        		</div>
+				</div>
+				
         	</div>
         </div>
         </div>

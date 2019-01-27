@@ -192,11 +192,11 @@
 										</table>
 									</td>
 									<td>
-													<form method="post"
-														action="<?php echo base_url('sistem/admin/datapertanyaanumum/delete/' . $value->id_pertanyaan_umum) ?>">
-														<button type="submit" class="btn btn-danger">Delete</button>
-													</form>
-												</td>
+										<form method="post"
+											action="<?php echo base_url('sistem/admin/datapertanyaanumum/delete/' . $value->id_pertanyaan_umum) ?>">
+											<button type="submit" class="btn btn-danger">Delete</button>
+										</form>
+									</td>
 								</tr>
 								<?php endforeach; ?>
 							</tbody>
