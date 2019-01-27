@@ -80,25 +80,25 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
+						<table id="datatable" class="table table-striped table-bordered"
 							cellspacing="0" width="100%">
 							<thead>
 								<tr>
-									<th>No</th>
-									<th>Pertanyaan umum</th>
-									<th>Khusus</th>
+									<th rowspan = 2>No</th>
+									<th rowspan = 2>Pertanyaan umum</th>
+									<th rowspan = 2>Khusus</th>
 									<th colspan ="2" >action</th>
+								</tr>
+								<tr style="display:none">
+									<th></th>
+									<th></th>
 								</tr>
 							</thead>
 							<tbody>
 								<?php foreach ($pertanyaanumum as $key => $value) : ?>
 								<tr>
-									<td>
-										<?php echo ($key + 1) ?>
-									</td>
-									<td>
-										<?php echo $value->pertanyaan_umum ?>
-									</td>
+									<td><?php echo ($key + 1) ?></td>
+									<td><?php echo $value->pertanyaan_umum ?></td>
 									<td>
 									<?php foreach ($jenisumum as $ke1y) :
 										if ($value->id_jenis_pertanyaan_umum == $ke1y->id_jenis_pertanyaan_umum) {
@@ -187,14 +187,16 @@
 														</div>
 													</div>
 												</td>
-												<td>
+												
+											</tr>
+										</table>
+									</td>
+									<td>
 													<form method="post"
 														action="<?php echo base_url('sistem/admin/datapertanyaanumum/delete/' . $value->id_pertanyaan_umum) ?>">
 														<button type="submit" class="btn btn-danger">Delete</button>
 													</form>
 												</td>
-											</tr>
-										</table>
 								</tr>
 								<?php endforeach; ?>
 							</tbody>

@@ -113,7 +113,6 @@ $route['sistem/admin/datapertanyaanumum/store'] = 'spbe/admin/datapertanyaanumum
 $route['sistem/admin/datapertanyaanumum/delete/(:num)'] = 'spbe/admin/datapertanyaanumum/delete/$1';
 $route['sistem/admin/datapertanyaanumum/edit/(:num)'] = 'spbe/admin/datapertanyaanumum/edit/$1';
 
-
 $route['sistem/admin/datauser'] = 'spbe/admin/userkontroller/index';
 $route['sistem/admin/datauser/store'] = 'spbe/admin/userkontroller/store';
 $route['sistem/admin/datauser/destroy/(:num)'] = 'spbe/admin/userkontroller/destroy/$1';

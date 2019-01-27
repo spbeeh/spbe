@@ -84,14 +84,19 @@
 
 
 						<div class="clearfix"></div>
+						
 						<table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap"
 							cellspacing="0" width="100%">
 							<thead>
 								<tr>
-									<th>No</th>
-									<th>Aplikasi Fungsional</th>
-									<th>Jenis</th>
+									<th rowspan = 2>No</th>
+									<th rowspan = 2>Aplikasi Fungsional</th>
+									<th rowspan = 2>Jenis</th>
 									<th colspan="2">action</th>
+								</tr>
+								<tr style="display:none">
+									<th></th>
+									<th></th>
 								</tr>
 							</thead>
 							<tbody>
@@ -110,10 +115,7 @@
 									}
 									endforeach; ?>
 									</td>
-									<td>
-										<table>
-											<tr>
-												<td><button type="button" class="btn btn-primary" data-toggle="modal"
+									<td><button type="button" class="btn btn-primary" data-toggle="modal"
 														data-target="#editdata<?php echo $key + 1 ?>">Edit</button>
 													<div id="editdata<?php echo $key + 1 ?>" class="modal fade"
 														role="dialog">
@@ -199,16 +201,14 @@
 															</div>
 														</div>
 													</div>
-												</td>
-												<td>
+									</td>
+									
+									<td>
 													<form method="post"
 														action="<?php echo base_url('sistem/admin/datanomenklatur/delete/' . $value->id_aplikasi_fungsional) ?>">
 														<button type="submit" class="btn btn-danger">Delete</button>
 													</form>
 												</td>
-											</tr>
-										</table>
-									</td>
 								</tr>
 								<?php 
 						} ?>

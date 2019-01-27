@@ -13,7 +13,7 @@
 					<!-- menu profile quick info -->
 					<div class="profile clearfix">
 						<div class="profile_pic">
-							<img src="<?php echo base_url('gentelella/images/img.jpg') ?>" alt="..."
+							<img src="<?php echo base_url('gentelella/production/images/img.jpg') ?>" alt="..."
 								class="img-circle profile_img">
 						</div>
 						<div class="profile_info">
@@ -96,7 +96,7 @@
 							<li class="">
 								<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown"
 									aria-expanded="false">
-									<img src="images/img.jpg" alt="">John Doe
+									<img src="<?php echo site_url('gentelella/production/images/img.jpg') ?>" alt="">John Doe
 									<span class=" fa fa-angle-down"></span>
 								</a>
 								<ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -122,7 +122,7 @@
 								<ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
 									<li>
 										<a>
-											<span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+											<span class="image"><img src="<?php echo site_url('gentelella/production/images/img.jpg') ?>" alt="Profile Image" /></span>
 											<span>
 												<span>John Smith</span>
 												<span class="time">3 mins ago</span>
@@ -135,7 +135,7 @@
 									</li>
 									<li>
 										<a>
-											<span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+											<span class="image"><img src="<?php echo site_url('gentelella/production/images/img.jpg')?> " alt="Profile Image" /></span>
 											<span>
 												<span>John Smith</span>
 												<span class="time">3 mins ago</span>
@@ -148,7 +148,7 @@
 									</li>
 									<li>
 										<a>
-											<span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+											<span class="image"><img src="<?php echo site_url('gentelella/production/images/img.jpg') ?>" alt="Profile Image" /></span>
 											<span>
 												<span>John Smith</span>
 												<span class="time">3 mins ago</span>
@@ -161,7 +161,7 @@
 									</li>
 									<li>
 										<a>
-											<span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+											<span class="image"><img src="<?php echo site_url('gentelella/production/images/img.jpg') ?>" alt="Profile Image" /></span>
 											<span>
 												<span>John Smith</span>
 												<span class="time">3 mins ago</span>
