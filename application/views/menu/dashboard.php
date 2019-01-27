@@ -40,6 +40,9 @@
 					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/laporan') ?>">Laporan</a>
 					</li>
+					<li>
+						<a class="nav-link" href="<?php echo site_url('logout') ?>">Logout</a>
+					</li>
 				</ul>
 			</div>
 		</div>

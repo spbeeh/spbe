@@ -57,7 +57,7 @@ class Auth extends MY_Controller
 			redirect('sistem/admin/dashboard');
 		}
 		if ($this->session->userdata('role') == "User") {
-			redirect('member/home');
+			redirect('menu/dashboard');
 		}
         //proses login dan validasi nya
 		if ($this->input->post('submit')) {
@@ -72,7 +72,7 @@ class Auth extends MY_Controller
 				if ($data->role == 'Admin') {
 					redirect('sistem/admin/dashboard');
 				} elseif ($data->role == 'User') {
-					redirect('member/home');
+					redirect('menu/dashboard');
 				}
 			} else {
 				$this->load->view('login/login', $data);

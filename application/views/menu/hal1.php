@@ -317,31 +317,33 @@
 								</div>
 							</div>
 						</div>
-						<!-- /.row -->
-
 					</div>
-					<!-- /.container -->
+				</div>
+				<!-- /.row -->
+			</div>
+		</div>
+	</div>
+	<!-- /.container -->
 
-					<!-- Footer -->
-					<!-- <footer class="py-5 bg-dark">
+	<!-- Footer -->
+	<!-- <footer class="py-5 bg-dark">
 		<div class="container">
 			<p class="m-0 text-center text-white">Copyright &copy; 2019</p>
 		</div> -->
-					<!-- /.container -->
-					<!-- </footer> -->
+	<!-- /.container -->
+	<!-- </footer> -->
 
-					<!-- Bootstrap core JavaScript -->
-					<script src="<?php echo base_url('Asett/vendor/jquery/jquery.min.js') ?>"></script>
-					<script src="<?php echo base_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script src="<?php echo base_url('Asett/vendor/jquery/jquery.min.js') ?>"></script>
+	<script src="<?php echo base_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
 
-					<script
-						src="<?php echo base_url('gentelella/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js') ?>">
-					</script>
-					<script src="<?php echo base_url('gentelella/vendors/fastclick/lib/fastclick.js') ?>"></script>
-					<script src="<?php echo base_url('gentelella/vendors/bootstrap/dist/js/bootstrap.min.js') ?>">
-					</script>
-					<script src="<?php echo base_url('gentelella/vendors/jquery/dist/jquery.min.js') ?>"></script>
-					<script src="<?php echo base_url('gentelella/vendors/nprogress/nprogress.js') ?>"></script>
+	<script src="<?php echo base_url('gentelella/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js') ?>">
+	</script>
+	<script src="<?php echo base_url('gentelella/vendors/fastclick/lib/fastclick.js') ?>"></script>
+	<script src="<?php echo base_url('gentelella/vendors/bootstrap/dist/js/bootstrap.min.js') ?>">
+	</script>
+	<script src="<?php echo base_url('gentelella/vendors/jquery/dist/jquery.min.js') ?>"></script>
+	<script src="<?php echo base_url('gentelella/vendors/nprogress/nprogress.js') ?>"></script>
 
 </body>
 

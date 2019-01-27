@@ -82,11 +82,11 @@ $route['coba/tambah'] = 'tes/user/add';
 //Fix VVVV ====
 
 //frontend$route['menu/form'] = 'form/index';
-$route['menu/hal1'] = 'hal1/index';
-$route['menu/hal2'] = 'hal2/index';
-$route['menu/form'] = 'form/index';
-$route['menu/dashboard'] = 'tes/dashboard/index';
-$route['menu/laporan'] = 'laporan/index';
+$route['menu/hal1'] = 'spbe/user/hal1/index';
+$route['menu/hal2'] = 'spbe/user/hal2/index';
+$route['menu/form'] = 'spbe/user/form/index';
+$route['menu/dashboard'] = 'spbe/user/dashboard/index';
+$route['menu/laporan'] = 'spbe/user/laporan/index';
 
 
 //Fix VVVVV

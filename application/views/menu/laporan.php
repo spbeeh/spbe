@@ -177,9 +177,9 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
-		<!-- /.row -->
+	</div>
+	<!-- /.row -->
 
 	</div>
 	<!-- /.container -->
