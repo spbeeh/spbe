@@ -1,12 +1,16 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class dashboard extends CI_Controller
+class dashboard extends MY_Controller
 {
 
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('spbe/user_model');
+		$this->load->model('spbe/pertanyaanumum_model');
+		$this->load->library('form_validation');
+		$this->check_login();
 	//Do your magic here
 	}
 

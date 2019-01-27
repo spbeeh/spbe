@@ -9,6 +9,7 @@ class Nomenklaturkontroller extends MY_Controller
 		parent::__construct();
 		//Do your magic here
 
+		$this->load->model('spbe/pertanyaan_model');
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
 			redirect('login', 'refresh');
@@ -17,7 +18,8 @@ class Nomenklaturkontroller extends MY_Controller
 
 	public function index()
 	{
-		$this->load->view('spbefix/_partialadmin/header');
+		$data['data'] = $this->pertanyaan_model->getAll();
+		$this->load->view('spbefix/_partialadmin/header', $data);
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/Nomenklatur');
 		$this->load->view('spbefix/_partialadmin/footer');

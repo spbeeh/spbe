@@ -21,6 +21,7 @@ class admindashboard extends MY_Controller    /// ini extend di ambil dari folde
 
 	public function index()
 	{
+		$this->check_login();
 		//$site = $this->Konfigurasi_model->listing();
 		$this->load->view('spbefix/_partialadmin/header');
 		$this->load->view('spbefix/_partialadmin/navigasi');

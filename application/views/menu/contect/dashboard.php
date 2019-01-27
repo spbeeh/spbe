@@ -1,20 +1,21 @@
 <!-- Page Content -->
 <div class="container">
 	<!-- Page Heading/Breadcrumbs -->
-	<h1 class="mt-4 mb-3">Beranda
-		<small></small>
+	<h1 class="mt-4 mb-3">Selamat Datang <br>
+		<small><?php echo $this->session->userdata('nip_pj'); ?></small>
 	</h1>
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item">
-			<a href="menu/dashboard">Beranda</a>
+			<a href="<?php echo base_url('menu/dashboard') ?>">Beranda</a>
 		</li>
-		<li class="breadcrumb-item active">Isi Kuisoner SPBE</li>
+		<!-- <li class="breadcrumb-item active">Isi Kuisoner SPBE</li> -->
 	</ol>
 	<!-- Intro Content -->
 	<div class="row">
 		<div class="col-lg-6">
-			<img class="Image" src="<?php echo site_url('Asett/Image/logo.png') ?>" style="width:500px;height:500px;"
-				alt="">
+			<!-- <?php echo base_url('Asett/Image/logo.png') ?> -->
+			<img class="Image" src="" style="width:500px;height:500px;" alt="">
+			<h1>INI LOGO</h1>
 		</div>
 		<div class="col-lg-6" style="text-align:justify;">
 			<h2>EVALUASI SPBE</h2>

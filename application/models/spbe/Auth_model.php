@@ -26,12 +26,12 @@ class Auth_model extends CI_Model
 		
         //jika bernilai 1 maka user tidak ditemukan
 		if (!$query) {
-			return redirect('', 'refresh');
+			return redirect('login', 'refresh');
 		}
 		
         //jika bernilai 2 maka user tidak aktif
 		if ($this->db->where('nip_pj', $username) == null) {
-			return redirect('', 'refresh');
+			return redirect('login', 'refresh');
 		}
         //jika bernilai 3 maka password salah
 		// if (!hash_verified($this->input->post('password'), $query->password)) {
@@ -51,13 +51,13 @@ class Auth_model extends CI_Model
 	{
 		$data = array(
 			'nip_pj' => $this->input->post('nip_pj'),
-			'namainstansipusat ' => $this->input->post('namainstansipusat'),
-			'nama_penanggungjawab ' => $this->input->post('namainstansipusat'),
-			'jabatan_pj ' => $this->input->post('namainstansipusat'),
-			'nama_operator ' => $this->input->post('namainstansipusat'),
-			'nip_op ' => $this->input->post('namainstansipusat'),
-			'jabatan_op ' => $this->input->post('namainstansipusat'),
-			'role ' => $this->input->post('role'),
+			'namainstansipusat' => $this->input->post('namainstansipusat'),
+			'nama_penanggungjawab' => $this->input->post('nama_penanggungjawab'),
+			'jabatan_pj' => $this->input->post('namainstansipusat'),
+			'nama_operator' => $this->input->post('namainstansipusat'),
+			'nip_op' => $this->input->post('namainstansipusat'),
+			'jabatan_op' => $this->input->post('namainstansipusat'),
+			'role' => $this->input->post('role'),
 			'password' => get_hash($this->input->post('password'))
 		);
 		return $this->db->insert('user', $data);

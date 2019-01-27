@@ -37,8 +37,8 @@
 											action="<?php echo base_url('sistem/admin/datapertanyaanumum/store') ?>"
 											method="post" enctype="multipart/form-data" novalidate>
 											<div class="form-group">
-												<label class="control-label col-md-3 col-sm-3 col-xs-12">Select
-													Custom</label>
+												<label class="control-label col-md-3 col-sm-3 col-xs-12">pertanyaan
+													Khusus</label>
 												<div class="col-sm-7 col-xs-12">
 													<select name="id_jenis_pertanyaan_umum"
 														class="select2_single form-control" tabindex="-1">
@@ -80,14 +80,13 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<table id="datatable" class="table table-striped table-bordered"
-							cellspacing="0" width="100%">
+						<table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="50%">
 							<thead>
 								<tr>
-									<th rowspan = 2>No</th>
-									<th rowspan = 2>Pertanyaan umum</th>
-									<th rowspan = 2>Khusus</th>
-									<th colspan ="2" >action</th>
+									<th rowspan=2>No</th>
+									<th rowspan=2>Pertanyaan umum</th>
+									<th rowspan=2>Khusus</th>
+									<th colspan="2">action</th>
 								</tr>
 								<tr style="display:none">
 									<th></th>
@@ -100,17 +99,18 @@
 									<td><?php echo ($key + 1) ?></td>
 									<td><?php echo $value->pertanyaan_umum ?></td>
 									<td>
-									<?php foreach ($jenisumum as $ke1y) :
+										<?php foreach ($jenisumum as $ke1y) :
 										if ($value->id_jenis_pertanyaan_umum == $ke1y->id_jenis_pertanyaan_umum) {
 										echo $ke1y->jenis_pertanyaan_umum;
 									}
-								endforeach; ?>
+									endforeach; ?>
 									</td>
 									<td>
 										<table>
 											<tr>
 												<td><button type="button" class="btn btn-primary" data-toggle="modal"
-																	data-target="#editdata<?php echo $key + 1 ?>">Edit</button>
+														data-target="#editdata<?php echo $key + 1 ?>"><span><i
+																class="fa fa-edit"></i></span></button>
 													<div id="editdata<?php echo $key + 1 ?>" class="modal fade"
 														role="dialog">
 														<div class="modal-dialog">
@@ -132,12 +132,13 @@
 																		</div>
 																		<div class="form-group">
 																			<label
-																				class="control-label col-md-3 col-sm-3 col-xs-12">Select
-																				Custom</label>
+																				class="control-label col-md-3 col-sm-3 col-xs-12">
+																				pertanyaan Khusus</label>
 																			<div class="col-sm-7 col-xs-12">
 																				<select
 																					class="select2_single form-control"
-																					name="id_jenis_pertanyaan_umum" tabindex="-1">
+																					name="id_jenis_pertanyaan_umum"
+																					tabindex="-1">
 																					<?php foreach ($jenisumum as $key) : ?>
 																					<?php if ($value->id_jenis_pertanyaan_umum == $key->id_jenis_pertanyaan_umum) { ?>
 																					<option
@@ -160,26 +161,31 @@
 																		<div class="item form-group">
 																			<label
 																				class="control-label col-md-3 col-sm-3 col-xs-12"
-																				for="name">Pertanyaan Umum  <span
+																				for="name">Pertanyaan Umum <span
 																					class="required"></span></label>
 																			<div class="col-md-6 col-sm-6 col-xs-12">
-																				<textarea id="name" class="form-control col-md-7 col-xs-12"
-																					data-validate-length-range="6" data-validate-words="2"
-																					name="pertanyaan_umum" required="required"
-																					type="text" ><?php echo $value->pertanyaan_umum ?></textarea>
+																				<textarea id="name"
+																					class="form-control col-md-7 col-xs-12"
+																					data-validate-length-range="6"
+																					data-validate-words="2"
+																					name="pertanyaan_umum"
+																					required="required"
+																					type="text"><?php echo $value->pertanyaan_umum ?></textarea>
 																			</div>
 																		</div>
-																		
+
 																		<div class="ln_solid"></div>
 																		<div class="form-group">
-																		<div class="form-group">
-																			<div class="col-md-6 col-md-offset-3 col-xs-12">
-																				<button type="submit" class="btn btn-primary"
-																					data-dismiss="modal">Cancel</button>
-																				<button id="send" type="submit"
-																					class="btn btn-success">Submit</button>
+																			<div class="form-group">
+																				<div
+																					class="col-md-6 col-md-offset-3 col-xs-12">
+																					<button type="submit"
+																						class="btn btn-primary"
+																						data-dismiss="modal">Cancel</button>
+																					<button id="send" type="submit"
+																						class="btn btn-success">Submit</button>
+																				</div>
 																			</div>
-																		</div>
 																		</div>
 																	</form>
 																</div>
@@ -187,15 +193,15 @@
 														</div>
 													</div>
 												</td>
-												
+												<td>
+													<form method="post"
+														action="<?php echo base_url('sistem/admin/datapertanyaanumum/delete/' . $value->id_pertanyaan_umum) ?>">
+														<button type="submit" class="btn btn-danger"><span><i
+																	class="fa fa-trash-o"></i></span></button>
+													</form>
+												</td>
 											</tr>
 										</table>
-									</td>
-									<td>
-										<form method="post"
-											action="<?php echo base_url('sistem/admin/datapertanyaanumum/delete/' . $value->id_pertanyaan_umum) ?>">
-											<button type="submit" class="btn btn-danger">Delete</button>
-										</form>
 									</td>
 								</tr>
 								<?php endforeach; ?>

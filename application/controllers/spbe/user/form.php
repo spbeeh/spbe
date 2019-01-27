@@ -1,13 +1,17 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class form extends CI_Controller
+class form extends MY_Controller
 {
 
 	public function __construct()
 	{
 		parent::__construct();
 		//Do your magic here
+		$this->load->model('spbe/user_model');
+		$this->load->model('spbe/pertanyaanumum_model');
+		$this->load->library('form_validation');
+		$this->check_login();
 	}
 
 

@@ -7,9 +7,13 @@
 
 	<script src="<?php echo base_url('gentelella/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js') ?>">
 	</script>
+
+	<script src="<?php echo base_url('gentelella/build/js/custom.min.1.js') ?>"></script>
+
+	<!-- <script src="<?php echo base_url('gentelella/vendors/bootstrap/dist/js/bootstrap.min.1.js') ?>"></script> -->
+
 	<script src="<?php echo base_url('gentelella/vendors/fastclick/lib/fastclick.js') ?>"></script>
-	<script src="<?php echo base_url('gentelella/vendors/bootstrap/dist/js/bootstrap.min.js') ?>">
-	</script>
+
 	<script src="<?php echo base_url('gentelella/vendors/jquery/dist/jquery.min.js') ?>"></script>
 	<script src="<?php echo base_url('gentelella/vendors/nprogress/nprogress.js') ?>"></script>
 

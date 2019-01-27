@@ -18,9 +18,9 @@
 			<div class="col-md-12 col-sm-12 col-xs-12">
 				<div class="x_panel">
 					<div class="x_title">
-						<h2>Responsive example<small>
+						<h2>Data User<small>
 								<font color="green">
-									<?php echo $this->session->flashdata('pesan'); ?>
+
 								</font>
 							</small></h2>
 						<div class="clearfix"></div>
@@ -39,7 +39,7 @@
 										</div>
 										<div class="modal-body">
 
-											<?php echo form_open('login/check_register', ''); ?>
+											<?php echo form_open('login/register', ''); ?>
 											<table>
 												<tr>
 													<td>
@@ -280,59 +280,61 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<table id="datatable" class="table table-striped table-bordered nowrap"
+						<table id="datatable" class="table table-striped table-bordered dt-responsive nowrap"
 							cellspacing="0" width="100%">
-								<thead>
-									<tr>
-										<th>No</th>
-										<th>Nama Instansi Pusat</th>
-										<th>Penanggung Jawab</th>
-										<th>NIP penanggung jawab</th>
-										<th>Jabatan penanggung jawab</th>
-										<th>Nama Operator</th>
-										<th>NIP operator</th>
-										<th>Jabatan operator</th>
-										<th>Role</th>
-										<!-- <th>pas</th> -->
-										<th>Action</th>
-									</tr>
-								</thead>
-								<tbody>
-									<?php foreach ($user as $key => $value) : ?>
-									<tr>
-										<td><?php echo ($key + 1) ?></td>
-										<td><?php echo $value->namainstansipusat ?></td>
-										<td><?php echo $value->nama_penanggungjawab ?></td>
-										<td><?php echo $value->nip_pj ?></td>
-										<td><?php echo $value->jabatan_pj ?></td>
-										<td><?php echo $value->nama_operator ?></td>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>Nama Instansi Pusat</th>
+									<th>Penanggung Jawab</th>
+									<th>NIP penanggung jawab</th>
+									<th>Jabatan penanggung jawab</th>
+									<!-- <th>Nama Operator</th>
+									<th>NIP operator</th>
+									<th>Jabatan operator</th> -->
+									<th>Role</th>
+									<!-- <th>pas</th> -->
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach ($user as $key => $value) : ?>
+								<tr>
+									<td><?php echo ($key + 1) ?></td>
+									<td><?php echo $value->namainstansipusat ?></td>
+									<td><?php echo $value->nama_penanggungjawab ?></td>
+									<td><?php echo $value->nip_pj ?></td>
+									<td><?php echo $value->jabatan_pj ?></td>
+									<!-- <td><?php echo $value->nama_operator ?></td>
 										<td><?php echo $value->nip_op ?></td>
-										<td><?php echo $value->jabatan_op ?></td>
-										<td><?php echo $value->role ?></td>
-										<!-- <td><?php //echo $value->password ?></td> -->
-										<td>
-											<table>
-												<tr>
-													<td>
-															<form method="post"
-															action="<?php echo base_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
-															<button type="submit" class="btn btn-primary">Preview</button>
-														</form>
-													</td>
-													<td>
-														<form method="post"
-															action="<?php echo base_url('sistem/admin/datauser/destroy/' . $value->id_user) ?>">
-															<button type="submit" class="btn btn-danger">Delete</button>
-														</form>
-													</td>
-													<td></td>
-												</tr>
-											</table>
-										</td>
-									</tr>
-									<?php endforeach; ?>
-								</tbody>
-							</table>
+										<td><?php echo $value->jabatan_op ?></td> -->
+									<td><?php echo $value->role ?></td>
+									<!-- <td><?php //echo $value->password ?></td> -->
+									<td>
+										<table>
+											<tr>
+												<td>
+													<form method="post"
+														action="<?php echo base_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
+														<button type="submit" class="btn btn-warning"><span><i
+																	class="fa fa-eye"></i></span></button>
+													</form>
+												</td>
+												<td>
+													<form method="post"
+														action="<?php echo base_url('sistem/admin/datauser/destroy/' . $value->id_user) ?>">
+														<button type="submit" class="btn btn-danger"><span><i
+																	class="fa fa-trash-o"></i></span></button>
+													</form>
+												</td>
+												<td></td>
+											</tr>
+										</table>
+									</td>
+								</tr>
+								<?php endforeach; ?>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>

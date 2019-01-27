@@ -10,6 +10,13 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
+					<?php if ($this->session->userdata('role')
+					== "Admin") { ?>
+					<li class="nav-item active-sm">
+						<a class="nav-link" href="<?php echo site_url('sistem/admin/dashboard') ?>">Admin</a>
+					</li>
+					<?php 
+			} ?>
 					<li class="nav-item active-sm">
 						<a class="nav-link" href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
 					</li>

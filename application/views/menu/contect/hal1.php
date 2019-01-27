@@ -1,6 +1,5 @@
 <!-- Page Content -->
 <div class="container">
-
 	<!-- Page Heading/Breadcrumbs -->
 	<h1 class="mt-4 mb-3">Jenis Form Evaluasi
 		<small></small>
@@ -12,7 +11,6 @@
 		</li>
 		<li class="breadcrumb-item active">Jenis Evaluasi Form</li>
 	</ol>
-
 	<!-- Image Header -->
 	<!-- <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt=""> -->
 

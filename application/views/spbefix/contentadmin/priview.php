@@ -21,24 +21,12 @@
         		<div class="row" id="printableArea">
         			<div class="col-md-12">
         				<div class="x_panel">
-        					<div class="x_title">
-        						<h2>Laporan Hasil Evaluasi <small>(nama instansi)</small></h2>
-        						<!-- <ul class="nav navbar-right panel_toolbox">
-        							<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+        					<div class="x_title"><?php foreach ($user as $key => $value) : ?>
+        						<h2>Laporan Hasil Evaluasi <small><?php echo $value->namainstansipusat ?></small></h2>
+        						<ul class="nav navbar-right panel_toolbox">
+        							<li><button class="btn btn-primary" type=""><i class="fa fa-edit"></i>edit</button>
         							</li>
-        							<li class="dropdown">
-        								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-        									aria-expanded="false"><i class="fa fa-wrench"></i></a>
-        								<ul class="dropdown-menu" role="menu">
-        									<li><a href="#">Settings 1</a>
-        									</li>
-        									<li><a href="#">Settings 2</a>
-        									</li>
-        								</ul>
-        							</li>
-        							<li><a class="close-link"><i class="fa fa-close"></i></a>
-        							</li>
-        						</ul> -->
+        						</ul>
         						<div class="clearfix"></div>
         					</div>
         					<div class="x_content">
@@ -74,7 +62,7 @@
         							<div class="row invoice-info">
         								<div class="pull-left col-sm-4 invoice-col">
         									<table>
-											<?php foreach ($user as $key => $value) : ?>
+
         										<tr>
         											<td>
         												<h3><strong>Nama Instansi Pusat</strong></h3>
@@ -242,34 +230,27 @@
         									</p> -->
         							<!-- </div> -->
         							<!-- /.col -->
-        							<!-- <div class="col-xs-6">
-        									<p class="lead">Amount Due 2/22/2014</p>
-        									<div class="table-responsive">
-        										<table class="table">
-        											<tbody>
-        												<tr>
-        													<th style="width:50%">Subtotal:</th>
-        													<td>$250.30</td>
-        												</tr>
-        												<tr>
-        													<th>Tax (9.3%)</th>
-        													<td>$10.34</td>
-        												</tr>
-        												<tr>
-        													<th>Shipping:</th>
-        													<td>$5.80</td>
-        												</tr>
-        												<tr>
-        													<th>Total:</th>
-        													<td>$265.24</td>
-        												</tr>
-        											</tbody>
-        										</table>
-        									</div>
-        								</div> -->
+        							<div class="col-xs-6 pull-right">
+        								<p class="lead"></p>
+        								<div class="table-responsive">
+        									<table class="table">
+        										<tbody>
+        											<tr>
+        												<th style="width:50%">total:</th>
+        												<td>
+        													%12 dari rekomendasi Sistem informasi
+        												</td>
+        											</tr>
+        											<tr>
+        												<th></th>
+        												<td></td>
+        											</tr>
+        									</table>
+        								</div>
+        							</div>
         							<!-- /.col -->
-							</div>
-							<?php endforeach; ?>
+        					</div>
+        					<?php endforeach; ?>
         					<!-- /.row -->
 
         					<!-- this row will not appear when printing -->
@@ -277,17 +258,17 @@
         						<div class="col-xs-12">
         							<button onclick="printDiv('printableArea')" class="btn btn-default btn-print"><i
         									class="fa fa-print"></i> Print</button>
-        							<button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i>
+        							<!-- <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i>
         								Submit Payment</button>
         							<button class="btn btn-primary pull-right" style="margin-right: 5px;"><i
-        									class="fa fa-download"></i> Generate PDF</button>
+        									class="fa fa-download"></i> Generate PDF</button> -->
         						</div>
         					</div>
         					</section>
         				</div>
         			</div>
-				</div>
-				
+        		</div>
+
         	</div>
         </div>
         </div>

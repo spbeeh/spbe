@@ -37,6 +37,7 @@ class Auth extends MY_Controller
 				'password' => $query->password,
 				'nip_pj' => $query->nip_pj,
 				'role' => $query->role,
+				// 'nama_penanggungjawab' => $query->nama_penanggungjawab,
 				'namainstansipusat' => $query->namainstansipusat,
 				'jabatan_pj' => $query->jabatan_pj,
 				'nama_operator' => $query->nama_operator,
@@ -65,7 +66,7 @@ class Auth extends MY_Controller
 			$this->form_validation->set_rules('password', 'password', 'trim|required|min_length[5]|max_length[22]');
 			$error = $this->check_account();
 
-			if ($this->form_validation->run() && $error === true) {
+			if ($this->form_validation->run() && $error == true) {
 				$data = $this->Auth_model->check_account($this->input->post('nip_pj'), $this->input->post('password'));
 
                 //jika bernilai TRUE maka alihkan halaman sesuai dengan level nya
@@ -75,10 +76,10 @@ class Auth extends MY_Controller
 					redirect('menu/dashboard');
 				}
 			} else {
-				$this->load->view('login/login', $data);
+				$this->load->view('login/login');
 			}
 		} else {
-			$this->load->view('login/login', $data);
+			$this->load->view('login/login');
 		}
 	}
 	public function logout()
@@ -90,7 +91,7 @@ class Auth extends MY_Controller
 	public function check_register()
 	{
 
-		$this->form_validation->set_rules('namainstansipusat', 'namainstansipusat', 'trim|required|min_length[3]|max_length[50]');
+		$this->form_validation->set_rules('namainstansipusat', 'namainstansipusat', 'trim|required|min_length[3]|max_length[100]');
 		$this->form_validation->set_rules('nama_penanggungjawab', 'nama_penanggungjawab', 'trim|required|min_length[3]|max_length[50]');
 		$this->form_validation->set_rules('jabatan_pj', 'jabatan_pj', 'trim|required|min_length[3]|max_length[50]');
 		$this->form_validation->set_rules('nama_operator', 'nama_operator', 'trim|required|min_length[3]|max_length[50]');
@@ -113,7 +114,7 @@ class Auth extends MY_Controller
           </div>
           </p>
         ');
-			redirect('login', 'refresh');
+			redirect('sistem/admin/datauser', 'refresh');
 		}
 	}
 }

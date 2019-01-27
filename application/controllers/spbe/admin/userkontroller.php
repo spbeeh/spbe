@@ -11,10 +11,10 @@ class Userkontroller extends MY_Controller
 		$this->load->model('spbe/user_model');
 		$this->load->library('form_validation');
 
-		// $this->check_login();
-		// if ($this->session->userdata('role') != "Admin") {
-		// 	redirect('login', 'refresh');
-		// }
+		$this->check_login();
+		if ($this->session->userdata('role') != "Admin") {
+			redirect('login', 'refresh');
+		}
 
 	}
 	public function index()
@@ -27,27 +27,10 @@ class Userkontroller extends MY_Controller
 		$this->load->view('spbefix/_partialadmin/js');
 	}
 
-	public function store()
-	{
-		$_POST['namainstansipusat'] = $this->input->post('namainstansipusat');
-		$_POST['nama_penanggungjawab'] = $this->input->post('nama_penanggungjawab');
-		$_POST['nip_pj'] = $this->input->post('nip_pj');
-		$_POST['jabatan_pj'] = $this->input->post('jabatan_pj');
-		$_POST['nama_operator'] = $this->input->post('nama_operator');
-		$_POST['nip_op'] = $this->input->post('nip_op');
-		$_POST['jabatan_op'] = $this->input->post('jabatan_op');
-
-		$this->user_model->save('user', $_POST);
-
-		redirect('sistem/admin/datauser', 'refresh');
-
-	}
-
-
 	public function report($id = null)
 	{
 		$data['user'] = $this->user_model->getUser($id);
-		
+
 		$this->load->view('spbefix/_partialadmin/header');
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/priview', $data);

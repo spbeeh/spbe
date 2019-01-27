@@ -52,32 +52,32 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'Welcome';
 // $route['404_override'] = '';
 
-$route['spbe'] = 'spbe/login/login/index';
-$route['spbe/kuisumum'] = 'spbe/spbe/kuisUmum';
-$route['spbe/nomenklatur'] = 'spbe/spbe/index';
-$route['spbe/dashboard'] = 'spbe/spbe/dashboard';
-$route['spbe/datauser'] = 'spbe/spbe/dataUser';
+// $route['spbe'] = 'spbe/login/login/index';
+// $route['spbe/kuisumum'] = 'spbe/spbe/kuisUmum';
+// $route['spbe/nomenklatur'] = 'spbe/spbe/index';
+// $route['spbe/dashboard'] = 'spbe/spbe/dashboard';
+// $route['spbe/datauser'] = 'spbe/spbe/dataUser';
 
 
 //$route['pertanyaan'] = 'spbe/admin/Pertanyaan/index';
 
-$route['jawaban'] = 'spbe/admin/jawaban/index';
-$route['spbe/dashboard2'] = 'spbe/spbe/dashboard2';
-$route['listjawaban'] = 'spbe/admin/Pertanyaan/getListJawaban';
+// $route['jawaban'] = 'spbe/admin/jawaban/index';
+// $route['spbe/dashboard2'] = 'spbe/spbe/dashboard2';
+// $route['listjawaban'] = 'spbe/admin/Pertanyaan/getListJawaban';
 
-$route['tes'] = 'tes/tescontroller/index';
-$route['tes/halaman2'] = 'tes/halaman2/index';
-$route['tes/halaman3'] = 'tes/pertanyaanController';
-$route['tes/tambah'] = 'tes/pertanyaanController/add';
-$route['coba'] = 'tes/jenis/index';
-$route['coba/new_form'] = 'tes/jenis/new_form';
-$route['coba/tambahdata'] = 'tes/jenis/add';
-$route['coba/pertanyaan'] = 'tes/pertanyaan/index';
-$route['coba/newFormPertanyaan'] = 'tes/pertanyaan/Form';
-$route['coba/pertanyaantambah'] = 'tes/pertanyaan/add';
-$route['coba/user'] = 'tes/user';
-$route['coba/form'] = 'tes/user/form';
-$route['coba/tambah'] = 'tes/user/add';
+// $route['tes'] = 'tes/tescontroller/index';
+// $route['tes/halaman2'] = 'tes/halaman2/index';
+// $route['tes/halaman3'] = 'tes/pertanyaanController';
+// $route['tes/tambah'] = 'tes/pertanyaanController/add';
+// $route['coba'] = 'tes/jenis/index';
+// $route['coba/new_form'] = 'tes/jenis/new_form';
+// $route['coba/tambahdata'] = 'tes/jenis/add';
+// $route['coba/pertanyaan'] = 'tes/pertanyaan/index';
+// $route['coba/newFormPertanyaan'] = 'tes/pertanyaan/Form';
+// $route['coba/pertanyaantambah'] = 'tes/pertanyaan/add';
+// $route['coba/user'] = 'tes/user';
+// $route['coba/form'] = 'tes/user/form';
+// $route['coba/tambah'] = 'tes/user/add';
 
 //Fix VVVV ====
 
@@ -95,7 +95,7 @@ $route['menu/laporan'] = 'spbe/user/laporan/index';
 ///// ini authnya
 $route['login'] = 'spbe/admin/Auth/login';
 $route['logout'] = 'spbe/admin/Auth/logout';
-$route['login/check_register'] = 'spbe/admin/Auth/check_register';
+$route['login/register'] = 'spbe/admin/Auth/check_register';
 
 $route['sistem/admin/dashboard'] = 'spbe/admin/admindashboard/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';

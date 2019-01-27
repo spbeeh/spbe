@@ -19,11 +19,11 @@
 	<link href="<?php echo base_url('Asett/css/modern-business.css') ?>" rel="stylesheet">
 
 	<!-- Bootstrap -->
-	<link href="<?php echo base_url('gentelella/vendors/bootstrap/dist/css/bootstrap.min.1.css') ?>" rel="stylesheet">
+	<!-- <link href="<?php echo base_url('gentelella/vendors/bootstrap/dist/css/bootstrap.min.1.css') ?>" rel="stylesheet"> -->
 	<!-- Font Awesome -->
 	<link href="<?php echo base_url('gentelella/vendors/font-awesome/css/font-awesome.min.css') ?>" rel="stylesheet">
 	<!-- NProgress -->
 	<link href="<?php echo base_url('gentelella/vendors/nprogress/nprogress.css') ?>" rel="stylesheet">
 
-	<link href="<?php echo base_url('gentelella/build/css/custom.min.1.css') ?>" rel="stylesheet">
+	<!-- <link href="<?php echo base_url('gentelella/build/css/custom.min.1.css') ?>" rel="stylesheet"> -->
 </head>

@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class hal2 extends CI_Controller
+class hal2 extends MY_Controller
 {
 
 
@@ -9,6 +9,10 @@ class hal2 extends CI_Controller
 	{
 		parent::__construct();
 		//Do your magic here
+		$this->load->model('spbe/user_model');
+		$this->load->model('spbe/pertanyaanumum_model');
+		$this->load->library('form_validation');
+		$this->check_login();
 	}
 
 	public function index()

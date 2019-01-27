@@ -4,6 +4,17 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Controllername extends CI_Controller
 {
 
+	public function __construct()
+	{
+		parent::__construct();
+		//Do your magic here
+		$this->check_login();
+		if ($this->session->userdata('role') != "Admin") {
+			redirect('login', 'refresh');
+		}
+	}
+
+
 	public function index()
 	{
 		$this->load->view('spbefix/_partialadmin/header');
