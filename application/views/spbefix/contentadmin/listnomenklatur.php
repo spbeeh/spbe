@@ -216,6 +216,7 @@
 											</tr>
 										</table>
 									</td>
+									<td></td>
 								</tr>
 								<?php 
 						} ?>

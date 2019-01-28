@@ -203,6 +203,7 @@
 											</tr>
 										</table>
 									</td>
+
 								</tr>
 								<?php endforeach; ?>
 							</tbody>
