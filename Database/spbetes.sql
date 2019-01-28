@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 25, 2019 at 12:05 PM
+-- Generation Time: Jan 28, 2019 at 02:14 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -134,6 +134,13 @@ CREATE TABLE `master` (
   `unit_kerja` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `master`
+--
+
+INSERT INTO `master` (`id_master`, `id_nama_aplikasi`, `id_user`, `id_jenis`, `jawab`, `nama_aplikasi`, `unit_kerja`) VALUES
+(1, 4, 2, 1, 'Ada', 'sinaga', 'upt infokom');
+
 -- --------------------------------------------------------
 
 --
@@ -146,9 +153,15 @@ CREATE TABLE `master_pertanyaan_umum` (
   `id_pertanyaan_umum` int(11) DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL,
   `jawab` varchar(200) DEFAULT NULL,
-  `nama_aplikasi` varchar(200) DEFAULT NULL,
-  `unit_kerja` varchar(200) DEFAULT NULL
+  `upload_file` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `master_pertanyaan_umum`
+--
+
+INSERT INTO `master_pertanyaan_umum` (`id_master_pertanyaan_umum`, `id_jenis_pertanyaan_umum`, `id_pertanyaan_umum`, `id_user`, `jawab`, `upload_file`) VALUES
+(2, 1, 1, 2, 'adad', NULL);
 
 -- --------------------------------------------------------
 
@@ -167,7 +180,9 @@ CREATE TABLE `pertanyaan_umum` (
 --
 
 INSERT INTO `pertanyaan_umum` (`id_pertanyaan_umum`, `id_jenis_pertanyaan_umum`, `pertanyaan_umum`) VALUES
-(1, 2, '1.	Jelaskan misi/sasaran pelaksanaan SPBE di Instansi Pusat/Pemerintah Daerah masing-masing?');
+(1, 2, '1.	Jelaskan misi/sasaran pelaksanaan SPBE di Instansi Pusat/Pemerintah Daerah masing-masing?'),
+(2, 1, 'a)	Sebutkan perguruan tinggi  negeri maupun swasta yang memiliki jurusan/program studi terkait komputer, teknologi informasi dan komunikasi, sistem informasi, atau sejenisnya di wilayah Pemerintah Daerah masing-masing?'),
+(3, 1, 'b)	Berapakah persentase ketersediaan sumber daya listrik untuk pelaksanaan SPBE di Pemerintah Daerah masing-masing dalam satu bulan?');
 
 -- --------------------------------------------------------
 
@@ -187,6 +202,15 @@ CREATE TABLE `user` (
   `password` varchar(200) DEFAULT NULL,
   `role` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id_user`, `namainstansipusat`, `nama_penanggungjawab`, `nip_pj`, `jabatan_pj`, `nama_operator`, `nip_op`, `jabatan_op`, `password`, `role`) VALUES
+(2, '123123123', '123123123', '123123123', '123123123', '123123123', '123123123', '123123123', '$2y$05$diQ4DlRLvERns6mJCXoQDezhVRuzs6nFN63ct7rUQMC1IeoYPkjuq', 'Admin'),
+(8, 'Malang', 'Qhodir Z', '2016045', 'Malang', 'Malang', 'Malang', 'Malang', '$2y$05$fhRxPkDQRPSmWiYrmG3goevTQlS5Y/J5CSxDZBbG/I73dv83vf7KS', 'Admin'),
+(9, 'Malang', 'Qhodir Z', '123123', 'Malang', 'Malang', 'Malang', 'Malang', '$2y$05$T8GRHwcsdH.Az4QmI50qjOoHT/pQgkcte1AJmGxH3TVK3nn6fzt9C', 'Admin');
 
 --
 -- Indexes for dumped tables
@@ -268,25 +292,25 @@ ALTER TABLE `jenis_pertanyaan_umum`
 -- AUTO_INCREMENT for table `master`
 --
 ALTER TABLE `master`
-  MODIFY `id_master` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_master` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `master_pertanyaan_umum`
 --
 ALTER TABLE `master_pertanyaan_umum`
-  MODIFY `id_master_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_master_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `pertanyaan_umum`
 --
 ALTER TABLE `pertanyaan_umum`
-  MODIFY `id_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
