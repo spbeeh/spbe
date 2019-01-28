@@ -80,7 +80,7 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="50%">
+						<table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
 							<thead>
 								<tr>
 									<th rowspan=2>No</th>
@@ -203,7 +203,7 @@
 											</tr>
 										</table>
 									</td>
-
+									<td></td>
 								</tr>
 								<?php endforeach; ?>
 							</tbody>

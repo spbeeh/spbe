@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Login V18</title>
+	<title><?php echo ucfirst($this->uri->segment(1)) ?></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--===============================================================================================-->
@@ -58,7 +58,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button type="submit" class="login100-form-btn" name="submit" value="login">
+						<button type="submit" class="login100-form-btn" name="submit" value="login">Login
 						</button>
 					</div>
 					<div class="text-center p-t-46 p-b-20">

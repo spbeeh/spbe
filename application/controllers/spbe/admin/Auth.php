@@ -76,7 +76,9 @@ class Auth extends MY_Controller
 					redirect('menu/dashboard');
 				}
 			} else {
-				$this->load->view('login/login');
+
+				redirect('sistem/admin/dashboard', 'refresh');
+
 			}
 		} else {
 			$this->load->view('login/login');

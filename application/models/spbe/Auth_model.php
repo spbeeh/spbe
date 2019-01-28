@@ -53,10 +53,10 @@ class Auth_model extends CI_Model
 			'nip_pj' => $this->input->post('nip_pj'),
 			'namainstansipusat' => $this->input->post('namainstansipusat'),
 			'nama_penanggungjawab' => $this->input->post('nama_penanggungjawab'),
-			'jabatan_pj' => $this->input->post('namainstansipusat'),
-			'nama_operator' => $this->input->post('namainstansipusat'),
-			'nip_op' => $this->input->post('namainstansipusat'),
-			'jabatan_op' => $this->input->post('namainstansipusat'),
+			'jabatan_pj' => $this->input->post('jabatan_pj'),
+			'nama_operator' => $this->input->post('nama_operator'),
+			'nip_op' => $this->input->post('nip_op'),
+			'jabatan_op' => $this->input->post('jabatan_op'),
 			'role' => $this->input->post('role'),
 			'password' => get_hash($this->input->post('password'))
 		);

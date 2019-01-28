@@ -27,9 +27,9 @@
 								onclick="cetak_datatable()">
 								<i class="fa fa-print"></i> Cetak
 							</button>
-							<button class="btn btn-danger btn-sm waves-effect waves-light" type="button"
-								onclick="window.history.back()">
-								<i class="fa fa-arrow-left"></i> Beranda
+							<button class="btn btn-danger btn-sm waves-effect waves-light" type="button" onclick="">
+								<i class="fa fa-arrow-left"></i> <a
+									href="<?php echo base_url('menu/dashboard') ?>">Beranda</a>
 							</button>
 							<div class="clearfix"></div>
 						</div>
