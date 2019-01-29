@@ -219,7 +219,7 @@
         												</td>
         												<td>
         													<form method="post"
-        														action="<?php echo base_url('sistem/admin/datanomenklatur/' . $value->id_user) ?>">
+        														action="<?php echo base_url('sistem/admin/nomenklatur/' . $value->id_user) ?>">
         														<button type="" class="btn btn-primary"
         															data-toggle="tooltip" data-placement="top"
         															title="Buka"><span><i

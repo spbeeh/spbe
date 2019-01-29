@@ -61,7 +61,7 @@
 												<th scope="row"></th>
 												<td><?php echo $data->jenis ?></td>
 												<td>
-													<?php if ($data->id_user == 2) {
+													<?php if ($data->id_user == $id) {
 													echo "<span class='label label-success'>sudah<span>";
 												} else {
 													echo "<span class='label label-danger'>Belum</span>";
