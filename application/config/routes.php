@@ -103,7 +103,7 @@ $route['sistem/admin/kuisonerumum'] = 'spbe/admin/kuisonerumum/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
 $route['sistem/admin/User'] = 'spbe/admin/admindashboard/index';
 
-$route['sistem/admin/datanomenklatur'] = 'spbe/admin/datanomenklatur/index';
+//$route['sistem/admin/datanomenklatur/(:num)'] = 'spbe/admin/datanomenklatur/cek/$1';
 $route['sistem/admin/datanomenklatur/store'] = 'spbe/admin/datanomenklatur/store';
 $route['sistem/admin/datanomenklatur/edit/(:num)'] = 'spbe/admin/datanomenklatur/edit/$1';
 $route['sistem/admin/datanomenklatur/delete/(:num)'] = 'spbe/admin/datanomenklatur/delete/$1';
@@ -118,6 +118,11 @@ $route['sistem/admin/datauser/store'] = 'spbe/admin/userkontroller/store';
 $route['sistem/admin/datauser/destroy/(:num)'] = 'spbe/admin/userkontroller/destroy/$1';
 $route['sistem/admin/datauser/report/(:num)'] = 'spbe/admin/userkontroller/report/$1';
 
+$route['sistem/admin/nomenklatur/(:num)'] = 'spbe/admin/nomenklaturkontroller/getById/$1';
+$route['sistem/admin/isinm/store'] = 'spbe/admin/isipertanyaannomenklatur/store';
+
+
+$route['sistem/admin/datanomenklatur/(:num)'] = 'spbe/admin/isipertanyaannomenklatur/edit/$1';
 // $route['tes'] = 'tes/tescontroller/index';
 
 // $route['tes/halaman2'] = 'tes/halaman2/index';

@@ -103,7 +103,9 @@ class Auth extends MY_Controller
 		$this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]|max_length[20]');
 		$this->form_validation->set_rules('role', 'role', 'trim|required|min_length[1]|max_length[50]');
 		if ($this->form_validation->run() == false) {
-			// $this->template->load('authentication/layout/template', 'authentication/register', $data);
+
+			redirect('sistem/admin/datauser', 'refresh');
+
 		} else {
 			$this->Auth_model->reg();
 			$this->session->set_flashdata('alert', '<p class="box-msg">

@@ -34,9 +34,9 @@ class Auth_model extends CI_Model
 			return redirect('login', 'refresh');
 		}
         //jika bernilai 3 maka password salah
-		// if (!hash_verified($this->input->post('password'), $query->password)) {
-		// 	return redirect('login', 'refresh');
-		// }
+		if (!hash_verified($this->input->post('password'), $query->password)) {
+			return redirect('login', 'refresh');
+		}
 
 		return $query;
 	}

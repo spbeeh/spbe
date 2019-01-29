@@ -189,6 +189,7 @@
         												<th>Evaluasi</th>
         												<th>&nbsp;</th>
         												<th>Status</th>
+        												<th>Aksi</th>
         												<!-- <th style="width: 59%">Description</th>
         												<th>Subtotal</th> -->
         											</tr>
@@ -200,12 +201,30 @@
         												<td></td>
         												<td>
         													<span style="color:green">Sudah Mengisi</span> </td>
+        												<td>
+        													<form method="post"
+        														action="<?php echo base_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
+        														<button type="" class="btn btn-primary"
+        															data-toggle="tooltip" data-placement="top"
+        															title="Buka"><span><i
+        																	class="fa fa-pencil"></i></span></button>
+        													</form>
+        												</td>
         											</tr>
         											<tr>
         												<td>2</td>
         												<td>Evaluasi Aplikasi</td>
         												<td></td>
         												<td><span style="color:red">Belum Mengisi/Belum Selesai</span>
+        												</td>
+        												<td>
+        													<form method="post"
+        														action="<?php echo base_url('sistem/admin/datanomenklatur/' . $value->id_user) ?>">
+        														<button type="" class="btn btn-primary"
+        															data-toggle="tooltip" data-placement="top"
+        															title="Buka"><span><i
+        																	class="fa fa-pencil"></i></span></button>
+        													</form>
         												</td>
         											</tr>
         										</tbody>

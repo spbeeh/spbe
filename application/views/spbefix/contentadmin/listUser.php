@@ -316,14 +316,18 @@
 												<td>
 													<form method="post"
 														action="<?php echo base_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
-														<button type="submit" class="btn btn-warning"><span><i
+														<button type="submit" class="btn btn-warning"
+															data-toggle="tooltip" data-placement="top"
+															title="Lihat"><span><i
 																	class="fa fa-eye"></i></span></button>
 													</form>
 												</td>
 												<td>
 													<form method="post"
 														action="<?php echo base_url('sistem/admin/datauser/destroy/' . $value->id_user) ?>">
-														<button type="submit" class="btn btn-danger"><span><i
+														<button type="submit" class="btn btn-danger"
+															data-toggle="tooltip" data-placement="top"
+															title="Hapus"><span><i
 																	class="fa fa-trash-o"></i></span></button>
 													</form>
 												</td>

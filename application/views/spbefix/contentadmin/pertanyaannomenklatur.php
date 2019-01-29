@@ -50,34 +50,58 @@
 										<thead>
 											<tr>
 												<th>No</th>
-												<th>Jenis Evaluasi</th>
-												<th>status</th>
-												<th>Aksi</th>
+												<th>Evaluasi</th>
+												<th></th>
+												<th></th>
+												<th></th>
 											</tr>
 										</thead>
 										<tbody>
-											<?php foreach ($jenis as $data) { ?>
-											<tr>
-												<th scope="row"></th>
-												<td><?php echo $data->jenis ?></td>
-												<td>
-													<?php if ($data->id_user == 2) {
-													echo "<span class='label label-success'>sudah<span>";
-												} else {
-													echo "<span class='label label-danger'>Belum</span>";
-												} ?>
-												</td>
-												<td>
-													<form method="post"
-														action="<?php echo base_url('sistem/admin/nomenklatur/' . $data->id_jenis) ?>">
-														<button type="submit" class="btn btn-warning"><span><i
-																	class="fa fa-edit"></i></span>Buka</button>
-													</form>
-												</td>
-											</tr>
-											<?php
+											<form method="POST"
+												action="<?php echo base_url('sistem/admin/isinm/store') ?>"
+												enctype="multipart/form-data">
+												<?php foreach ($tampil as $key => $value) { ?>
+												<tr>
+													<th scope="row"><?php echo ($key + 1) ?></th>
+													<td><?php echo $value->aplikasi_fungsional ?></td>
+													<td>
+														<div class="btn-group" data-toggle="buttons">
+															<label class="ada<?php echo ($key + 1) ?> btn btn-default"
+																data-toggle-class="btn-primary"
+																data-toggle-passive-class="btn-default">
+																<input type="radio" name="jawab" value="Ada">
+																&nbsp;Ada&nbsp;
+															</label>
+															<label class="tidak<?php echo ($key + 1) ?> btn btn-primary"
+																data-toggle-class="btn-primary"
+																data-toggle-passive-class="btn-default">
+																<input type="radio" name="jawab" value="Tidak"> Tidak
+																Ada
+															</label>
+														</div>
+													</td>
+													<td>
+														<input class="form-control" type="text" name="nama_aplikasi"
+															placeholder="Nama Aplikasi">
+													</td>
+													<td>
+														<input class="form-control" type="text" name="unit_kerja"
+															placeholder="Unit Kerja">
+													</td>
+												</tr>
+												<?php
 
-									} ?>
+										} ?>
+												<tr>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td></td>
+													<td><button type="" class="btn btn-animate">Kembali</button><button
+															type="submit" class="btn btn-primary">submit</button>
+													</td>
+												</tr>
+											</form>
 										</tbody>
 									</table>
 

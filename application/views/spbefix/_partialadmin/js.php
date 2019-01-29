@@ -12,18 +12,26 @@
 <script src="<?php echo site_url('gentelella/vendors/datatables.net/js/jquery.dataTables.min.js') ?>"></script>
 <script src="<?php echo site_url('gentelella/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js') ?>"></script>
 <script src="<?php echo site_url('gentelella/vendors/datatables.net-buttons/js/dataTables.buttons.min.js') ?>"></script>
-<script src="<?php echo site_url('gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js') ?>"></script>
+<script src="<?php echo site_url('gentelella/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js') ?>">
+</script>
 <script src="<?php echo site_url('gentelella/vendors/datatables.net-buttons/js/buttons.flash.min.js') ?>"></script>
 <script src="<?php echo site_url('gentelella/vendors/datatables.net-buttons/js/buttons.html5.min.js') ?>"></script>
 <script src="<?php echo site_url('gentelella/vendors/datatables.net-buttons/js/buttons.print.min.js') ?>"></script>
-<script src="<?php echo site_url('gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js') ?>"></script>
-<script src="<?php echo site_url('gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js') ?>"></script>
-<script src="<?php echo site_url('gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js') ?>"></script>
-<script src="<?php echo site_url('gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js') ?>"></script>
-<script src="<?php echo site_url('gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js') ?>"></script>
+<script src="<?php echo site_url('gentelella/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js') ?>">
+</script>
+<script src="<?php echo site_url('gentelella/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js') ?>">
+</script>
+<script src="<?php echo site_url('gentelella/vendors/datatables.net-responsive/js/dataTables.responsive.min.js') ?>">
+</script>
+<script src="<?php echo site_url('gentelella/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js') ?>">
+</script>
+<script src="<?php echo site_url('gentelella/vendors/datatables.net-scroller/js/dataTables.scroller.min.js') ?>">
+</script>
 <script src="<?php echo site_url('gentelella/vendors/jszip/dist/jszip.min.js') ?>"></script>
 <script src="<?php echo site_url('gentelella/vendors/pdfmake/build/pdfmake.min.js') ?>"></script>
 <script src="<?php echo site_url('gentelella/vendors/pdfmake/build/vfs_fonts.js') ?>"></script>
+
+
 
 <!-- Custom Theme Scripts -->
 <script src="<?php echo site_url('gentelella//build/js/custom.min.js') ?>"></script>
@@ -85,24 +93,24 @@
 
 <script>
 $(document).ready(function() {
-    $('#myTable').DataTable(
-		
+	$('#myTable').DataTable(
+
 	);
-} );
+});
 </script>
 <script>
-	function printDiv(divName) {
-		var printContents = document.getElementById(divName).innerHTML;
-		var originalContents = document.body.innerHTML;
+function printDiv(divName) {
+	var printContents = document.getElementById(divName).innerHTML;
+	var originalContents = document.body.innerHTML;
 
-		document.body.innerHTML = printContents;
+	document.body.innerHTML = printContents;
 
-		window.print();
+	window.print();
 
-		document.body.innerHTML = originalContents;
-	}
+	document.body.innerHTML = originalContents;
+}
 </script>
-<script>
+<!-- <script>
 $(document).ready(function() {
 	$(".ada1").click(function() {
 		//alert("yeah");
@@ -455,4 +463,4 @@ $(document).ready(function() {
 		$('.a36').hide();
 	});
 });
-</script>
+</script> -->
