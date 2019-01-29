@@ -40,8 +40,8 @@
 									<ul class="nav child_menu">
 										<li><a href="<?php echo base_url('sistem/admin/kuisonerumum') ?>">Kuisioner
 												Umum</a></li>
-										<li><a href="<?php echo base_url('sistem/admin/nomenklatur') ?>">Nomenklatur</a>
-										</li>
+										<!-- <li><a href="<?php echo base_url('sistem/admin/nomenklatur') ?>">Nomenklatur</a>
+										</li> -->
 									</ul>
 								</li>
 								<li><a><i class="fa fa-desktop"></i> List User <span

@@ -8,7 +8,6 @@ class Nomenklaturkontroller extends MY_Controller
 	{
 		parent::__construct();
 		//Do your magic here
-
 		$this->load->model('spbe/pertanyaan_model');
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
@@ -28,21 +27,27 @@ class Nomenklaturkontroller extends MY_Controller
 
 	public function getById($id = null)
 	{
-
-		if ($this->pertanyaan_model->getById($id) == null) {
-			show_404();
-		} else {
-			$idku['id'] = $id;
-			$data['jenis'] = $this->pertanyaan_model->getById($id);
-			$this->load->view('spbefix/_partialadmin/header', $data, $idku);
-			$this->load->view('spbefix/_partialadmin/navigasi');
-			$this->load->view('spbefix/contentadmin/Nomenklatur');
-			$this->load->view('spbefix/_partialadmin/footer');
-			$this->load->view('spbefix/_partialadmin/js');
-		}
+		$idku['id'] = $id;
+		$data['jenis'] = $this->pertanyaan_model->getById($id);
+		$this->load->view('spbefix/_partialadmin/header', $data, $idku);
+		$this->load->view('spbefix/_partialadmin/navigasi');
+		$this->load->view('spbefix/contentadmin/Nomenklatur');
+		$this->load->view('spbefix/_partialadmin/footer');
+		$this->load->view('spbefix/_partialadmin/js');
 
 	}
 
+	public function getByIdnomen($id = null)
+	{
+		$idku['id'] = $id;
+		$data['tampil'] = $this->pertanyaan_model->getById($id);
+		$this->load->view('spbefix/_partialadmin/header', $data, $idku);
+		$this->load->view('spbefix/_partialadmin/navigasi');
+		$this->load->view('spbefix/contentadmin/pertanyaannomenklatur');
+		$this->load->view('spbefix/_partialadmin/footer');
+		$this->load->view('spbefix/_partialadmin/js');
+
+	}
 }
 
 /* End of file nomenklaturkontroller.php */

@@ -19,77 +19,61 @@
 		<div class="clearfix"></div>
 		<!-- <div class="row"> -->
 		<div class="col-md-12 col-sm-12 col-xs-12">
-			<div class="x_panel">
-				<div class="page-title">
-					<div class="title_left">
-						<h3>Kuisioner Umum : </h3>
-					</div>
-				</div>
-				<div class="row">
-					<div class="x_content">
-						<div class="clearfix"></div>
-						<div class="row">
-							<div class="col-md-12 col-sm-12 col-xs-12">
-								<div class="x_panel">
-									<div class="x_title">
-										<h2>Hover rows <small>Try hovering over the rows</small></h2>
-										<ul class="nav navbar-right panel_toolbox">
-											<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-											</li>
-											<li class="dropdown">
-												<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-													aria-expanded="false"><i class="fa fa-wrench"></i></a>
-												<ul class="dropdown-menu" role="menu">
-													<li><a href="#">Settings 1</a>
-													</li>
-													<li><a href="#">Settings 2</a>
-													</li>
-												</ul>
-											</li>
-											<li><a class="close-link"><i class="fa fa-close"></i></a>
-											</li>
-										</ul>
-										<div class="clearfix"></div>
-									</div>
-									<div class="x_content">
+			<div class="row">
+				<div class="x_content">
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="x_panel">
+								<div class="x_title">
+									<h2>Nomenklatur <small></small></h2>
+									<ul class="nav navbar-right panel_toolbox">
+										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+										</li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+												aria-expanded="false"><i class="fa fa-wrench"></i></a>
+											<ul class="dropdown-menu" role="menu">
+												<li><a href="#">Settings 1</a>
+												</li>
+												<li><a href="#">Settings 2</a>
+												</li>
+											</ul>
+										</li>
+										<li><a class="close-link"><i class="fa fa-close"></i></a>
+										</li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="x_content">
+									<form method="post" action="<?php echo base_url('') ?>"
+										enctype="multipart/data-form">
 										<table class="table table-hover">
 											<thead>
 												<tr>
-													<th>#</th>
-													<th>First Name</th>
-													<th>Last Name</th>
-													<th>Username</th>
+													<th></th>
+													<th></th>
+													<th></th>
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<th scope="row">1</th>
-													<td>Mark</td>
-													<td>Otto</td>
-													<td>@mdo</td>
-												</tr>
-												<tr>
-													<th scope="row">2</th>
-													<td>Jacob</td>
-													<td>Thornton</td>
-													<td>@fat</td>
-												</tr>
-												<tr>
-													<th scope="row">3</th>
-													<td>Larry</td>
-													<td>the Bird</td>
-													<td>@twitter</td>
-												</tr>
+												<td></td>
+												<td></td>
+												<td>
+													<textarea id="message" required="required" class="form-control"
+														name="message"
+														style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+												</td>
 											</tbody>
 										</table>
-
-									</div>
+									</form>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 </div>

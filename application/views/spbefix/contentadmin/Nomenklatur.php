@@ -61,7 +61,7 @@
 												<th scope="row"></th>
 												<td><?php echo $data->jenis ?></td>
 												<td>
-													<?php if ($data->id_user == $id) {
+													<?php if ($data->id_user == $this->uri->segment(4)) {
 													echo "<span class='label label-success'>sudah<span>";
 												} else {
 													echo "<span class='label label-danger'>Belum</span>";
@@ -69,9 +69,11 @@
 												</td>
 												<td>
 													<form method="post"
-														action="<?php echo base_url('sistem/admin/nomenklatur/' . $data->id_jenis) ?>">
-														<button type="submit" class="btn btn-warning"><span><i
-																	class="fa fa-edit"></i></span>Buka</button>
+														action="<?php echo base_url('sistem/admin/nomenklatur/isi/' . $data->id_jenis) ?>">
+														<button type="submit" class="btn btn-warning"
+															data-toggle="tooltip" data-placement="top"
+															title="Buka"><span><i
+																	class="fa fa-edit"></i></span></button>
 													</form>
 												</td>
 											</tr>
