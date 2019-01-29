@@ -28,7 +28,7 @@ class Nomenklaturkontroller extends MY_Controller
 
 	public function getById($id = null)
 	{
-		$data['tampil'] = $this->pertanyaan_model->getById($id);
+		
 		// foreach ($data as $key) {
 		// 	echo $key->aplikasi_fungsional;
 		// }
@@ -36,6 +36,7 @@ class Nomenklaturkontroller extends MY_Controller
 		if ($this->pertanyaan_model->getById($id) == null) {
 			show_404();
 		} else {
+			$data['tampil'] = $this->pertanyaan_model->getById($id);
 			$this->load->view('spbefix/_partialadmin/header', $data);
 			$this->load->view('spbefix/_partialadmin/navigasi');
 			$this->load->view('spbefix/contentadmin/pertanyaannomenklatur');

@@ -103,7 +103,7 @@ $route['sistem/admin/kuisonerumum'] = 'spbe/admin/kuisonerumum/index';
 $route['sistem/admin/nomenklatur'] = 'spbe/admin/nomenklaturkontroller/index';
 $route['sistem/admin/User'] = 'spbe/admin/admindashboard/index';
 
-//$route['sistem/admin/datanomenklatur/(:num)'] = 'spbe/admin/datanomenklatur/cek/$1';
+$route['sistem/admin/datanomenklatur'] = 'spbe/admin/datanomenklatur/index';
 $route['sistem/admin/datanomenklatur/store'] = 'spbe/admin/datanomenklatur/store';
 $route['sistem/admin/datanomenklatur/edit/(:num)'] = 'spbe/admin/datanomenklatur/edit/$1';
 $route['sistem/admin/datanomenklatur/delete/(:num)'] = 'spbe/admin/datanomenklatur/delete/$1';
