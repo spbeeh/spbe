@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2019 at 02:14 AM
+-- Generation Time: Jan 29, 2019 at 02:26 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -128,7 +128,6 @@ CREATE TABLE `master` (
   `id_master` int(11) NOT NULL,
   `id_nama_aplikasi` int(11) DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL,
-  `id_jenis` int(11) DEFAULT NULL,
   `jawab` varchar(200) DEFAULT NULL,
   `nama_aplikasi` varchar(200) DEFAULT NULL,
   `unit_kerja` varchar(200) DEFAULT NULL
@@ -138,8 +137,8 @@ CREATE TABLE `master` (
 -- Dumping data for table `master`
 --
 
-INSERT INTO `master` (`id_master`, `id_nama_aplikasi`, `id_user`, `id_jenis`, `jawab`, `nama_aplikasi`, `unit_kerja`) VALUES
-(1, 4, 2, 1, 'Ada', 'sinaga', 'upt infokom');
+INSERT INTO `master` (`id_master`, `id_nama_aplikasi`, `id_user`, `jawab`, `nama_aplikasi`, `unit_kerja`) VALUES
+(1, 4, 2, 'Ada', 'sinaga', 'upt infokom');
 
 -- --------------------------------------------------------
 
@@ -149,7 +148,6 @@ INSERT INTO `master` (`id_master`, `id_nama_aplikasi`, `id_user`, `id_jenis`, `j
 
 CREATE TABLE `master_pertanyaan_umum` (
   `id_master_pertanyaan_umum` int(11) NOT NULL,
-  `id_jenis_pertanyaan_umum` int(11) DEFAULT NULL,
   `id_pertanyaan_umum` int(11) DEFAULT NULL,
   `id_user` int(11) DEFAULT NULL,
   `jawab` varchar(200) DEFAULT NULL,
@@ -160,8 +158,8 @@ CREATE TABLE `master_pertanyaan_umum` (
 -- Dumping data for table `master_pertanyaan_umum`
 --
 
-INSERT INTO `master_pertanyaan_umum` (`id_master_pertanyaan_umum`, `id_jenis_pertanyaan_umum`, `id_pertanyaan_umum`, `id_user`, `jawab`, `upload_file`) VALUES
-(2, 1, 1, 2, 'adad', NULL);
+INSERT INTO `master_pertanyaan_umum` (`id_master_pertanyaan_umum`, `id_pertanyaan_umum`, `id_user`, `jawab`, `upload_file`) VALUES
+(2, 1, 2, 'adad', NULL);
 
 -- --------------------------------------------------------
 
@@ -172,17 +170,18 @@ INSERT INTO `master_pertanyaan_umum` (`id_master_pertanyaan_umum`, `id_jenis_per
 CREATE TABLE `pertanyaan_umum` (
   `id_pertanyaan_umum` int(11) NOT NULL,
   `id_jenis_pertanyaan_umum` int(11) DEFAULT NULL,
-  `pertanyaan_umum` varchar(500) DEFAULT NULL
+  `pertanyaan_umum` varchar(500) DEFAULT NULL,
+  `jenisinput` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pertanyaan_umum`
 --
 
-INSERT INTO `pertanyaan_umum` (`id_pertanyaan_umum`, `id_jenis_pertanyaan_umum`, `pertanyaan_umum`) VALUES
-(1, 2, '1.	Jelaskan misi/sasaran pelaksanaan SPBE di Instansi Pusat/Pemerintah Daerah masing-masing?'),
-(2, 1, 'a)	Sebutkan perguruan tinggi  negeri maupun swasta yang memiliki jurusan/program studi terkait komputer, teknologi informasi dan komunikasi, sistem informasi, atau sejenisnya di wilayah Pemerintah Daerah masing-masing?'),
-(3, 1, 'b)	Berapakah persentase ketersediaan sumber daya listrik untuk pelaksanaan SPBE di Pemerintah Daerah masing-masing dalam satu bulan?');
+INSERT INTO `pertanyaan_umum` (`id_pertanyaan_umum`, `id_jenis_pertanyaan_umum`, `pertanyaan_umum`, `jenisinput`) VALUES
+(1, 2, '1.	Jelaskan misi/sasaran pelaksanaan SPBE di Instansi Pusat/Pemerintah Daerah masing-masing?', ''),
+(2, 1, 'a)	Sebutkan perguruan tinggi  negeri maupun swasta yang memiliki jurusan/program studi terkait komputer, teknologi informasi dan komunikasi, sistem informasi, atau sejenisnya di wilayah Pemerintah Daerah masing-masing?', ''),
+(3, 1, 'b)	Berapakah persentase ketersediaan sumber daya listrik untuk pelaksanaan SPBE di Pemerintah Daerah masing-masing dalam satu bulan?', '');
 
 -- --------------------------------------------------------
 
@@ -241,15 +240,13 @@ ALTER TABLE `jenis_pertanyaan_umum`
 ALTER TABLE `master`
   ADD PRIMARY KEY (`id_master`),
   ADD KEY `FK_REFERENCE_1` (`id_nama_aplikasi`),
-  ADD KEY `FK_REFERENCE_2` (`id_user`),
-  ADD KEY `FK_REFERENCE_3` (`id_jenis`);
+  ADD KEY `FK_REFERENCE_2` (`id_user`);
 
 --
 -- Indexes for table `master_pertanyaan_umum`
 --
 ALTER TABLE `master_pertanyaan_umum`
   ADD PRIMARY KEY (`id_master_pertanyaan_umum`),
-  ADD KEY `FK_REFERENCE_5` (`id_jenis_pertanyaan_umum`),
   ADD KEY `FK_REFERENCE_6` (`id_pertanyaan_umum`),
   ADD KEY `FK_REFERENCE_7` (`id_user`);
 
@@ -327,14 +324,12 @@ ALTER TABLE `aplikasi_fungsional`
 --
 ALTER TABLE `master`
   ADD CONSTRAINT `FK_REFERENCE_1` FOREIGN KEY (`id_nama_aplikasi`) REFERENCES `aplikasi_fungsional` (`id_aplikasi_fungsional`),
-  ADD CONSTRAINT `FK_REFERENCE_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
-  ADD CONSTRAINT `FK_REFERENCE_3` FOREIGN KEY (`id_jenis`) REFERENCES `jenis` (`id_jenis`);
+  ADD CONSTRAINT `FK_REFERENCE_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 
 --
 -- Constraints for table `master_pertanyaan_umum`
 --
 ALTER TABLE `master_pertanyaan_umum`
-  ADD CONSTRAINT `FK_REFERENCE_5` FOREIGN KEY (`id_jenis_pertanyaan_umum`) REFERENCES `jenis_pertanyaan_umum` (`id_jenis_pertanyaan_umum`),
   ADD CONSTRAINT `FK_REFERENCE_6` FOREIGN KEY (`id_pertanyaan_umum`) REFERENCES `pertanyaan_umum` (`id_pertanyaan_umum`),
   ADD CONSTRAINT `FK_REFERENCE_7` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`);
 

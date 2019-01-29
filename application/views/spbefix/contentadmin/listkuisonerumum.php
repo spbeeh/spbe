@@ -80,7 +80,7 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+						<table id="myTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
 							<thead>
 								<tr>
 									<th rowspan=2>No</th>
@@ -164,13 +164,12 @@
 																				for="name">Pertanyaan Umum <span
 																					class="required"></span></label>
 																			<div class="col-md-6 col-sm-6 col-xs-12">
-																				<textarea id="name"
+																				<textarea id="name" col="30" rows="10"
 																					class="form-control col-md-7 col-xs-12"
 																					data-validate-length-range="6"
 																					data-validate-words="2"
 																					name="pertanyaan_umum"
-																					required="required"
-																					type="text"><?php echo $value->pertanyaan_umum ?></textarea>
+																					required="required"><?php echo $value->pertanyaan_umum ?></textarea>
 																			</div>
 																		</div>
 
@@ -203,7 +202,7 @@
 											</tr>
 										</table>
 									</td>
-									<td></td>
+									<!-- <td></td> -->
 								</tr>
 								<?php endforeach; ?>
 							</tbody>

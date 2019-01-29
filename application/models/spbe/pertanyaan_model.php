@@ -10,7 +10,10 @@ class pertanyaan_model extends CI_Model
 		parent::__construct();
 	//Do your magic here
 	}
-
+	public function getAlllist()
+	{
+		return $this->db->get('aplikasi_fungsional')->result();
+	}
 	public function getAll()
 	{
 
@@ -26,7 +29,13 @@ class pertanyaan_model extends CI_Model
 
 	public function getById($id)
 	{
-		return $this->db->query("SELECT * FROM aplikasi_fungsional WHERE id_jenis = $id")->result();
+		$this->db->select('*')
+			->from('aplikasi_fungsional')
+			->join('jenis', 'aplikasi_fungsional.id_jenis = jenis.id_jenis')
+			->JOIN('master', 'aplikasi_fungsional.id_aplikasi_fungsional=master.id_nama_aplikasi', 'left')
+			->GROUP_BY('jenis');
+		$query = $this->db->get();
+		return $query->result();
 	}
 
 	public function save($table, $data)

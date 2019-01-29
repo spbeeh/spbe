@@ -23,7 +23,7 @@ class Datanomenklatur extends MY_Controller
 	public function index()
 	{
 		$data['jenis'] = $this->jenis_model->getAll();
-		$data['aa'] = $this->pertanyaan_model->getAll();
+		$data['aa'] = $this->pertanyaan_model->getAlllist();
 		$this->load->view('spbefix/_partialadmin/header', $data);
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/listnomenklatur');

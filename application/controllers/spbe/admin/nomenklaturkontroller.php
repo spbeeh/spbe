@@ -28,18 +28,15 @@ class Nomenklaturkontroller extends MY_Controller
 
 	public function getById($id = null)
 	{
-		
-		// foreach ($data as $key) {
-		// 	echo $key->aplikasi_fungsional;
-		// }
-		// $data['data'] = $this->pertanyaan_model->getAll();
+
 		if ($this->pertanyaan_model->getById($id) == null) {
 			show_404();
 		} else {
-			$data['tampil'] = $this->pertanyaan_model->getById($id);
-			$this->load->view('spbefix/_partialadmin/header', $data);
+			$idku['id'] = $id;
+			$data['jenis'] = $this->pertanyaan_model->getById($id);
+			$this->load->view('spbefix/_partialadmin/header', $data, $idku);
 			$this->load->view('spbefix/_partialadmin/navigasi');
-			$this->load->view('spbefix/contentadmin/pertanyaannomenklatur');
+			$this->load->view('spbefix/contentadmin/Nomenklatur');
 			$this->load->view('spbefix/_partialadmin/footer');
 			$this->load->view('spbefix/_partialadmin/js');
 		}
