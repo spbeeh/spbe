@@ -120,11 +120,8 @@ $route['sistem/admin/datauser/report/(:num)'] = 'spbe/admin/userkontroller/repor
 
 $route['sistem/admin/nomenklatur/(:num)'] = 'spbe/admin/nomenklaturkontroller/getById/$1';
 $route['sistem/admin/isinm/store'] = 'spbe/admin/isipertanyaannomenklatur/store';
-
+$route['sistem/admin/nomenklatur/isi/(:num)'] = 'spbe/admin/nomenklaturkontroller/getByIdnomen/$1';
 
 $route['sistem/admin/datanomenklatur/(:num)'] = 'spbe/admin/isipertanyaannomenklatur/edit/$1';
-// $route['tes'] = 'tes/tescontroller/index';
-
-// $route['tes/halaman2'] = 'tes/halaman2/index';
 
 $route['translate_uri_dashes'] = false;

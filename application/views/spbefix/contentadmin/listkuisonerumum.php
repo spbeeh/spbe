@@ -80,18 +80,20 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<table id="myTable" class="table table-striped table-bordered" cellspacing="0" width="100%">
+						<table id="datatable-responsive" class="table table-striped table-bordered" cellspacing="0"
+							width="100%">
 							<thead>
 								<tr>
 									<th rowspan=2>No</th>
 									<th rowspan=2>Pertanyaan umum</th>
 									<th rowspan=2>Khusus</th>
-									<th colspan="2">action</th>
+									<th rowspan=2>inputan</th>
+									<th rowspan=2>action</th>
 								</tr>
-								<tr style="display:none">
+								<!-- <tr style="display:none">
 									<th></th>
 									<th></th>
-								</tr>
+								</tr> -->
 							</thead>
 							<tbody>
 								<?php foreach ($pertanyaanumum as $key => $value) : ?>
@@ -105,6 +107,7 @@
 									}
 									endforeach; ?>
 									</td>
+									<td><?php echo $value->jenisinput ?></td>
 									<td>
 										<table>
 											<tr>
@@ -139,7 +142,7 @@
 																					class="select2_single form-control"
 																					name="id_jenis_pertanyaan_umum"
 																					tabindex="-1">
-																					<?php foreach ($jenisumum as $key) : ?>
+																					<?php foreach ($jenisumum as $value => $key) : ?>
 																					<?php if ($value->id_jenis_pertanyaan_umum == $key->id_jenis_pertanyaan_umum) { ?>
 																					<option
 																						value="<?php echo $key->id_jenis_pertanyaan_umum ?>"
@@ -172,7 +175,6 @@
 																					required="required"><?php echo $value->pertanyaan_umum ?></textarea>
 																			</div>
 																		</div>
-
 																		<div class="ln_solid"></div>
 																		<div class="form-group">
 																			<div class="form-group">
@@ -193,16 +195,47 @@
 													</div>
 												</td>
 												<td>
-													<form method="post"
-														action="<?php echo base_url('sistem/admin/datapertanyaanumum/delete/' . $value->id_pertanyaan_umum) ?>">
-														<button type="submit" class="btn btn-danger"><span><i
-																	class="fa fa-trash-o"></i></span></button>
-													</form>
+													<button type="button" class="btn btn-danger" data-toggle="modal"
+														data-target="#delete"><span><i
+																class="fa fa-trash-o"></i></span></button>
+
+													<div id="delete" class="modal fade " tabindex="-1" role="dialog"
+														aria-hidden="true">
+
+														<div class="modal-dialog modal-sm">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close"
+																		data-dismiss="modal" aria-label="Close"><span
+																			aria-hidden="true">×</span>
+																	</button>
+																	<h4 class="modal-title" id="myModalLabel2"
+																		align="center">
+																		Peringatan</h4>
+																</div>
+																<div class="modal-body">
+																	<p align="center">yakin ingin
+																		dihapus?<?php echo $value->id_pertanyaan_umum ?>
+																	</p>
+																</div>
+																<div class="modal-footer">
+																	<center>
+																		<form method="post"
+																			action="<?php echo base_url('sistem/admin/datapertanyaanumum/delete/' . $value->id_pertanyaan_umum) ?>">
+																			<button type="submit"
+																				class="btn btn-danger">Ya</button>
+																		</form>
+																		<button type="button"
+																			class="btn btn-primary">Tidak</button>
+																</div>
+															</div>
+														</div>
+													</div>
 												</td>
 											</tr>
 										</table>
 									</td>
-									<!-- <td></td> -->
+									<td></td>
 								</tr>
 								<?php endforeach; ?>
 							</tbody>

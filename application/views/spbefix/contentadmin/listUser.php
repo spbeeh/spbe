@@ -323,13 +323,51 @@
 													</form>
 												</td>
 												<td>
-													<form method="post"
-														action="<?php echo base_url('sistem/admin/datauser/destroy/' . $value->id_user) ?>">
-														<button type="submit" class="btn btn-danger"
-															data-toggle="tooltip" data-placement="top"
-															title="Hapus"><span><i
-																	class="fa fa-trash-o"></i></span></button>
-													</form>
+													<button type="button" class="btn btn-danger" data-toggle="modal"
+														data-target="#delete<?php echo $key + 1 ?>" data-placement="top"
+														title="Hapus"><span><i
+																class="fa fa-trash-o"></i></span></button>
+
+													<div id="delete<?php echo $key + 1 ?>" class="modal fade "
+														tabindex="-1" role="dialog" aria-hidden="true">
+
+														<div class="modal-dialog modal-sm">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close"
+																		data-dismiss="modal" aria-label="Close"><span
+																			aria-hidden="true">×</span>
+																	</button>
+																	<h4 class="modal-title" id="myModalLabel2"
+																		align="center">
+																		Peringatan</h4>
+																</div>
+																<div class="modal-body">
+																	<p align="center">yakin ingin
+																		dihapus?<?php echo $value->nip_pj ?>
+																	</p>
+																</div>
+																<div class="modal-footer">
+																	<center>
+																		<table>
+																			<tr>
+																				<td>
+																					<form method="post"
+																						action="<?php echo base_url('sistem/admin/datauser/destroy/' . $value->id_user) ?>">
+																						<button type="submit"
+																							class="btn btn-danger">Ya</button>
+																					</form>
+																				</td>
+																				<td><button type="button"
+																						class="btn btn-primary"
+																						data-dismiss="modal">Tidak</button>
+																				</td>
+																			</tr>
+																		</table>
+																</div>
+															</div>
+														</div>
+													</div>
 												</td>
 												<td></td>
 											</tr>

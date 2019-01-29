@@ -8,7 +8,8 @@
 	<!--===============================================================================================-->
 	<link rel="icon" type="image/png" href="<?php echo base_url('Asset/images/icons/favicon.ico') ?>" />
 	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?= base_url('Asset/vendor/bootstrap/css/bootstrap.css'); ?>">
+	<link rel="stylesheet" type="text/css"
+		href="<?php echo base_url('Asset/vendor/bootstrap/css/bootstrap.min.css') ?>">
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css"
 		href="<?php echo base_url('Asset/fonts/font-awesome-4.7.0/css/font-awesome.min.css') ?>">
@@ -67,19 +68,21 @@
 						</span>
 					</div>
 				</form>
-
 				<div class="login100-more"
 					style="background-image: url('<?php echo base_url('Asset/images/teratai.jpg') ?>');">
-
 				</div>
-
 			</div>
 		</div>
 	</div>
+
+
+
+
+
 	<!--===============================================================================================-->
-	<script src="<?php echo base_url('Assets/vendor/jquery/jquery-3.2.1.min.js') ?>"></script>
+	<script src="<?php echo base_url('Asset/vendor/jquery/jquery-3.2.1.min.js') ?>"></script>
 	<!--===============================================================================================-->
-	<script src="<?php echo base_url('Assets/vendor/animsition/js/animsition.min.js') ?>"></script>
+	<script src="<?php echo base_url('Asset/vendor/animsition/js/animsition.min.js') ?>"></script>
 	<!--===============================================================================================-->
 	<script src="<?php echo base_url('Asset/vendor/bootstrap/js/popper.js') ?>"></script>
 	<script src="<?php echo base_url('Asset/vendor/bootstrap/js/bootstrap.min.js') ?>"></script>
@@ -92,9 +95,6 @@
 	<script src="<?php echo base_url('Asset/vendor/countdowntime/countdowntime.js') ?>"></script>
 	<!--===============================================================================================-->
 	<script src="<?php echo base_url('Asset/js/main.js') ?>"></script>
-	<script>
-	$('#myalert').delay('slow').slideDown('slow').delay(4100).slideUp(600);
-	</script>
 
 </body>
 
