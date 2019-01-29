@@ -11,7 +11,7 @@ class isipertanyaannomenklatur extends CI_Controller
 		$this->load->model('spbe/isipertanyaannomenklatur_model');
 		$this->load->model('spbe/pertanyaan_model');
 		if ($this->session->userdata('role') != "Admin") {
-			redirect('login', 'refresh');
+			redirect('login');
 		}
 	}
 

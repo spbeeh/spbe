@@ -14,7 +14,7 @@ class admindashboard extends MY_Controller    /// ini extend di ambil dari folde
 
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
-			redirect('login', 'refresh');
+			redirect('login');
 		}
 	}
 

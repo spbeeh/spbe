@@ -26,16 +26,16 @@ class Auth_model extends CI_Model
 		
         //jika bernilai 1 maka user tidak ditemukan
 		if (!$query) {
-			return redirect('login', 'refresh');
+			return redirect('login');
 		}
 		
         //jika bernilai 2 maka user tidak aktif
 		if ($this->db->where('nip_pj', $username) == null) {
-			return redirect('login', 'refresh');
+			return redirect('login');
 		}
         //jika bernilai 3 maka password salah
 		if (!hash_verified($this->input->post('password'), $query->password)) {
-			return redirect('login', 'refresh');
+			return redirect('login');
 		}
 
 		return $query;

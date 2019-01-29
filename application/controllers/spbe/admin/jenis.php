@@ -10,7 +10,7 @@ class Controllername extends CI_Controller
 		//Do your magic here
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
-			redirect('login', 'refresh');
+			redirect('login');
 		}
 	}
 

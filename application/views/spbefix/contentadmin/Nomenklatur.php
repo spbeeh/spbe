@@ -62,9 +62,9 @@
 												<td><?php echo $data->jenis ?></td>
 												<td>
 													<?php if ($data->id_user == $this->uri->segment(4)) {
-													echo "<span class='label label-success'>sudah<span>";
+													echo "<label class='label label-success'>sudah<label>";
 												} else {
-													echo "<span class='label label-danger'>Belum</span>";
+													echo "<label class='label label-danger'>Belum</label>";
 												} ?>
 												</td>
 												<td>

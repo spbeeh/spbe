@@ -204,7 +204,7 @@
         												<td>
         													<form method="post"
         														action="<?php echo base_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
-        														<button type="" class="btn btn-primary"
+        														<button type="" class="btn btn-primary btn-sm"
         															data-toggle="tooltip" data-placement="top"
         															title="Buka"><span><i
         																	class="fa fa-pencil"></i></span></button>
@@ -220,7 +220,7 @@
         												<td>
         													<form method="post"
         														action="<?php echo base_url('sistem/admin/nomenklatur/' . $value->id_user) ?>">
-        														<button type="" class="btn btn-primary"
+        														<button type="" class="btn btn-primary btn-sm"
         															data-toggle="tooltip" data-placement="top"
         															title="Buka"><span><i
         																	class="fa fa-pencil"></i></span></button>
@@ -234,21 +234,6 @@
         							</div>
         							<!-- /.row -->
 
-        							<!-- <div class="row"> -->
-        							<!-- accepted payments column -->
-        							<!-- <div class="col-xs-6">
-        									<p class="lead">Payment Methods:</p>
-        									<img src="images/visa.png" alt="Visa">
-        									<img src="images/mastercard.png" alt="Mastercard">
-        									<img src="images/american-express.png" alt="American Express">
-        									<img src="images/paypal.png" alt="Paypal">
-        									<p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
-        										Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly
-        										ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers
-        										sifteo edmodo ifttt zimbra.
-        									</p> -->
-        							<!-- </div> -->
-        							<!-- /.col -->
         							<div class="col-xs-6 pull-right">
         								<p class="lead"></p>
         								<div class="table-responsive">
@@ -277,10 +262,6 @@
         						<div class="col-xs-12">
         							<button onclick="printDiv('printableArea')" class="btn btn-default btn-print"><i
         									class="fa fa-print"></i> Print</button>
-        							<!-- <button class="btn btn-success pull-right"><i class="fa fa-credit-card"></i>
-        								Submit Payment</button>
-        							<button class="btn btn-primary pull-right" style="margin-right: 5px;"><i
-        									class="fa fa-download"></i> Generate PDF</button> -->
         						</div>
         					</div>
         					</section>
