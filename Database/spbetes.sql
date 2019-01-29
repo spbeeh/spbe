@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2019 at 02:26 PM
+-- Generation Time: Jan 29, 2019 at 04:15 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -133,13 +133,6 @@ CREATE TABLE `master` (
   `unit_kerja` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `master`
---
-
-INSERT INTO `master` (`id_master`, `id_nama_aplikasi`, `id_user`, `jawab`, `nama_aplikasi`, `unit_kerja`) VALUES
-(1, 4, 2, 'Ada', 'sinaga', 'upt infokom');
-
 -- --------------------------------------------------------
 
 --
@@ -208,8 +201,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `namainstansipusat`, `nama_penanggungjawab`, `nip_pj`, `jabatan_pj`, `nama_operator`, `nip_op`, `jabatan_op`, `password`, `role`) VALUES
 (2, '123123123', '123123123', '123123123', '123123123', '123123123', '123123123', '123123123', '$2y$05$diQ4DlRLvERns6mJCXoQDezhVRuzs6nFN63ct7rUQMC1IeoYPkjuq', 'Admin'),
-(8, 'Malang', 'Qhodir Z', '2016045', 'Malang', 'Malang', 'Malang', 'Malang', '$2y$05$fhRxPkDQRPSmWiYrmG3goevTQlS5Y/J5CSxDZBbG/I73dv83vf7KS', 'Admin'),
-(9, 'Malang', 'Qhodir Z', '123123', 'Malang', 'Malang', 'Malang', 'Malang', '$2y$05$T8GRHwcsdH.Az4QmI50qjOoHT/pQgkcte1AJmGxH3TVK3nn6fzt9C', 'Admin');
+(8, 'Malang', 'Qhodir Z', '2016045', 'Malang', 'Malang', 'Malang', 'Malang', '$2y$05$fhRxPkDQRPSmWiYrmG3goevTQlS5Y/J5CSxDZBbG/I73dv83vf7KS', 'Admin');
 
 --
 -- Indexes for dumped tables
