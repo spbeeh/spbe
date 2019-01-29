@@ -59,7 +59,8 @@
 	<link href="<?php echo site_url('gentelella/build/css/custom.min.css') ?>" rel="stylesheet">
 
 	<!-- bootstrap-wysiwyg -->
-	<link href="<?php echo site_url('gentelella/vendors/google-code-prettify/bin/prettify.min.css') ?>" rel="stylesheet">
+	<link href="<?php echo site_url('gentelella/vendors/google-code-prettify/bin/prettify.min.css') ?>"
+		rel="stylesheet">
 	<!-- Select2 -->
 	<link href="<?php echo site_url('gentelella/vendors/select2/dist/css/select2.min.css') ?>" rel="stylesheet">
 	<!-- Switchery -->
@@ -67,7 +68,10 @@
 	<!-- starrr -->
 	<link href="<?php echo site_url('gentelella/vendors/starrr/dist/starrr.cs') ?>s" rel="stylesheet">
 	<!-- bootstrap-daterangepicker -->
-	<link href="<?php echo site_url('gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css') ?>" rel="stylesheet">
+	<link href="<?php echo site_url('gentelella/vendors/bootstrap-daterangepicker/daterangepicker.css') ?>"
+		rel="stylesheet">
+
+
 
 
 </head>
