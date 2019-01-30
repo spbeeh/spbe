@@ -35,16 +35,18 @@
         							<div class="row">
         								<div class="col-xs-12 invoice-header">
         									<h1>
-        										<center>Kementerian Pendayagunaan Aparatur Negara dan
-        											Reformasi Birokrasi
+        										<center>PEMERINTAH KOTA MALANG <br> DINAS KOMUNIKASI DAN INFORMATIKA
         									</h1>
+        									<h3>
+        										<center>UPT. PUSAT KENDALI (COMMAND CENTER)
+        									</h3>
         									<br>
         									<h4 class="">
         										<center>
-        											Jalan Jenderal Sudirman Kavling 69 Jakarta Selatan - 12190 Telp.
-        											(+6221)
-        											7398381 - 89 Ext. 2111 <br>
-        											email : kominfo@malangkota.go.id
+        											Jalan Tugu No. 1 Telp.
+        											(0341)
+        											328553 <br>
+        											email : ncc@malangkota.go.id
         									</h4>
         								</div>
         								<!-- /.col -->

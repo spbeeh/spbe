@@ -38,6 +38,7 @@ class laporan extends MY_Controller
 		} else {
 			$data['user'] = $this->user_model->getUser($id);
 			$data['tampil'] = $this->user_model->getReport($id);
+			$data['pertanyaan_umum'] = $this->pertanyaanumum_model->getById($id);
 			$this->load->view('menu/_partial/header', $data);
 			$this->load->view('menu/_partial/navigasi2');
 			$this->load->view('menu/contect/laporan');

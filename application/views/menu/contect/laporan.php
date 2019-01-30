@@ -38,17 +38,17 @@
 								<tbody>
 									<tr>
 										<td>
-											<img src="<?php echo site_url('Asett/Image/logo.png') ?>" height="80"
-												width="80">
+											<!-- <img src="<?php echo site_url('Asett/Image/logo.png') ?>" height="80"
+												width="80"> -->
 										</td>
 										<td width="30">&nbsp;</td>
 										<td align="center">
-											<h4 class="uppercase">Kementerian Pendayagunaan Aparatur Negara dan
-												Reformasi Birokrasi</h4>
-											<h4 class="uppercase">Evaluasi SPBE</h4>
-											Jalan Jenderal Sudirman Kavling 69 Jakarta Selatan - 12190 Telp. (+6221)
-											7398381 - 89 Ext. 2111 <br>
-											email : asdep2balaks@menpan.go.id
+											<h4 class="uppercase">PEMERINTAH KOTA MALANG <br> DINAS KOMUNIKASI DAN
+												INFORMATIKA</h4>
+											Jalan Tugu No. 1 Telp.
+											(0341)
+											328553 <br>
+											email : ncc@malangkota.go.id
 										</td>
 									</tr>
 								</tbody>
@@ -112,10 +112,8 @@
 									<td>1</td>
 									<td>Pertanyaaan Umum</td>
 									<td>
-										<?php if (isset($value->id_user) === $this->session->userdata('id_user')) {
-
+										<?php if (isset($pertanyaan_umum->id_user) == $this->session->userdata('id_user')) {
 										echo ("<span style='color:green'>Sudah Mengisi</span>");
-
 									} else {
 										echo ("<span style='color:red'>Belum Mengisi/Belum Selesai</span>");
 									} ?>
@@ -124,7 +122,7 @@
 								<tr>
 									<td>2</td>
 									<td>Evaluasi Aplikasi</td>
-									<td><?php if (isset($value->id_user) === $this->session->userdata('id_user')) {
+									<td><?php if (isset($tampil->id_user) == $this->session->userdata('id_user')) {
 
 													echo ("<span style='color:green'>Sudah Mengisi</span>");
 
