@@ -21,7 +21,7 @@
 					== "Admin") { ?>
 					<li class="nav-item">
 						<a class="nav-link" href="<?php echo site_url('sistem/admin/dashboard') ?>" onclick="">
-							<i class="now-ui-icons users_single-02"></i>
+							<i class=""></i>
 							<p>Admin</p>
 						</a>
 					</li>
@@ -50,7 +50,7 @@
 					<li class="nav-item">
 						<a class="nav-link" href="<?php echo site_url('logout') ?>" onclick="">
 							<i class="now-ui-icons media-1_button-power"></i>
-							<p>Logout</p>
+							<p>Keluar</p>
 						</a>
 					</li>
 				</ul>
