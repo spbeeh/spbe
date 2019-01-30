@@ -46,47 +46,76 @@
 									<div class="clearfix"></div>
 								</div>
 								<div class="x_content">
-									<form method="post" action="<?php echo base_url('') ?>"
-										enctype="multipart/data-form">
-										<table class="table table-hover">
-											<thead>
-												<tr>
-													<th></th>
-													<th></th>
-													<th></th>
-												</tr>
-											</thead>
-											<tbody>
-												<?php foreach ($tampil as $key => $value) { ?>
-												<tr>
-													<td><?php echo $value->id_jenis_pertanyaan_umum ?></td>
-													<td><?php echo $value->pertanyaan_umum ?></td>
-													<td><?php if ($value->jenisinput == "File") { ?>
-														<input type="file" name="" value="">
+									<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
+										action="<?php echo base_url(); ?>/">
+										<?php foreach ($pertanyaanUtama as $data) { ?>
+										<div id="step-1">
+											<div class="row">
+												<div class="col-md-12 col-sm-12 col-xs-12">
+													<div class="x_panel">
+														<div class="x_title">
+															<font size="4">
+																<?php echo $data->no_urut . ". " . $data->pertanyaan_umum; ?>
+															</font>
+															<div class="clearfix"></div>
+														</div>
+														<div class="x_content">
+															<br />
+															<?php 
+										if (count($controller->getSubPertanyaan($data->id_pertanyaan_umum)) > 0) {
+												//Sub Pertanyaan
+											foreach ($controller->getSubPertanyaan($data->id_pertanyaan_umum) as $sub) { ?>
+															<font size="4"><?php echo $sub->pertanyaan_umum ?><br>
+															</font>
 
-														<?php 
-												} else { ?>
-														<textarea id="message" required="required" class="form-control"
-															name="message"
-															style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
-														<?php 
-												} ?>
-													</td>
-
-												</tr>
-												<?php 
-										} ?>
-												<tr>
-													<td></td>
-													<td>
-													</td>
-													<td>
-														<button type="button" class="btn btn-animate">batal</button>
-														<button type="submit" class="btn btn-success">submit</button>
-													</td>
-												</tr>
-											</tbody>
-										</table>
+															<?php 
+											if ($sub->jenisinput == "File") {
+												?>
+															<div class="form-group">
+																<input type="file" name="jawab" class="form-control" />
+															</div>
+															<?php 
+										} else {
+											?>
+															<div class="form-group">
+																<textarea required="required" class="form-control"
+																	name="jawab"
+																	style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+															</div>
+															<?php	
+										}
+										?>
+															<?php 
+									}
+								} else {
+									?>
+															<?php 
+											if ($data->jenisinput == "File") {
+												?>
+															<div class="form-group">
+																<input type="file" name="jawab" class="form-control" />
+															</div>
+															<?php 
+										} else {
+											?>
+															<div class="form-group">
+																<textarea required="required" class="form-control"
+																	name="jawab"
+																	style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+															</div>
+															<?php	
+										}
+										?>
+															<?php 
+									}
+									?>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<?php 
+			} ?>
 									</form>
 								</div>
 							</div>

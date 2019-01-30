@@ -126,4 +126,6 @@ $route['sistem/admin/nomenklatur/isi/(:num)'] = 'spbe/admin/nomenklaturkontrolle
 
 $route['sistem/admin/datanomenklatur/(:num)'] = 'spbe/admin/isipertanyaannomenklatur/edit/$1';
 
+$route['sistem/admin/kuisonerumum/(:num)'] = 'spbe/admin/kuisonerumum/getById/$1';
+
 $route['translate_uri_dashes'] = false;

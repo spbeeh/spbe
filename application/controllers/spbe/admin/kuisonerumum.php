@@ -27,6 +27,30 @@ class kuisonerumum extends MY_Controller
 		$this->load->view('spbefix/_partialadmin/js');
 	}
 
+	public function getById($id = null)
+	{
+		$data['pertanyaanUtama'] = $this->pertanyaanumum_model->getPertanyaan();
+		$data['controller'] = $this;
+		$this->load->view('spbefix/_partialadmin/header', $data);
+		$this->load->view('spbefix/_partialadmin/navigasi');
+		$this->load->view('spbefix/contentadmin/KuisonerUmum');
+		$this->load->view('spbefix/_partialadmin/footer');
+		$this->load->view('spbefix/_partialadmin/js');
+	}
+
+	//=====================
+	//PERTANYAAN UMUM/EVALUASI UMUM
+	//=====================
+	public function getSubPertanyaan($id)
+	{
+		return $this->pertanyaanumum_model->getSubPertanyaan($id);
+	}
+
+	public function debug($id)
+	{
+		echo json_encode($this->pertanyaanumum_model->getSubPertanyaan($id));
+	}
+
 }
 
 /* End of file kuisonerumum.php */

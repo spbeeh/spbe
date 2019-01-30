@@ -38,7 +38,7 @@ class user_model extends CI_Model
 	public function getReport($id)
 	{
 		$this->db->SELECT('*')
-			->FROM('master_pertanyaan_umum');
+			->FROM('master');
 		$query = $this->db->get();
 		return $query->result();
 	}

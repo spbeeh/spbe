@@ -200,10 +200,17 @@
         												<td>Pertanyaaan Umum</td>
         												<td></td>
         												<td>
-        													<span style="color:green">Sudah Mengisi</span> </td>
+        													<?php if (isset($value->id_user) === $this->uri->segment(5)) {
+
+																					echo ("<span style='color:green'>Sudah Mengisi</span>");
+
+																				} else {
+																					echo ("<span style='color:red'>Belum Mengisi/Belum Selesai</span>");
+																				} ?>
+        												</td>
         												<td>
         													<form method="post"
-        														action="<?php echo base_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
+        														action="<?php echo base_url('sistem/admin/kuisonerumum/' . $value->id_user) ?>">
         														<button type="" class="btn btn-primary btn-sm"
         															data-toggle="tooltip" data-placement="top"
         															title="Buka"><span><i
@@ -216,13 +223,13 @@
         												<td>Evaluasi Aplikasi</td>
         												<td></td>
         												<td>
-															<?php if () { ?>
-																<span style="color:red">
-																	Belum Mengisi/Belum Selesai
-																</span>
-																
-															 <?php 
-														} ?>
+        													<?php if (isset($value->id_user) === $this->uri->segment(5)) {
+
+																					echo ("<span style='color:green'>Sudah Mengisi</span>");
+
+																				} else {
+																					echo ("<span style='color:red'>Belum Mengisi/Belum Selesai</span>");
+																				} ?>
         												</td>
         												<td>
         													<form method="post"
