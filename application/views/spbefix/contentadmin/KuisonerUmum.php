@@ -57,14 +57,34 @@
 												</tr>
 											</thead>
 											<tbody>
-												<td></td>
-												<td></td>
-												<td>
-													<textarea id="message" required="required" class="form-control"
-														name="message"
-														style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
-												</td>
-												<td><input type="file" name="" value=""></td>
+												<?php foreach ($tampil as $key => $value) { ?>
+												<tr>
+													<td><?php echo $value->id_jenis_pertanyaan_umum ?></td>
+													<td><?php echo $value->pertanyaan_umum ?></td>
+													<td><?php if ($value->jenisinput == "File") { ?>
+														<input type="file" name="" value="">
+
+														<?php 
+												} else { ?>
+														<textarea id="message" required="required" class="form-control"
+															name="message"
+															style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+														<?php 
+												} ?>
+													</td>
+
+												</tr>
+												<?php 
+										} ?>
+												<tr>
+													<td></td>
+													<td>
+													</td>
+													<td>
+														<button type="button" class="btn btn-animate">batal</button>
+														<button type="submit" class="btn btn-success">submit</button>
+													</td>
+												</tr>
 											</tbody>
 										</table>
 									</form>

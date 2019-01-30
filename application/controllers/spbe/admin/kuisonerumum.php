@@ -9,6 +9,7 @@ class kuisonerumum extends MY_Controller
 	{
 		parent::__construct();
 		//Do your magic here
+		$this->load->model('spbe/pertanyaanumum_model');
 
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
@@ -18,7 +19,8 @@ class kuisonerumum extends MY_Controller
 
 	public function index()
 	{
-		$this->load->view('spbefix/_partialadmin/header');
+		$data['tampil'] = $this->pertanyaanumum_model->getAll();
+		$this->load->view('spbefix/_partialadmin/header', $data);
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/KuisonerUmum');
 		$this->load->view('spbefix/_partialadmin/footer');
