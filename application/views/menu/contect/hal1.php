@@ -22,33 +22,73 @@
 				<!-- Smart Wizard -->
 
 				<div id="wizard" class="form_wizard wizard_horizontal"> 
-
-					<div id="step-1">
-						<div class="row">
-							<div class="col-md-12 col-sm-12 col-xs-12">
-								<div class="x_panel">
-									<div class="x_title">
-										<font size="4">1. Jelaskan misi/sasaran pelaksanaan SPBE di Instansi
-											Pusat/Pemerintah Daerah masing-masing?</font>
-										<div class="clearfix"></div>
-									</div>
-									<div class="x_content">
-										<br />
-										<form id="demo-form2" data-parsley-validate
-											class="form-horizontal form-label-left">
-
-											<div class="form-group">
-												<textarea id="message" required="required" class="form-control"
-													name="message"
-													style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
-											</div>
-										</form>
+					<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="<?php echo base_url(); ?>/">
+					<?php foreach($pertanyaanUtama AS $data){ ?>
+						<div id="step-1">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 col-xs-12">
+									<div class="x_panel">
+										<div class="x_title">
+											<font size="4"><?php echo $data->no_urut.". ".$data->pertanyaan_umum; ?></font>
+											<div class="clearfix"></div>
+										</div>
+										<div class="x_content">
+											<br />
+											<?php 
+											if(count($controller->getSubPertanyaan($data->id_pertanyaan_umum))>0){
+												//Sub Pertanyaan
+												foreach($controller->getSubPertanyaan($data->id_pertanyaan_umum) AS $sub){ ?>
+												<font size="4"><?php echo $sub->pertanyaan_umum ?><br></font>
+												
+												<?php 
+													if($sub->jenisinput=="File"){
+												?>
+												<div class="form-group">
+													<input type="file" name="jawab" class="form-control" />
+												</div>
+												<?php 
+													}else{
+												?>
+												<div class="form-group">
+													<textarea required="required" class="form-control"
+														name="jawab"
+														style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+												</div>
+												<?php												
+													}
+												?>
+											<?php 
+												}
+											}else{
+											?>
+												<?php 
+													if($data->jenisinput=="File"){
+												?>
+												<div class="form-group">
+													<input type="file" name="jawab" class="form-control" />
+												</div>
+												<?php 
+													}else{
+												?>
+												<div class="form-group">
+													<textarea required="required" class="form-control"
+														name="jawab"
+														style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+												</div>
+												<?php												
+													}
+												?>
+											<?php 
+											}
+											?>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-
+					<?php } ?>
+					</form>
+					<!--
 					<div id="step-2">
 						<div class="row">
 							<div class="col-md-12 col-sm-12 col-xs-12">
@@ -262,7 +302,7 @@
 							</div>
 						</div>
 					</div>
-
+					-->
 					<div>
 						<button type="submit" class="btn btn-primary">Submit</button>
 					</div>

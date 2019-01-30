@@ -22,7 +22,9 @@ class datapertanyaanumum extends MY_Controller
 	public function index()
 	{
 		$data['pertanyaanumum'] = $this->pertanyaanumum_model->getAll();
-		$data['jenisumum'] = $this->jenisumum_model->getAll();;
+		$data['jenisumum'] 		= $this->jenisumum_model->getAll();
+		$data['pertanyaanUtama']= $this->pertanyaanumum_model->getPertanyaan();
+		
 		$this->load->view('spbefix/_partialadmin/header', $data);
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/listkuisonerumum');
@@ -32,9 +34,11 @@ class datapertanyaanumum extends MY_Controller
 
 	public function store()
 	{
-		$_POST['pertanyaan_umum'] = $this->input->post('pertanyaan_umum');
-		$_POST['jenisinput'] = $this->input->post('jenisinput');
-		$_POST['id_jenis_pertanyaan_umum'] = $this->input->post('id_jenis_pertanyaan_umum');
+		$_POST['no_urut'] 					= $this->input->post('no_urut');
+		$_POST['pertanyaan_umum'] 			= $this->input->post('pertanyaan_umum');
+		$_POST['sub_pertanyaan'] 			= $this->input->post('sub_pertanyaan');
+		$_POST['jenisinput'] 				= $this->input->post('jenisinput');
+		$_POST['id_jenis_pertanyaan_umum'] 	= $this->input->post('id_jenis_pertanyaan_umum');
 
 		$this->pertanyaanumum_model->save('pertanyaan_umum', $_POST);
 

@@ -36,6 +36,27 @@ class pertanyaanumum_model extends CI_Model
 	{
 		return $this->db->delete($table, array("id_pertanyaan_umum" => $id));
 	}
+	
+	//=====================
+	//PERTANYAAN UMUM/EVALUASI UMUM
+	//=====================
+	public function getPertanyaan(){
+		$this->db->SELECT('*')
+				->FROM('pertanyaan_umum')
+				->WHERE('sub_pertanyaan',0)
+				->ORDER_BY('no_urut');
+		$query = $this->db->get();
+		return $query->result();
+	}
+	
+	public function getSubPertanyaan($id){
+		$this->db->SELECT('*')
+				->FROM('pertanyaan_umum')
+				->WHERE('sub_pertanyaan',$id)
+				->ORDER_BY('no_urut');
+		$query = $this->db->get();
+		return $query->result();
+	}
 }
 
 /* End of file pertanyaanumum.php */

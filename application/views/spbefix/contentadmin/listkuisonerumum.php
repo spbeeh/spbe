@@ -36,6 +36,13 @@
 										<form class="form-horizontal form-label-left"
 											action="<?php echo base_url('sistem/admin/datapertanyaanumum/store') ?>"
 											method="post" enctype="multipart/form-data" novalidate>
+											<div class="item form-group">
+												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
+													No. Urut <span class="required"></span></label>
+												<div class="col-sm-7 col-xs-12">
+													<input type="number" required="required" class="form-control" name="no_urut"/>
+												</div>
+											</div>
 											<div class="form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12">pertanyaan
 													Khusus</label>
@@ -56,9 +63,25 @@
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
 													Pertanyaan Umum <span class="required"></span></label>
 												<div class="col-sm-7 col-xs-12">
-													<textarea id="message" required="required" class="form-control"
-														name="message"
+													<textarea required="required" class="form-control"
+														name="pertanyaan_umum"
 														style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-3 col-sm-3 col-xs-12">Sub
+													Pertanyaan</label>
+												<div class="col-sm-7 col-xs-12">
+													<select name="sub_pertanyaan"
+														class="select2_single form-control" tabindex="-1">
+														<option>Tidak ada</option>
+														<?php foreach ($pertanyaanUtama as $data) : ?>
+														<option value="<?php echo $data->id_pertanyaan_umum ?>">
+															<?php echo $data->pertanyaan_umum ?>
+														</option>
+														<?php endforeach; ?>
+
+													</select>
 												</div>
 											</div>
 											<div class="form-group">
