@@ -1,5 +1,6 @@
 	<!-- Page Content -->
 	<div class="container">
+		<?php $id = $this->session->userdata('nip_pj'); ?>
 
 		<!-- Page Heading/Breadcrumbs -->
 		<h1 class="mt-4 mb-3">Jenis Form Evaluasi
@@ -38,7 +39,12 @@
 						</p>
 					</div>
 					<div class="card-footer">
-						<a href="<?php echo site_url('menu/hal2') ?>" class="btn btn-primary">Buka</a>
+						<form method="post"
+							action="<?php echo base_url('menu/hal2/'.$id) ?>">
+							<button type="submit" class="btn btn-primary"
+								data-toggle="tooltip" data-placement="top"
+								title="Buka">Buka</button>
+						</form>
 					</div>
 				</div>
 			</div>

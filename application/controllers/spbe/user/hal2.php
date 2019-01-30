@@ -11,6 +11,7 @@ class hal2 extends MY_Controller
 		//Do your magic here
 		$this->load->model('spbe/user_model');
 		$this->load->model('spbe/pertanyaanumum_model');
+		$this->load->model('spbe/pertanyaan_model');
 		$this->load->library('form_validation');
 		$this->check_login();
 	}
@@ -22,5 +23,26 @@ class hal2 extends MY_Controller
 		$this->load->view('menu/contect/hal2');
 		$this->load->view('menu/_partial/js');
 		//$this->load->view('menu/hal2');
+	}
+
+	public function getById($id = null)
+	{
+		$idku['id'] = $id;
+		$data['jenis'] = $this->pertanyaan_model->getById($id);
+		$this->load->view('menu/_partial/header', $data, $idku);
+		$this->load->view('menu/_partial/navigasi');
+		$this->load->view('menu/contect/hal2');
+		$this->load->view('menu/_partial/js');
+	}
+
+	public function getByIdnomen($id = null)
+	{
+		$idku['id'] = $id;
+		$data['tampil'] = $this->pertanyaan_model->getById($id);
+		$this->load->view('menu/_partial/header', $data, $idku);
+		$this->load->view('menu/_partial/navigasi');
+		$this->load->view('menu/contect/pertanyaan');
+		$this->load->view('menu/_partial/js');
+
 	}
 }
