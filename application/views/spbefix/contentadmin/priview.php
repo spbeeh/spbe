@@ -35,16 +35,15 @@
         							<div class="row">
         								<div class="col-xs-12 invoice-header">
         									<h1>
-        										<center>Kementerian Pendayagunaan Aparatur Negara dan
-        											Reformasi Birokrasi
+        										<center>Dinas Komunikasi dan Informatika Pemerintahan Kota Malang
         									</h1>
         									<br>
         									<h4 class="">
         										<center>
-        											Jalan Jenderal Sudirman Kavling 69 Jakarta Selatan - 12190 Telp.
-        											(+6221)
-        											7398381 - 89 Ext. 2111 <br>
-        											email : asdep2balaks@menpan.go.id
+        											Jalan Mayjen sungkono - 12190 Telp.
+        											(0341)
+        											751550 <br>
+        											email : kominfo@malangkota.go.id
         									</h4>
         								</div>
         								<!-- /.col -->
@@ -178,7 +177,6 @@
         								<!-- /.col -->
         							</div>
         							<!-- /.row -->
-
         							<!-- Table row -->
         							<div class="row">
         								<div class="col-xs-12 table">
@@ -200,7 +198,12 @@
         												<td>Pertanyaaan Umum</td>
         												<td></td>
         												<td>
-        													<span style="color:green">Sudah Mengisi</span> </td>
+        													<?php if ($tampil == $this->uri->segment(5)) {
+																					echo ("<span style='color:green'>Sudah Mengisi</span>");
+																				} else {
+																					echo ("<span style='color:red'>Belum Mengisi/Belum Selesai</span>");
+																				} ?>
+        												</td>
         												<td>
         													<form method="post"
         														action="<?php echo base_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
@@ -216,13 +219,11 @@
         												<td>Evaluasi Aplikasi</td>
         												<td></td>
         												<td>
-															<?php if () { ?>
-																<span style="color:red">
-																	Belum Mengisi/Belum Selesai
-																</span>
-																
-															 <?php 
-														} ?>
+        													<?php if ($tampil == $this->uri->segment(5)) {
+																					echo ("<span style='color:green'>Sudah Mengisi</span>");
+																				} else {
+																					echo ("<span style='color:red'>Belum Mengisi/Belum Selesai</span>");
+																				} ?>
         												</td>
         												<td>
         													<form method="post"
@@ -240,7 +241,6 @@
         								<!-- /.col -->
         							</div>
         							<!-- /.row -->
-
         							<div class="col-xs-6 pull-right">
         								<p class="lead"></p>
         								<div class="table-responsive">
@@ -249,7 +249,9 @@
         											<tr>
         												<th style="width:50%">total:</th>
         												<td>
-        													%12 dari rekomendasi Sistem informasi
+        													%<?php echo ((count($tampil) / 36) * 100) ?> dari
+        													rekomendasi Sistem
+        													informasi
         												</td>
         											</tr>
         											<tr>
@@ -263,7 +265,6 @@
         					</div>
         					<?php endforeach; ?>
         					<!-- /.row -->
-
         					<!-- this row will not appear when printing -->
         					<div class="row no-print">
         						<div class="col-xs-12">
@@ -275,7 +276,6 @@
         				</div>
         			</div>
         		</div>
-
         	</div>
         </div>
         </div>
