@@ -215,7 +215,14 @@
         												<td>2</td>
         												<td>Evaluasi Aplikasi</td>
         												<td></td>
-        												<td><span style="color:red">Belum Mengisi/Belum Selesai</span>
+        												<td>
+															<?php if () { ?>
+																<span style="color:red">
+																	Belum Mengisi/Belum Selesai
+																</span>
+																
+															 <?php 
+														} ?>
         												</td>
         												<td>
         													<form method="post"
