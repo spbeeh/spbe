@@ -15,7 +15,7 @@ class Datanomenklatur extends MY_Controller
 
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
-			redirect('login', 'refresh');
+			redirect('login');
 		}
 
 
@@ -40,7 +40,7 @@ class Datanomenklatur extends MY_Controller
 
 		$this->pertanyaan_model->save('aplikasi_fungsional', $_POST);
 
-		redirect('sistem/admin/datanomenklatur', 'refresh');
+		redirect('sistem/admin/datanomenklatur');
 	}
 
 	public function edit($id = null)

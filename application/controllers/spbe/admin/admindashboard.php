@@ -14,15 +14,14 @@ class admindashboard extends MY_Controller    /// ini extend di ambil dari folde
 
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
-			redirect('login', 'refresh');
+			redirect('login');
 		}
 	}
 
 
 	public function index()
 	{
-		$this->check_login();
-		//$site = $this->Konfigurasi_model->listing();
+
 		$this->load->view('spbefix/_partialadmin/header');
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/dashboard');

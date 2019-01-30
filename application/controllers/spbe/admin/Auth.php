@@ -77,7 +77,7 @@ class Auth extends MY_Controller
 				}
 			} else {
 
-				redirect('sistem/admin/dashboard', 'refresh');
+				redirect('sistem/admin/dashboard');
 
 			}
 		} else {
@@ -104,7 +104,7 @@ class Auth extends MY_Controller
 		$this->form_validation->set_rules('role', 'role', 'trim|required|min_length[1]|max_length[50]');
 		if ($this->form_validation->run() == false) {
 
-			redirect('sistem/admin/datauser', 'refresh');
+			redirect('sistem/admin/datauser');
 
 		} else {
 			$this->Auth_model->reg();
@@ -118,7 +118,7 @@ class Auth extends MY_Controller
           </div>
           </p>
         ');
-			redirect('sistem/admin/datauser', 'refresh');
+			redirect('sistem/admin/datauser');
 		}
 	}
 }

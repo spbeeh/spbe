@@ -13,7 +13,7 @@ class Userkontroller extends MY_Controller
 
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
-			redirect('login', 'refresh');
+			redirect('login');
 		}
 
 	}
@@ -45,7 +45,7 @@ class Userkontroller extends MY_Controller
 			show_404();
 		}
 		$this->user_model->delete($id);
-		redirect('sistem/admin/datauser', 'refresh');
+		redirect('sistem/admin/datauser');
 
 	}
 }

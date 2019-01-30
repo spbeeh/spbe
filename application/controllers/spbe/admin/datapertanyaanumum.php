@@ -15,7 +15,7 @@ class datapertanyaanumum extends MY_Controller
 
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
-			redirect('login', 'refresh');
+			redirect('login');
 		}
 	}
 
@@ -37,7 +37,7 @@ class datapertanyaanumum extends MY_Controller
 
 		$this->pertanyaanumum_model->save('pertanyaan_umum', $_POST);
 
-		redirect('sistem/admin/datapertanyaanumum', 'refresh');
+		redirect('sistem/admin/datapertanyaanumum');
 
 	}
 
