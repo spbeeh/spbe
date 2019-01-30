@@ -22,21 +22,26 @@ class user_model extends CI_Model
 		$this->db->insert($table, $data);
 	}
 
-	public function getUser($id){
+	public function getUser($id)
+	{
 
-        $this->db->where('id_user', $id);
-        $this->db->from('user');     
-        $query = $this->db->get(); 
-        
-        if($query->num_rows() != 0)
-        {
-            return $query->result();
-        }
-        else
-        {
-            return false;
-        }
-    }
+		$this->db->where('id_user', $id);
+		$this->db->from('user');
+		$query = $this->db->get();
+		if ($query->num_rows() != 0) {
+			return $query->result();
+		} else {
+			return false;
+		}
+	}
+
+	public function getReport($id)
+	{
+		$this->db->SELECT('*')
+			->FROM('master_pertanyaan_umum');
+		$query = $this->db->get();
+		return $query->result();
+	}
 
 	public function delete($id)
 	{
