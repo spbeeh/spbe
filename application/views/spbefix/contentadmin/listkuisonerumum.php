@@ -55,11 +55,29 @@
 											<div class="item form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
 													Pertanyaan Umum <span class="required"></span></label>
+												<div class="col-sm-7 col-xs-12">
+													<textarea id="message" required="required" class="form-control"
+														name="message"
+														style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="control-label col-md-3" for="Role">
+													jenis inputan <span class="required">*</span>
+												</label>
 												<div class="col-md-6 col-sm-6 col-xs-12">
-													<textarea id="name" class="form-control col-md-7 col-xs-12"
-														data-validate-length-range="6" data-validate-words="2"
-														name="pertanyaan_umum" placeholder="" required="required"
-														type="text"></textarea>
+													<div id="gender" class="btn-group" data-toggle="buttons">
+														<label class="btn btn-default" data-toggle-class="btn-primary"
+															data-toggle-passive-class="btn-default">
+															<input type="radio" name="jenisinput" value="File"> &nbsp;
+															File
+															&nbsp;
+														</label>
+														<label class="btn btn-default" data-toggle-class="btn-primary"
+															data-toggle-passive-class="btn-default">
+															<input type="radio" name="jenisinput" value="Text"> Text
+														</label>
+													</div>
 												</div>
 											</div>
 											<div class="ln_solid"></div>
@@ -80,15 +98,14 @@
 							</div>
 						</div>
 						<div class="clearfix"></div>
-						<table id="datatable-responsive" class="table table-striped table-bordered" cellspacing="0"
-							width="100%">
+						<table id="datatable-responsive" class="table table-striped " cellspacing="0" width="100%">
 							<thead>
 								<tr>
-									<th rowspan=2>No</th>
-									<th rowspan=2>Pertanyaan umum</th>
-									<th rowspan=2>Khusus</th>
-									<th rowspan=2>inputan</th>
-									<th rowspan=2>action</th>
+									<th>No</th>
+									<th>Pertanyaan umum</th>
+									<th>Khusus</th>
+									<th>Inputan</th>
+									<th>Aksi</th>
 								</tr>
 								<!-- <tr style="display:none">
 									<th></th>

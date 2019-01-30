@@ -33,6 +33,7 @@ class datapertanyaanumum extends MY_Controller
 	public function store()
 	{
 		$_POST['pertanyaan_umum'] = $this->input->post('pertanyaan_umum');
+		$_POST['jenisinput'] = $this->input->post('jenisinput');
 		$_POST['id_jenis_pertanyaan_umum'] = $this->input->post('id_jenis_pertanyaan_umum');
 
 		$this->pertanyaanumum_model->save('pertanyaan_umum', $_POST);

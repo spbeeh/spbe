@@ -118,7 +118,8 @@
 									<td>
 										<table>
 											<tr>
-												<td><button type="button" class="btn btn-primary" data-toggle="modal"
+												<td><button type="button" class="btn btn-primary btn-sm"
+														data-toggle="modal"
 														data-target="#editdata<?php echo $key + 1 ?>"><span><i
 																class="fa fa-edit"></i></span> </button>
 													<div id="editdata<?php echo $key + 1 ?>" class="modal fade"
@@ -199,9 +200,6 @@
 																		</div>
 																	</form>
 																</div>
-																<!-- <div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-									</div> -->
 															</div>
 														</div>
 													</div>
@@ -209,7 +207,7 @@
 												<td>
 													<form method="post"
 														action="<?php echo base_url('sistem/admin/datanomenklatur/delete/' . $value->id_aplikasi_fungsional) ?>">
-														<button type="submit" class="btn btn-danger"><span><i
+														<button type="submit" class="btn btn-danger btn-sm"><span><i
 																	class="fa fa-trash-o"></i></span></button>
 													</form>
 												</td>

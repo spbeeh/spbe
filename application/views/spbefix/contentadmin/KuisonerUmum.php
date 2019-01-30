@@ -64,6 +64,7 @@
 														name="message"
 														style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
 												</td>
+												<td><input type="file" name="" value=""></td>
 											</tbody>
 										</table>
 									</form>
