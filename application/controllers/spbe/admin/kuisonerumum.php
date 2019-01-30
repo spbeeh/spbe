@@ -30,6 +30,7 @@ class kuisonerumum extends MY_Controller
 	public function getById($id = null)
 	{
 		$data['pertanyaanUtama'] = $this->pertanyaanumum_model->getPertanyaan();
+		$data['tampil'] = $this->pertanyaanumum_model->getAll();
 		$data['controller'] = $this;
 		$this->load->view('spbefix/_partialadmin/header', $data);
 		$this->load->view('spbefix/_partialadmin/navigasi');

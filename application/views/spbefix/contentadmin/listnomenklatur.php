@@ -100,18 +100,18 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php foreach ($aa as $key => $value) { ?>
+								<?php foreach ($aa as $ke1y => $value) { ?>
 								<tr>
 									<td>
-										<?php echo ($key + 1) ?>
+										<?php echo ($ke1y + 1) ?>
 									</td>
 									<td>
 										<?php echo $value->aplikasi_fungsional ?>
 									</td>
 									<td>
-										<?php foreach ($jenis as $ke1y) :
-										if ($value->id_jenis == $ke1y->id_jenis) {
-										echo $ke1y->jenis;
+										<?php foreach ($jenis as $key) :
+										if ($value->id_jenis == $key->id_jenis) {
+										echo $key->jenis;
 									}
 									endforeach; ?>
 									</td>
@@ -120,9 +120,9 @@
 											<tr>
 												<td><button type="button" class="btn btn-primary btn-sm"
 														data-toggle="modal"
-														data-target="#editdata<?php echo $key + 1 ?>"><span><i
+														data-target="#editdata<?php echo $ke1y + 1 ?>"><span><i
 																class="fa fa-edit"></i></span> </button>
-													<div id="editdata<?php echo $key + 1 ?>" class="modal fade"
+													<div id="editdata<?php echo $ke1y + 1 ?>" class="modal fade"
 														role="dialog">
 														<div class="modal-dialog">
 															<div class="modal-content">
@@ -194,7 +194,8 @@
 																						class="btn btn-primary"
 																						data-dismiss="modal">Cancel</button>
 																					<button id="send" type="submit"
-																						class="btn btn-success">Submit</button>
+																						class="btn btn-success"
+																						data-dismiss="modal">Submit</button>
 																				</div>
 																			</div>
 																		</div>
@@ -205,11 +206,57 @@
 													</div>
 												</td>
 												<td>
-													<form method="post"
+													<button type="button" class="btn btn-danger" data-toggle="modal"
+														data-target="#delete<?php echo ($ke1y + 1) ?>"><span><i
+																class="fa fa-trash-o"></i></span></button>
+
+													<div id="delete<?php echo ($ke1y + 1) ?>" class="modal fade "
+														tabindex="-1" role="dialog" aria-hidden="true">
+
+														<div class="modal-dialog modal-sm">
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close"
+																		data-dismiss="modal" aria-label="Close"><span
+																			aria-hidden="true">×</span>
+																	</button>
+																	<h4 class="modal-title" id="myModalLabel2"
+																		align="center">
+																		Peringatan</h4>
+																</div>
+																<div class="modal-body">
+																	<p align="center">yakin ingin
+																		dihapus?
+																		<?php echo $value->id_aplikasi_fungsional ?>
+																	</p>
+																</div>
+																<div class="modal-footer">
+																	<center>
+																		<table>
+																			<tr>
+																				<td>
+																					<form method="post"
+																						action="<?php echo base_url('sistem/admin/datanomenklatur/delete/' . $value->id_aplikasi_fungsional) ?>">
+																						<button type="submit"
+																							class="btn btn-danger">Ya</button>
+																					</form>
+																				</td>
+
+																				<td><button type="button"
+																						class="btn btn-primary"
+																						data-dismiss="modal">Tidak</button>
+																				</td>
+																			</tr>
+																		</table>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- <form method="post"
 														action="<?php echo base_url('sistem/admin/datanomenklatur/delete/' . $value->id_aplikasi_fungsional) ?>">
 														<button type="submit" class="btn btn-danger btn-sm"><span><i
 																	class="fa fa-trash-o"></i></span></button>
-													</form>
+													</form> -->
 												</td>
 											</tr>
 										</table>
