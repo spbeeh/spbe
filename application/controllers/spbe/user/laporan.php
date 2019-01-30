@@ -22,7 +22,8 @@ class laporan extends MY_Controller
 			show_404();
 		} else {
 			$data['user'] = $this->user_model->getUser($id);
-			$data['rpot'] = $this->user_model->getReport($id);
+			$data['tampil'] = $this->user_model->getReport($id);
+			$data['pertanyaan_umum'] = $this->pertanyaanumum_model->getById($id);
 			$this->load->view('menu/_partial/header', $data);
 			$this->load->view('menu/_partial/navigasi2');
 			$this->load->view('menu/contect/laporan');
@@ -33,6 +34,7 @@ class laporan extends MY_Controller
 
 	public function getReport($id = null)
 	{
+		$id = $this->session->userdata('id_user');
 		if ($id != $this->session->userdata('id_user')) {
 			show_404();
 		} else {

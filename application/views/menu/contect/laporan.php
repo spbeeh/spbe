@@ -2,7 +2,7 @@
 <div class="container">
 	<?php foreach ($user as $key) { ?>
 	<!-- Page Heading/Breadcrumbs -->
-	<h1 class="mt-4 mb-3">Jenis Form Evaluasi
+	<!-- <h1 class="mt-4 mb-3">Jenis Form Evaluasi
 		<small></small>
 	</h1>
 
@@ -11,7 +11,7 @@
 			<a href="<?php echo base_url('menu/dashboard') ?>">Beranda</a>
 		</li>
 		<li class="breadcrumb-item active">Laporan</li>
-	</ol>
+	</ol> -->
 
 	<!-- Image Header -->
 	<!-- <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt=""> -->
@@ -122,7 +122,7 @@
 								<tr>
 									<td>2</td>
 									<td>Evaluasi Aplikasi</td>
-									<td><?php if (isset($tampil->id_user) == $this->session->userdata('id_user')) {
+									<td><?php if (isset($key->id_user) == $this->session->userdata('id_user')) {
 
 													echo ("<span style='color:green'>Sudah Mengisi</span>");
 
