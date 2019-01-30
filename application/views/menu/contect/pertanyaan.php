@@ -1,51 +1,24 @@
-<!-- page content -->
-<div class="right_col" role="main">
+<div class="wrapper">
+	<?php $id = $this->session->userdata('id_user'); ?>
 	<div class="">
-		<div class="page-title">
-			<div class="title_left">
-				<h3><small></small></h3>
-			</div>
-			<div class="title_right">
-				<div class="col-md-5 col-sm-5 col-xs-12 form-group">
-					<!-- <div class="input-group">
-						<input type="text" class="form-control" placeholder="Search for...">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">Go!</button>
-						</span>
-					</div> -->
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<!-- <div class="row"> -->
-		<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="container">
 			<div class="row">
-				<div class="x_content">
-					<div class="clearfix"></div>
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="x_panel">
-								<div class="x_title">
-									<h2>Nomenklatur <small></small></h2>
-									<ul class="nav navbar-right panel_toolbox">
-										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-												aria-expanded="false"><i class="fa fa-wrench"></i></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Settings 1</a>
-												</li>
-												<li><a href="#">Settings 2</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="close-link"><i class="fa fa-close"></i></a>
-										</li>
-									</ul>
-									<div class="clearfix"></div>
-								</div>
-								<div class="x_content">
+				<div class="col-md-auto ml-auto col-xl-auto mr-auto">
+					<!-- <p class="category">Tabs with Background on Card</p> -->
+					<!-- Tabs with Background on Card -->
+					<div class="card">
+						<div class="card-header">
+							<ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist"
+								data-background-color="orange">
+								<li class="nav-item">
+									<h1 class="nav-link">Nomen Klatur</h1>
+								</li>
+							</ul>
+						</div>
+						<div class="card-body">
+							<!-- Tab panes -->
+							<div class="tab-content text-center">
+								<div class="tab-pane active" id="home1" role="tabpanel">
 									<table class="table table-hover">
 										<thead>
 											<tr>
@@ -62,23 +35,49 @@
 												enctype="multipart/form-data">
 												<?php foreach ($tampil as $key => $value) { ?>
 												<tr>
-													<th scope="row"><?php echo ($key + 1) ?></th>
-													<td><?php echo $value->aplikasi_fungsional ?></td>
+													<th scope="row">
+														<?php echo ($key + 1) ?>
+													</th>
 													<td>
-														<div class="btn-group" data-toggle="buttons">
-															<label class="ada<?php echo ($key + 1) ?> btn btn-default"
-																data-toggle-class="btn-primary"
-																data-toggle-passive-class="btn-default">
+														<?php echo $value->aplikasi_fungsional ?>
+													</td>
+													<td>
+
+														<div class="form-check form-check-radio">
+															<label class="form-check-label">
+																<input class="form-check-input" type="radio"
+																	name="exampleRadios"
+																	id="exampleRadios<?php echo ($key + 1) ?>"
+																	value="Ada">
+																<span class="form-check-sign"></span>
+																Ada
+															</label>
+
+															<label class="form-check-label">
+																<input class="form-check-input" type="radio"
+																	name="exampleRadios"
+																	id="exampleRadios<?php echo ($key + 1) ?>"
+																	value="Tidak Ada">
+																<span class="form-check-sign"></span>
+																Tidak Ada
+															</label>
+														</div>
+														<!-- <div class="badge-group" data-toggle="buttons">
+															<label
+																class="ada<?php echo ($key + 1) ?> badge badge-default"
+																data-toggle-class="badge-primary"
+																data-toggle-passive-class="badge-default">
 																<input type="radio" name="jawab" value="Ada">
 																&nbsp;Ada&nbsp;
 															</label>
-															<label class="tidak<?php echo ($key + 1) ?> btn btn-primary"
-																data-toggle-class="btn-primary"
-																data-toggle-passive-class="btn-default">
+															<label
+																class="tidak<?php echo ($key + 1) ?> badge badge-primary"
+																data-toggle-class="badge-primary"
+																data-toggle-passive-class="badge-default">
 																<input type="radio" name="jawab" value="Tidak"> Tidak
 																Ada
 															</label>
-														</div>
+														</div> -->
 													</td>
 													<td>
 														<input class="form-control" type="text" name="nama_aplikasi"
@@ -97,22 +96,55 @@
 													<td></td>
 													<td></td>
 													<td></td>
-													<td><button type="" class="btn btn-animate">Kembali</button><button
-															type="submit" class="btn btn-primary">submit</button>
+													<td>
+														<button type="button" class="btn btn-animate">Kembali</button>
+														<button type="submit" class="btn btn-primary">submit</button>
 													</td>
 												</tr>
 											</form>
 										</tbody>
 									</table>
-
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- End Tabs on plain Card -->
 				</div>
 			</div>
+			<div class="separator separator-primary"></div>
 
 		</div>
 	</div>
 </div>
-<!-- /page content
+<footer class="footer footer-default">
+	<div class="container">
+		<nav>
+			<ul>
+				<li>
+					<a href="https://www.creative-tim.com">
+						Creative Tim
+					</a>
+				</li>
+				<li>
+					<a href="http://presentation.creative-tim.com">
+						About Us
+					</a>
+				</li>
+				<li>
+					<a href="http://blog.creative-tim.com">
+						Blog
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="copyright" id="copyright">
+			&copy;
+			<script>
+			document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+			</script>, Designed by
+			<a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+			<a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+		</div>
+	</div>
+</footer>
+</div>

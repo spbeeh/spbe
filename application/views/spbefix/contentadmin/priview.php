@@ -24,8 +24,8 @@
         					<div class="x_title"><?php foreach ($user as $key => $value) : ?>
         						<h2>Laporan Hasil Evaluasi <small><?php echo $value->namainstansipusat ?></small></h2>
         						<ul class="nav navbar-right panel_toolbox">
-        							<li><button class="btn btn-primary" type=""><i class="fa fa-edit"></i>edit</button>
-        							</li>
+        							<!-- <li><button class="btn btn-primary" type=""><i class="fa fa-edit"></i>edit</button>
+        							</li> -->
         						</ul>
         						<div class="clearfix"></div>
         					</div>
@@ -44,7 +44,7 @@
         											Jalan Jenderal Sudirman Kavling 69 Jakarta Selatan - 12190 Telp.
         											(+6221)
         											7398381 - 89 Ext. 2111 <br>
-        											email : asdep2balaks@menpan.go.id
+        											email : kominfo@malangkota.go.id
         									</h4>
         								</div>
         								<!-- /.col -->
@@ -200,10 +200,8 @@
         												<td>Pertanyaaan Umum</td>
         												<td></td>
         												<td>
-        													<?php if (isset($value->id_user) === $this->uri->segment(5)) {
-
+        													<?php if (isset($pertanyaan_umum->id_user) == $this->session->userdata('id_user')) {
 																					echo ("<span style='color:green'>Sudah Mengisi</span>");
-
 																				} else {
 																					echo ("<span style='color:red'>Belum Mengisi/Belum Selesai</span>");
 																				} ?>
@@ -223,7 +221,7 @@
         												<td>Evaluasi Aplikasi</td>
         												<td></td>
         												<td>
-        													<?php if (isset($value->id_user) === $this->uri->segment(5)) {
+        													<?php if (isset($value->id_user) == $this->session->userdata('id_user')) {
 
 																					echo ("<span style='color:green'>Sudah Mengisi</span>");
 
@@ -256,7 +254,10 @@
         											<tr>
         												<th style="width:50%">total:</th>
         												<td>
-        													%12 dari rekomendasi Sistem informasi
+        													(<?php echo number_format(((count($tampil) / 36) * 100), 0) ?>%)
+        													dari
+        													rekomendasi Sistem
+        													informasi
         												</td>
         											</tr>
         											<tr>

@@ -239,8 +239,9 @@
 																	Peringatan</h4>
 															</div>
 															<div class="modal-body">
-																<p align="center">yakin ingin
-																	dihapus?<?php echo $value->nip_pj ?>
+																<p align="center">Yakin ingin
+																	dihapus?
+																	<br><?php echo $value->nama_penanggungjawab ?>
 																</p>
 															</div>
 															<div class="modal-footer">

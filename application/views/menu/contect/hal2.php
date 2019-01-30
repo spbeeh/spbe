@@ -1,55 +1,28 @@
-<div class="right_col" role="main">
+<div class="wrapper">
+	<?php $id = $this->session->userdata('id_user'); ?>
 	<div class="">
-		<div class="page-title">
-			<div class="title_left">
-				<h3><small></small></h3>
-				<?php $id = $this->session->userdata('nip_pj'); ?>
-			</div>
-			<div class="title_right">
-				<div class="col-md-5 col-sm-5 col-xs-12 form-group">
-					<!-- <div class="input-group">
-						<input type="text" class="form-control" placeholder="Search for...">
-						<span class="input-group-btn">
-							<button class="btn btn-default" type="button">Go!</button>
-						</span>
-					</div> -->
-				</div>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<!-- <div class="row"> -->
-		<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="container">
 			<div class="row">
-				<div class="x_content">
-					<div class="clearfix"></div>
-					<div class="row">
-						<div class="col-md-12 col-sm-12 col-xs-12">
-							<div class="x_panel">
-								<div class="x_title">
-									<h2>Nomenklatur <small></small></h2>
-									<ul class="nav navbar-right panel_toolbox">
-										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-										</li>
-										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-												aria-expanded="false"><i class="fa fa-wrench"></i></a>
-											<ul class="dropdown-menu" role="menu">
-												<li><a href="#">Settings 1</a>
-												</li>
-												<li><a href="#">Settings 2</a>
-												</li>
-											</ul>
-										</li>
-										<li><a class="close-link"><i class="fa fa-close"></i></a>
-										</li>
-									</ul>
-									<div class="clearfix"></div>
-								</div>
-								<div class="x_content">
+				<div class="col-md-auto ml-auto col-xl-auto mr-auto">
+					<!-- <p class="category">Tabs with Background on Card</p> -->
+					<!-- Tabs with Background on Card -->
+					<div class="card">
+						<div class="card-header">
+							<ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist"
+								data-background-color="orange">
+								<li class="nav-item">
+									<h1 class="nav-link">Nomen Klatur</h1>
+								</li>
+							</ul>
+						</div>
+						<div class="card-body">
+							<!-- Tab panes -->
+							<div class="tab-content text-center">
+								<div class="tab-pane active" id="home1" role="tabpanel">
 									<table class="table table-hover">
 										<thead>
 											<tr>
-												<th>No</th>
+												<th></th>
 												<th>Jenis Evaluasi</th>
 												<th>status</th>
 												<th>Aksi</th>
@@ -59,17 +32,28 @@
 											<?php foreach ($jenis as $data) { ?>
 											<tr>
 												<th scope="row"></th>
-												<td><?php echo $data->jenis ?></td>
 												<td>
-													<?php if ($data->id_user == $this->uri->segment(4)) {
-													echo "<span class='label label-success'>sudah<span>";
+													<?php echo $data->jenis ?>
+												</td>
+												<td>
+													<?php if ($data->id_user == $id) {
+													echo "<span class='badge badge-success'>sudah<span>";
 												} else {
-													echo "<span class='label label-danger'>Belum</span>";
+													echo "<span class='badge badge-danger'>Belum</span>";
 												} ?>
 												</td>
 												<td>
+													<?php if (isset($jenis->id_user) == $id) { ?>
 													<form method="post"
-														action="<?php echo base_url('menu/hal2/isi/' .$id) ?>">
+														action="<?php echo base_url('menu/hal2/isi/' . $id) ?>">
+														<button type="submit" class="btn btn-info" data-toggle="tooltip"
+															data-placement="top" title="Buka"><span><i
+																	class="fa fa-eye"></i></span></button>
+													</form>
+													<?php 
+											} ?>
+													<form method="post"
+														action="<?php echo base_url('menu/hal2/isi/' . $id) ?>">
 														<button type="submit" class="btn btn-warning"
 															data-toggle="tooltip" data-placement="top"
 															title="Buka"><span><i
@@ -82,14 +66,53 @@
 									} ?>
 										</tbody>
 									</table>
-
+									<!-- <form method="post"
+										action="<?php echo base_url('menu/hal1/' . $this->session->userdata('id_user')) ?>">
+										<button class="btn btn-primary pull-right">
+											<font color="white">Buka</font>
+										</button>
+									</form> -->
 								</div>
 							</div>
 						</div>
 					</div>
+					<!-- End Tabs on plain Card -->
 				</div>
 			</div>
+			<div class="separator separator-primary"></div>
 
 		</div>
 	</div>
+</div>
+<footer class="footer footer-default ">
+	<div class="container">
+		<nav>
+			<ul>
+				<li>
+					<a href="https://www.creative-tim.com">
+						Creative Tim
+					</a>
+				</li>
+				<li>
+					<a href="http://presentation.creative-tim.com">
+						About Us
+					</a>
+				</li>
+				<li>
+					<a href="http://blog.creative-tim.com">
+						Blog
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="copyright" id="copyright">
+			&copy;
+			<script>
+			document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+			</script>, Designed by
+			<a href="https://www.invisionapp.com" target="_blank">Invision</a>. Coded by
+			<a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+		</div>
+	</div>
+</footer>
 </div>

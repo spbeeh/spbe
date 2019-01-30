@@ -27,22 +27,31 @@ class hal2 extends MY_Controller
 
 	public function getById($id = null)
 	{
-		$idku['id'] = $id;
-		$data['jenis'] = $this->pertanyaan_model->getById($id);
-		$this->load->view('menu/_partial/header', $data, $idku);
-		$this->load->view('menu/_partial/navigasi');
-		$this->load->view('menu/contect/hal2');
-		$this->load->view('menu/_partial/js');
+		if ($id != $this->session->userdata('id_user')) {
+			show_404();
+		} else {
+			$idku['id'] = $id;
+			$data['jenis'] = $this->pertanyaan_model->getById($id);
+			$this->load->view('menu/_partial/header', $data, $idku);
+			$this->load->view('menu/_partial/navigasi2');
+			$this->load->view('menu/contect/hal2');
+			$this->load->view('menu/_partial/js');
+		}
 	}
 
 	public function getByIdnomen($id = null)
 	{
-		$idku['id'] = $id;
-		$data['tampil'] = $this->pertanyaan_model->getById($id);
-		$this->load->view('menu/_partial/header', $data, $idku);
-		$this->load->view('menu/_partial/navigasi');
-		$this->load->view('menu/contect/pertanyaan');
-		$this->load->view('menu/_partial/js');
+		if ($id != $this->session->userdata('id_user')) {
+			show_404();
+		} else {
+			$linkid = $this->session->userdata('id_user');
+			$id = $linkid;
+			$data['tampil'] = $this->pertanyaan_model->getById($id);
+			$this->load->view('menu/_partial/header', $data);
+			$this->load->view('menu/_partial/navigasi2');
+			$this->load->view('menu/contect/pertanyaan');
+			$this->load->view('menu/_partial/js');
+		}
 
 	}
 }

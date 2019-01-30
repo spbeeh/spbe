@@ -9,6 +9,7 @@ class Userkontroller extends MY_Controller
 		parent::__construct();
 	//Do your magic here
 		$this->load->model('spbe/user_model');
+		$this->load->model('spbe/pertanyaanumum_model');
 		$this->load->library('form_validation');
 
 		$this->check_login();
@@ -31,6 +32,7 @@ class Userkontroller extends MY_Controller
 	{
 		$data['user'] = $this->user_model->getUser($id);
 		$data['tampil'] = $this->user_model->getReport($id);
+		$data['pertanyaan_umum'] = $this->pertanyaanumum_model->getById($id);
 		$this->load->view('spbefix/_partialadmin/header');
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/priview', $data);

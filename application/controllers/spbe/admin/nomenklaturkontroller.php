@@ -29,7 +29,7 @@ class Nomenklaturkontroller extends MY_Controller
 	{
 		$idku['id'] = $id;
 		$data['jenis'] = $this->pertanyaan_model->getById($id);
-		$this->load->view('spbefix/_partialadmin/header', $data, $idku);
+		$this->load->view('spbefix/_partialadmin/header', $data + $idku);
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/Nomenklatur');
 		$this->load->view('spbefix/_partialadmin/footer');

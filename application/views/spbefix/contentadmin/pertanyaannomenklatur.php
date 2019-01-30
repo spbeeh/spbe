@@ -26,7 +26,7 @@
 						<div class="col-md-12 col-sm-12 col-xs-12">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Nomenklatur <small></small></h2>
+									<h2>Nomenklatur<small></small></h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -57,51 +57,56 @@
 											</tr>
 										</thead>
 										<tbody>
-											<form method="POST"
+											<!-- <form method="POST"
 												action="<?php echo base_url('sistem/admin/isinm/store') ?>"
-												enctype="multipart/form-data">
-												<?php foreach ($tampil as $key => $value) { ?>
-												<tr>
-													<th scope="row"><?php echo ($key + 1) ?></th>
-													<td><?php echo $value->aplikasi_fungsional ?></td>
-													<td>
-														<div class="btn-group" data-toggle="buttons">
-															<label class="ada<?php echo ($key + 1) ?> btn btn-default"
-																data-toggle-class="btn-primary"
-																data-toggle-passive-class="btn-default">
-																<input type="radio" name="jawab" value="Ada">
-																&nbsp;Ada&nbsp;
-															</label>
-															<label class="tidak<?php echo ($key + 1) ?> btn btn-primary"
-																data-toggle-class="btn-primary"
-																data-toggle-passive-class="btn-default">
-																<input type="radio" name="jawab" value="Tidak"> Tidak
-																Ada
-															</label>
-														</div>
-													</td>
-													<td>
-														<input class="form-control" type="text" name="nama_aplikasi"
-															placeholder="Nama Aplikasi">
-													</td>
-													<td>
-														<input class="form-control" type="text" name="unit_kerja"
-															placeholder="Unit Kerja">
-													</td>
-												</tr>
-												<?php
+												enctype="multipart/form-data"> -->
+											<?php foreach ($tampil as $key => $value) { ?>
+											<tr>
+												<th scope="row"><?php echo ($key + 1) ?></th>
+												<td><?php echo $value->aplikasi_fungsional ?></td>
+												<td>
+													<div class="btn-group" data-toggle="buttons">
+														<?php if (isset($value->id_user) == $this->session->userdata('id_user')) { ?>
+														<label class="ada<?php echo ($key + 1) ?> btn btn-default">
+															<input type="radio" name="jawab"
+																value="<?php echo $value->jawab ?>" disabled>
+															&nbsp;<?php echo $value->jawab ?>&nbsp;
+														</label>
+														<?php 
+												} else { ?>
+														<label class="ada<?php echo ($key + 1) ?> btn btn-default">
+															<input type="radio" name="jawab" value="-" disabled>
+															&nbsp;-&nbsp;
+														</label>
+														<?php	
+												} ?>
+													</div>
+												</td>
+												<td>
+													<input class="form-control" type="text" name="nama_aplikasi"
+														placeholder="Nama Aplikasi"
+														value="<?php echo $value->nama_aplikasi ?>" disabled>
+												</td>
+												<td>
+													<input class="form-control" type="text" name="unit_kerja"
+														placeholder="Unit Kerja"
+														value="<?php echo $value->nama_aplikasi ?>" disabled>
+												</td>
+											</tr>
+											<?php
 
-										} ?>
-												<tr>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td></td>
-													<td><button type="" class="btn btn-animate">Kembali</button><button
-															type="submit" class="btn btn-primary">submit</button>
-													</td>
-												</tr>
-											</form>
+									} ?>
+											<tr>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td></td>
+												<td>
+													<!-- <td><button type="" class="btn btn-animate">Kembali</button><button
+															type="submit" class="btn btn-primary">submit</button> -->
+												</td>
+											</tr>
+											<!-- </form> -->
 										</tbody>
 									</table>
 

@@ -17,6 +17,16 @@ class pertanyaanumum_model extends CI_Model
 
 	}
 
+	public function getById($id = null)
+	{
+		$this->db->select('*')
+			->from('pertanyaan_umum')
+			->join('jenis_pertanyaan_umum', 'pertanyaan_umum.id_pertanyaan_umum = jenis_pertanyaan_umum.id_jenis_pertanyaan_umum')
+			->JOIN('master_pertanyaan_umum', 'pertanyaan_umum.id_pertanyaan_umum = master_pertanyaan_umum.id_pertanyaan_umum', 'left');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 	public function save($table, $data)
 	{
 		$this->db->insert($table, $data);
@@ -59,6 +69,11 @@ class pertanyaanumum_model extends CI_Model
 			->ORDER_BY('no_urut');
 		$query = $this->db->get();
 		return $query->result();
+	}
+
+	public function ambilUser($id = null)
+	{
+		# code...
 	}
 }
 

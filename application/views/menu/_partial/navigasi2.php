@@ -1,9 +1,9 @@
 <body class="index-page sidebar-collapse">
 	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
+	<nav class="navbar navbar-expand-lg bg-primary ">
 		<div class="container">
 			<div class="navbar-translate">
-				<a class="navbar-brand" href="">
+				<a class="navbar-brand" href="" rel="tooltip" title="SPBE" data-placement="bottom" target="_blank">
 					SPBE
 				</a>
 				<button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse"
@@ -40,7 +40,9 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="<?php echo site_url('menu/laporan') ?>" onclick="">
+						<a class="nav-link"
+							href="<?php echo site_url('menu/laporan/' . $this->session->userdata('id_user')) ?>"
+							onclick="">
 							<i class=""></i>
 							<p>Laporan</p>
 						</a>

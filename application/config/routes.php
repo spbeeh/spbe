@@ -82,14 +82,14 @@ $route['default_controller'] = 'Welcome';
 //Fix VVVV ====
 
 //frontend$route['menu/form'] = 'form/index';
-$route['menu/hal1'] = 'spbe/user/hal1/index';
+$route['menu/hal1/(:num)'] = 'spbe/user/hal1/getByumum/$1';
 $route['menu/hal2'] = 'spbe/user/hal2/index';
 $route['menu/hal2/(:num)'] = 'spbe/user/hal2/getById/$1';
 $route['menu/hal2/isi/(:num)'] = 'spbe/user/hal2/getByIdnomen/$1';
 $route['menu/form'] = 'spbe/user/form/index';
 $route['menu/dashboard'] = 'spbe/user/dashboard/index';
 $route['menu/laporan'] = 'spbe/user/laporan/index';
-
+$route['menu/laporan/(:num)'] = 'spbe/user/laporan/getReport/$1';
 
 //Fix VVVVV
 // $route['login'] = 'spbe/login/login/index';

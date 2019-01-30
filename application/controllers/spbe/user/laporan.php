@@ -17,10 +17,32 @@ class laporan extends MY_Controller
 
 	public function index()
 	{
-		$this->load->view('menu/_partial/header');
-		$this->load->view('menu/_partial/navigasi');
-		$this->load->view('menu/contect/laporan');
-		$this->load->view('menu/_partial/js');
-		//$this->load->view('menu/laporan');
+		$id = $this->session->userdata('id_user');
+		if ($id != $this->session->userdata('id_user')) {
+			show_404();
+		} else {
+			$data['user'] = $this->user_model->getUser($id);
+			$data['rpot'] = $this->user_model->getReport($id);
+			$this->load->view('menu/_partial/header', $data);
+			$this->load->view('menu/_partial/navigasi2');
+			$this->load->view('menu/contect/laporan');
+			$this->load->view('menu/_partial/js');
+		//$this->load->view('menu/laporan');}
+		}
+	}
+
+	public function getReport($id = null)
+	{
+		if ($id != $this->session->userdata('id_user')) {
+			show_404();
+		} else {
+			$data['user'] = $this->user_model->getUser($id);
+			$data['tampil'] = $this->user_model->getReport($id);
+			$this->load->view('menu/_partial/header', $data);
+			$this->load->view('menu/_partial/navigasi2');
+			$this->load->view('menu/contect/laporan');
+			$this->load->view('menu/_partial/js');
+		}
+
 	}
 }

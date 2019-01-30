@@ -1,75 +1,34 @@
-	<!-- Footer -->
+<!--   Core JS Files   -->
+<script src="<?php echo base_url('Asset/assets/js/core/jquery.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('Asset/assets/js/core/popper.min.js') ?>" type="text/javascript"></script>
+<script src="<?php echo base_url('Asset/assets/js/core/bootstrap.min.js') ?>" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="<?php echo base_url('Asset/assets/js/plugins/bootstrap-switch.js') ?>"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="<?php echo base_url('Asset/assets/js/plugins/nouislider.min.js') ?>" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="<?php echo base_url('Asset/assets/js/plugins/bootstrap-datepicker.js') ?>" type="text/javascript">
+</script>
+<!--  Google Maps Plugin    -->
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="<?php echo base_url('Asset/assets/js/now-ui-kit.js?v=1.2.0') ?>" type="text/javascript"></script>
 
-	<!-- Bootstrap core JavaScript -->
-	<script src="<?php echo site_url('Asett/vendor/jquery/jquery.min.js') ?> "></script>
-	<script src="<?php echo site_url('Asett/vendor/bootstrap/js/bootstrap.bundle.min.js') ?> "></script>
-
-
-	<script src="<?php echo base_url('gentelella/vendors/jQuery-Smart-Wizard/js/jquery.smartWizard.js') ?>">
-	</script>
-
-	<script src="<?php echo base_url('gentelella/build/js/custom.min.1.js') ?>"></script>
-
-	<!-- <script src="<?php echo base_url('gentelella/vendors/bootstrap/dist/js/bootstrap.min.1.js') ?>"></script> -->
-
-	<script src="<?php echo base_url('gentelella/vendors/fastclick/lib/fastclick.js') ?>"></script>
-
-	<script src="<?php echo base_url('gentelella/vendors/jquery/dist/jquery.min.js') ?>"></script>
-	<script src="<?php echo base_url('gentelella/vendors/nprogress/nprogress.js') ?>"></script>
-
-	<script src="<? php('coba_files/jquery.js(1).download') ?>"></script>
-	<script src="<? php('coba_files/bootstrap.js.download') ?>"></script>
-
-	<script src="<? php('coba_files/jquery-asScroll.js.download') ?>"></script>
-	<script src="<? php('coba_files/jquery.mousewheel.js.download') ?>"></script>
-	<script src="<? php('coba_files/jquery.asScrollable.all.js.download') ?>"></script>
-	<script src="<? php('coba_files/jquery-asHoverScroll.js.download') ?>"></script>
-	<script src="<? php('coba_files/waves.js.download') ?>"></script>
-	<!-- Plugins -->
-	<script src="<? php('coba_files/switchery.min.js.download') ?>"></script>
-	<script src="<? php('coba_files/intro.js.download') ?>"></script>
-	<script src="<? php('coba_files/screenfull.js.download') ?>"></script>
-	<script src="<? php('coba_files/jquery-slidePanel.js.download') ?>"></script>
-	<script src="<? php('coba_files/jquery.matchHeight-min.js.download') ?>"></script>
-	<script src="<? php('coba_files/jquery.peity.min.js.download') ?>"></script>
-	<!-- Scripts -->
-	<script src="<? php('coba_files/core.js.download') ?>"></script>
-	<script src="<? php('coba_files/site.js.download') ?>"></script>
-	<script src="<? php('coba_files/menu.js.download') ?>"></script>
-	<script src="<? php('coba_files/menubar.js.download') ?>"></script>
-	<script src="<? php('coba_files/sidebar.js.download') ?>"></script>
-	<script src="<? php('coba_files/config-colors.js.download') ?>"></script>
-	<script src="<? php('coba_files/config-tour.js.download') ?>"></script>
-	<script src="<? php('coba_files/asscrollable.js.download') ?>"></script>
-
-	<script src="<? php('coba_files/slidepanel.js.download') ?>"></script>
-	<script src="<? php('coba_files/switchery.js.download') ?>"></script>
-	<script src="<? php('coba_files/tabs.js.download') ?>"></script>
-	<script src="<? php('coba_files/matchheight.js.download') ?>"></script>
-	<script src="<? php('coba_files/peity.js.download') ?>"></script>
-	<script src="<? php('coba_files/panel.js.download') ?>"></script>
-	<script src="<? php('coba_files/jquery.dataTables.min.js.download') ?>"></script>
-	<script src="<? php('coba_files/dataTables.fixedHeader.js.download') ?>"></script>
-	<script src="<? php('coba_files/dataTables.bootstrap.js.download') ?>"></script>
-	<script src="<? php('coba_files/dataTables.responsive.js.download') ?>"></script>
-	<script src="<? php('coba_files/dataTables.tableTools.js.download') ?>"></script>
-	<script src="<? php('coba_files/datatables.js.download') ?>"></script>
-	<script type="text/javascript">
-function cetak_datatable() {
-	$('[data-plugin="dataTable"]').dataTable().fnDestroy();
-	$('#pbody').removeClass('panel-body');
-	window.print();
-	setTimeout(function() {
-		$('[data-plugin="dataTable"]').dataTable();
-		$('#pbody').addClass('panel-body');
-	}, 1000);
-}
-$('#qrcode').qrcode({
-	width: 86,
-	height: 86,
-	text: gid + "|~~|" + kd
+<script>
+$(document).ready(function() {
+	// the body of this function is in assets/js/now-ui-kit.js
+	nowuiKit.initSliders();
 });
-	</script>
-	</body>
 
-	</html>
+function scrollToDownload() {
+
+	if ($('.section-download').length != 0) {
+		$("html, body").animate({
+			scrollTop: $('.section-download').offset().top
+		}, 1000);
+	}
+}
+</script>
+</body>
+
+</html>

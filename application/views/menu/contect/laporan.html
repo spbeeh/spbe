@@ -1,6 +1,6 @@
 <!-- Page Content -->
 <div class="container">
-	<?php foreach ($user as $key) { ?>
+
 	<!-- Page Heading/Breadcrumbs -->
 	<h1 class="mt-4 mb-3">Jenis Form Evaluasi
 		<small></small>
@@ -38,8 +38,7 @@
 								<tbody>
 									<tr>
 										<td>
-											<img src="<?php echo site_url('Asett/Image/logo.png') ?>" height="80"
-												width="80">
+											<img src="<?php echo site_url('Asett/Image/logo.png') ?>" height="80" width="80">
 										</td>
 										<td width="30">&nbsp;</td>
 										<td align="center">
@@ -63,7 +62,7 @@
 								<tr>
 									<td style="width: 200px">Nama Instansi Daerah</td>
 									<td style="width:10px">:</td>
-									<td><?php echo $key->namainstansipusat ?></td>
+									<td> </td>
 									<td></td>
 									<td style="width: 200px"></td>
 									<td style="width:10px"></td>
@@ -72,29 +71,29 @@
 								<tr>
 									<td style="width: 200px">Nama Penanggung Jawab</td>
 									<td style="width:10px">:</td>
-									<td><?php echo $key->nama_penanggungjawab ?></td>
+									<td> </td>
 									<td></td>
 									<td style="width: 200px">Nama Operator</td>
 									<td style="width:10px">:</td>
-									<td style="width:200px"><?php echo $key->nama_operator ?></td>
+									<td style="width:200px"></td>
 								</tr>
 								<tr>
 									<td style="width: 200px">NIP</td>
 									<td style="width:10px">:</td>
-									<td><?php echo $key->nip_pj ?></td>
+									<td> </td>
 									<td></td>
 									<td style="width: 200px">NIP</td>
 									<td style="width:10px">:</td>
-									<td style="width:200px"><?php echo $key->nip_op ?></td>
+									<td style="width:200px"></td>
 								</tr>
 								<tr>
 									<td>Jabatan</td>
 									<td style="width:10px">:</td>
-									<td><?php echo $key->jabatan_pj ?> </td>
+									<td> </td>
 									<td></td>
 									<td style="width: 200px">Jabatan</td>
 									<td style="width:10px">:</td>
-									<td style="width:200px"><?php echo $key->jabatan_op ?></td>
+									<td style="width:200px"></td>
 								</tr>
 							</tbody>
 						</table>
@@ -112,27 +111,12 @@
 									<td>1</td>
 									<td>Pertanyaaan Umum</td>
 									<td>
-										<?php if (isset($value->id_user) === $this->session->userdata('id_user')) {
-
-										echo ("<span style='color:green'>Sudah Mengisi</span>");
-
-									} else {
-										echo ("<span style='color:red'>Belum Mengisi/Belum Selesai</span>");
-									} ?>
-									</td>
+										<span style="color:green">Sudah Mengisi</span> </td>
 								</tr>
 								<tr>
 									<td>2</td>
 									<td>Evaluasi Aplikasi</td>
-									<td><?php if (isset($value->id_user) === $this->session->userdata('id_user')) {
-
-													echo ("<span style='color:green'>Sudah Mengisi</span>");
-
-												} else {
-													echo ("<span style='color:red'>Belum Mengisi/Belum Selesai</span>");
-												} ?>
-										</span>
-									</td>
+									<td><span style="color:red">Belum Mengisi</span> </td>
 								</tr>
 							</tbody>
 						</table>
@@ -147,7 +131,6 @@
 	</div>
 </div>
 <!-- /.row -->
-<?php 
-} ?>
+
 </div>
 <!-- /.container -->
