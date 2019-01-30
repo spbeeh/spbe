@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2019 at 09:05 PM
+-- Generation Time: Jan 30, 2019 at 11:33 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 7.3.0
 
@@ -130,6 +130,13 @@ CREATE TABLE `master` (
   `unit_kerja` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `master`
+--
+
+INSERT INTO `master` (`id_master`, `id_nama_aplikasi`, `id_user`, `jawab`, `nama_aplikasi`, `unit_kerja`) VALUES
+(4, 34, 8, 'Ada', 'SDH', 'UMM');
+
 -- --------------------------------------------------------
 
 --
@@ -142,6 +149,13 @@ CREATE TABLE `master_pertanyaan_umum` (
   `id_user` int(11) DEFAULT NULL,
   `jawab` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `master_pertanyaan_umum`
+--
+
+INSERT INTO `master_pertanyaan_umum` (`id_master_pertanyaan_umum`, `id_pertanyaan_umum`, `id_user`, `jawab`) VALUES
+(5, 2, 8, 'asd');
 
 -- --------------------------------------------------------
 
@@ -273,13 +287,13 @@ ALTER TABLE `jenis_pertanyaan_umum`
 -- AUTO_INCREMENT for table `master`
 --
 ALTER TABLE `master`
-  MODIFY `id_master` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_master` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `master_pertanyaan_umum`
 --
 ALTER TABLE `master_pertanyaan_umum`
-  MODIFY `id_master_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_master_pertanyaan_umum` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `pertanyaan_umum`
@@ -291,7 +305,7 @@ ALTER TABLE `pertanyaan_umum`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
