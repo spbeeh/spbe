@@ -83,6 +83,7 @@ $route['default_controller'] = 'Welcome';
 
 //frontend$route['menu/form'] = 'form/index';
 $route['menu/hal1/(:num)'] = 'spbe/user/hal1/getByumum/$1';
+$route['menu/hal1/store'] = 'spbe/user/hal1/store';
 $route['menu/hal2'] = 'spbe/user/hal2/index';
 $route['menu/hal2/(:num)'] = 'spbe/user/hal2/getById/$1';
 $route['menu/hal2/isi/(:num)'] = 'spbe/user/hal2/getByIdnomen/$1';

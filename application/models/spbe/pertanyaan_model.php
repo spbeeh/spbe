@@ -21,6 +21,7 @@ class pertanyaan_model extends CI_Model
 			->from('aplikasi_fungsional')
 			->join('jenis', 'aplikasi_fungsional.id_jenis = jenis.id_jenis')
 			->JOIN('master', 'aplikasi_fungsional.id_aplikasi_fungsional=master.id_nama_aplikasi', 'left')
+				
 			->GROUP_BY('jenis');
 		$query = $this->db->get();
 		return $query->result();
@@ -33,12 +34,22 @@ class pertanyaan_model extends CI_Model
 			->from('aplikasi_fungsional')
 			->join('jenis', 'aplikasi_fungsional.id_jenis = jenis.id_jenis')
 			->JOIN('master', 'aplikasi_fungsional.id_aplikasi_fungsional=master.id_nama_aplikasi', 'left')
-
 			->GROUP_BY('jenis');
 		$query = $this->db->get();
 		return $query->result();
 	}
 
+public function getByIdnomen($id)
+	{
+		$this->db->select('*')
+			->from('aplikasi_fungsional')
+			->join('jenis', 'aplikasi_fungsional.id_jenis = jenis.id_jenis')
+			->JOIN('master', 'aplikasi_fungsional.id_aplikasi_fungsional=master.id_nama_aplikasi', 'left')
+				
+			->GROUP_BY('jenis');
+		$query = $this->db->get();
+		return $query->result();
+	}
 	public function save($table, $data)
 	{
 		$this->db->insert($table, $data);

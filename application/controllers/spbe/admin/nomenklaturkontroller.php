@@ -27,9 +27,9 @@ class Nomenklaturkontroller extends MY_Controller
 
 	public function getById($id = null)
 	{
-		$idku['id'] = $id;
+		$idku['id']=$id;
 		$data['jenis'] = $this->pertanyaan_model->getById($id);
-		$this->load->view('spbefix/_partialadmin/header', $data + $idku);
+		$this->load->view('spbefix/_partialadmin/header', $data,$idku);
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/Nomenklatur');
 		$this->load->view('spbefix/_partialadmin/footer');
@@ -39,9 +39,9 @@ class Nomenklaturkontroller extends MY_Controller
 
 	public function getByIdnomen($id = null)
 	{
-		$idku['id'] = $id;
+		$idku['id']=$id;
 		$data['tampil'] = $this->pertanyaan_model->getById($id);
-		$this->load->view('spbefix/_partialadmin/header', $data, $idku);
+		$this->load->view('spbefix/_partialadmin/header', $data , $idku);
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/pertanyaannomenklatur');
 		$this->load->view('spbefix/_partialadmin/footer');

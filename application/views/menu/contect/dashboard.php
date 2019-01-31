@@ -14,7 +14,7 @@
 	<div class="section section-basic" id="basic-elements">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8 ml-auto mr-auto text-center">
+				<div class="col-md-auto ml-auto mr-auto text-center">
 					<h2 class="title">TUJUAN EVALUASI SPBE</h2>
 					<div class="">
 						<img class="Image" src="<?php echo site_url('Asett/Image/tujuan.png') ?>"

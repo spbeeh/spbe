@@ -11,6 +11,7 @@ class hal1 extends MY_Controller
 		//Do your magic here
 		$this->load->model('spbe/user_model');
 		$this->load->model('spbe/pertanyaanumum_model');
+		$this->load->model('spbe/masterpertanyaanumum_model');
 		$this->load->library('form_validation');
 		$this->check_login();
 	}
@@ -56,5 +57,32 @@ class hal1 extends MY_Controller
 	public function debug($id)
 	{
 		echo json_encode($this->pertanyaanumum_model->getSubPertanyaan($id));
+	}
+
+	public function store(){
+		$n = count($this->input->post('id'));
+		$user	= $this->input->post('user');
+		$id 	= $this->input->post('id');
+		$jawab 	= $this->input->post('jawab');
+		$jenis = $this->input->post('jenis');
+		 
+		 for($i =0; $i< $n;$i++){
+		 	if($jenis[$i] == 'File'){
+		 		
+		 		$data['id_user'] 			= $user;
+				$data['id_pertanyaan_umum']	= $id[$i];
+				$data['jawab'] 				= $jawab[$i];
+
+				$this->masterpertanyaanumum_model->save('master_pertanyaan_umum',$data);
+		 	}else{
+		 		$data['id_user'] 			= $user;
+				$data['id_pertanyaan_umum']	= $id[$i];
+				$data['jawab'] 				= $jawab[$i];
+
+				$this->masterpertanyaanumum_model->save('master_pertanyaan_umum',$data);
+		 	}
+			
+		 }
+		redirect('menu/form');
 	}
 }

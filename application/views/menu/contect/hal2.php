@@ -1,5 +1,5 @@
 <div class="wrapper">
-	<?php $id = $this->session->userdata('id_user'); ?>
+	<!-- <?php $id = $this->session->userdata('id_user'); ?> -->
 	<div class="">
 		<div class="container">
 			<div class="row">
@@ -29,7 +29,7 @@
 											</tr>
 										</thead>
 										<tbody>
-											<?php foreach ($jenis as $data) { ?>
+											<?php foreach ($jenis as $key => $data) { ?>
 											<tr>
 												<th scope="row"></th>
 												<td>
@@ -43,17 +43,9 @@
 												} ?>
 												</td>
 												<td>
-													<?php if (isset($jenis->id_user) == $id) { ?>
+													
 													<form method="post"
-														action="<?php echo base_url('menu/hal2/isi/' . $id) ?>">
-														<button type="submit" class="btn btn-info" data-toggle="tooltip"
-															data-placement="top" title="Buka"><span><i
-																	class="fa fa-eye"></i></span></button>
-													</form>
-													<?php 
-											} ?>
-													<form method="post"
-														action="<?php echo base_url('menu/hal2/isi/' . $id) ?>">
+														action="<?php echo base_url('menu/hal2/isi/' . $data->id_jenis) ?>">
 														<button type="submit" class="btn btn-warning"
 															data-toggle="tooltip" data-placement="top"
 															title="Buka"><span><i

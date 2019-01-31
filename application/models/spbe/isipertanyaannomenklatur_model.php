@@ -10,9 +10,9 @@ class isipertanyaannomenklatur_model extends CI_Model
 
 	}
 
-	public function store()
+	public function save($table, $data)
 	{
-
+		return $this->db->insert($table, $data);
 	}
 
 

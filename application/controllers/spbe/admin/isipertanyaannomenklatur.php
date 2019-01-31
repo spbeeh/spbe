@@ -23,7 +23,18 @@ class isipertanyaannomenklatur extends CI_Controller
 
 	public function store()
 	{
-		# code...
+		$data['id_nama_aplikasi'] 	= $this->input->post('id_nama_aplikasi');
+		$data['id_user'] 			= $this->input->post('id_user');
+		$data['jawab'] 				= $this->input->post('jawab');
+		$data['nama_aplikasi'] 		= $this->input->post('nama_aplikasi');
+		$data['unit_kerja'] 		= $this->input->post('unit_kerja');
+
+		echo '<pre>';
+		print_r($data);
+
+		// $this->isipertanyaannomenklatur_model->save('master', $_POST);
+
+		// redirect('menu/hal2/' . $this->session->userdata('id_user'));
 	}
 
 	public function edit($id = null)

@@ -32,7 +32,7 @@
 						<form class="form" method="Post" action="<?php echo base_url('login') ?>" role="login">
 							<div class="card-header text-center">
 								<div class="logo-container">
-									<img src="<?php echo base_url('Asset/assets/img/now-logo.png') ?>" alt="">
+									<!-- <img src="<?php echo base_url('Asset/assets/img/now-logo.png') ?>" alt=""> -->
 								</div>
 							</div>
 							<div class="card-body">
