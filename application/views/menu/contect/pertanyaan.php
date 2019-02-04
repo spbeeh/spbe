@@ -11,7 +11,7 @@
 							<ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist"
 								data-background-color="orange">
 								<li class="nav-item">
-									<h1 class="nav-link">Nomen Klatur</h1>
+									<h1 class="nav-link">Nomenklatur</h1>
 								</li>
 							</ul>
 						</div>
@@ -39,7 +39,7 @@
 														<?php echo ($key + 1) ?>
 													</th>
 													<td>
-														<?php echo $value->aplikasi_fungsional ?>
+													<p style="margin-left:5em;"> <?php echo $value->aplikasi_fungsional ?></p>
 														<input type="hidden" name="id_nama_aplikasi"
 															value="<?php echo $value->id_aplikasi_fungsional ?>">
 														<input type="hidden" name="id_user"
