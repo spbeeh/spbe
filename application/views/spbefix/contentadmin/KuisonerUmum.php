@@ -72,7 +72,7 @@
 											if ($sub->jenisinput == "File") {
 												?>
 															<div class="form-group">
-																<input type="file" name="jawab" class="form-control" />
+																<input type="file" name="jawab" class="form-control"  />
 															</div>
 															<?php 
 										} else {
@@ -80,7 +80,7 @@
 															<div class="form-group">
 																<textarea required="required" class="form-control"
 																	name="jawab"
-																	style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+																	style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;" readonly><?php echo $jawaban->getById($id,$sub->id_pertanyaan_umum)->jawab;?></textarea>
 															</div>
 															<?php	
 										}
@@ -101,7 +101,7 @@
 															<div class="form-group">
 																<textarea required="required" class="form-control"
 																	name="jawab"
-																	style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
+																	style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;" readonly><?php echo $jawaban->getById($id,$data->id_pertanyaan_umum)->jawab;?></textarea>
 															</div>
 															<?php	
 										}

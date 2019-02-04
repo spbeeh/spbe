@@ -1,0 +1,24 @@
+export TERM=xterm
+
+echo 0 > /proc/sys/vm/dirty_writeback_centisecs
+
+rw 
+
+init=/bin/bash
+
+
+
+
+
+xxx.xxx.xxx.xxx/dvwa/hackable/uploads/shell.php
+
+
+
+gcc dc64.c -o cowroot -pthread
+
+
+./cowroot
+
+
+shutdown -h now / 
+shutdown -P now
