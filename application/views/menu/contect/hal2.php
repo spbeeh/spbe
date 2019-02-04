@@ -11,7 +11,7 @@
 							<ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist"
 								data-background-color="orange">
 								<li class="nav-item">
-									<h1 class="nav-link">Nomen Klatur</h1>
+									<h1 class="nav-link">Nomenklatur</h1>
 								</li>
 							</ul>
 						</div>
@@ -24,7 +24,7 @@
 											<tr>
 												<th></th>
 												<th>Jenis Evaluasi</th>
-												<th>status</th>
+												<th>Status</th>
 												<th>Aksi</th>
 											</tr>
 										</thead>
@@ -33,7 +33,7 @@
 											<tr>
 												<th scope="row"></th>
 												<td>
-													<?php echo $data->jenis ?>
+												<?php echo $data->jenis ?>
 												</td>
 												<td>
 													<?php if ($data->id_user == $id) {

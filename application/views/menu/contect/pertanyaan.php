@@ -39,7 +39,7 @@
 														<?php echo ($key + 1) ?>
 													</th>
 													<td>
-													<p style="margin-left:5em;"> <?php echo $value->aplikasi_fungsional ?></p>
+													 <?php echo $value->aplikasi_fungsional ?>
 														<input type="hidden" name="id_nama_aplikasi"
 															value="<?php echo $value->id_aplikasi_fungsional ?>">
 														<input type="hidden" name="id_user"
