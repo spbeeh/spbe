@@ -8,7 +8,7 @@
 
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item">
-			<a href="<?php echo base_url('menu/dashboard') ?>">Beranda</a>
+			<a href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
 		</li>
 		<li class="breadcrumb-item active">Laporan</li>
 	</ol> -->
@@ -29,7 +29,7 @@
 							</button>
 							<button class="btn btn-danger btn-sm waves-effect waves-light" type="button" onclick="">
 								<i class="fa fa-arrow-left"></i> <a
-									href="<?php echo base_url('menu/dashboard') ?>">Beranda</a>
+									href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
 							</button> -->
 							<div class="clearfix"></div>
 						</div>

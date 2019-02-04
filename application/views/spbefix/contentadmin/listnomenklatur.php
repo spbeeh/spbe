@@ -37,7 +37,7 @@
 									</div>
 									<div class="modal-body">
 										<form class="form-horizontal form-label-left" method="post"
-											action="<?php echo base_url('sistem/admin/datanomenklatur/store') ?>"
+											action="<?php echo site_url('sistem/admin/datanomenklatur/store') ?>"
 											enctype="multipart/form-data" novalidate>
 											<div class="item form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
@@ -134,7 +134,7 @@
 																<div class="modal-body">
 																	<form class="form-horizontal form-label-left"
 																		method="post"
-																		action="<?php echo base_url('sistem/admin/datanomenklatur/edit/' . $value->id_aplikasi_fungsional) ?>"
+																		action="<?php echo site_url('sistem/admin/datanomenklatur/edit/' . $value->id_aplikasi_fungsional) ?>"
 																		enctype="multipart/form-data" novalidate>
 																		<div>
 																			<input type="hidden"
@@ -236,7 +236,7 @@
 																			<tr>
 																				<td>
 																					<form method="post"
-																						action="<?php echo base_url('sistem/admin/datanomenklatur/delete/' . $value->id_aplikasi_fungsional) ?>">
+																						action="<?php echo site_url('sistem/admin/datanomenklatur/delete/' . $value->id_aplikasi_fungsional) ?>">
 																						<button type="submit"
 																							class="btn btn-danger">Ya</button>
 																					</form>
@@ -253,7 +253,7 @@
 														</div>
 													</div>
 													<!-- <form method="post"
-														action="<?php echo base_url('sistem/admin/datanomenklatur/delete/' . $value->id_aplikasi_fungsional) ?>">
+														action="<?php echo site_url('sistem/admin/datanomenklatur/delete/' . $value->id_aplikasi_fungsional) ?>">
 														<button type="submit" class="btn btn-danger btn-sm"><span><i
 																	class="fa fa-trash-o"></i></span></button>
 													</form> -->

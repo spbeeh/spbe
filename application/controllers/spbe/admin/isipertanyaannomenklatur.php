@@ -23,18 +23,51 @@ class isipertanyaannomenklatur extends CI_Controller
 
 	public function store()
 	{
-		$data['id_nama_aplikasi'] 	= $this->input->post('id_nama_aplikasi');
-		$data['id_user'] 			= $this->input->post('id_user');
-		$data['jawab'] 				= $this->input->post('jawab');
-		$data['nama_aplikasi'] 		= $this->input->post('nama_aplikasi');
-		$data['unit_kerja'] 		= $this->input->post('unit_kerja');
+		// $data['id_nama_aplikasi'] = $this->input->post('id_nama_aplikasi');
+		// $data['id_user'] = $this->input->post('id_user');
+		// $data['jawab'] = $this->input->post('jawab');
+		// $data['nama_aplikasi'] = $this->input->post('nama_aplikasi');
+		// $data['unit_kerja'] = $this->input->post('unit_kerja');
 
-		echo '<pre>';
-		print_r($data);
+		// echo '<pre>';
+		// print_r($data);
+		// $data = array();
+		# code...
+		// $count = count($this->input->post('jawab'));
 
-		// $this->isipertanyaannomenklatur_model->save('master', $_POST);
+		// $data = array(
+		// 	'id_nama_aplikasi' => $this->input->post('id_nama_aplikasi'),
+		// 	'id_user' => $this->input->post('id_user'),
+		// 	'jawab' => $this->input->post('jawab'),
+		// 	'nama_aplikasi' => $this->input->post('nama_aplikasi'),
+		// 	'unit_kerja' => $this->input->post('unit_kerja'),
+		// );
+		$jawab = $this->input->post('jawab');
+		$apl = $this->input->post('nama_aplikasi');
+		$unit = $this->input->post('unit_kerja');
 
-		// redirect('menu/hal2/' . $this->session->userdata('id_user'));
+
+
+		$data = array(
+			'id_nama_aplikasi' => $this->input->post('id_nama_aplikasi'),
+			'id_user' => $this->input->post('id_user'),
+			'jawab' => $jawab,
+			'nama_aplikasi' => $apl,
+			'unit_kerja' => $unit,
+		);
+		for ($i = 0; $i < count($data); $i++) {
+			$data['id_nama_aplikasi'];
+			$data['id_user'];
+			$data['jawab'][$i];
+			$data['nama_aplikasi'][$i];
+			$data['unit_kerja'][$i];
+
+			echo "<pre>";
+			print_r($data);
+		}
+		// $this->isipertanyaannomenklatur_model->save('master', $data);
+
+	// redirect ('menu/hal2/' . $this->session->userdata ('id_user'));
 	}
 
 	public function edit($id = null)

@@ -7,7 +7,7 @@
 
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item">
-			<a href="<?php echo base_url('menu/dashboard') ?>">Beranda</a>
+			<a href="<?php echo site_url('menu/dashboard') ?>">Beranda</a>
 		</li>
 		<li class="breadcrumb-item active">Jenis Evaluasi Form</li>
 	</ol>
@@ -23,8 +23,8 @@
 
 				<div id="wizard" class="form_wizard wizard_horizontal">
 					<form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left"
-						action="<?php echo base_url('menu/hal1/store') ?>" method="post" >
-						<input type="hidden" name="user" value="<?php echo$this->session->userdata('id_user'); ?>">
+						action="<?php echo site_url('menu/hal1/store') ?>" method="post">
+						<input type="hidden" name="user" value="<?php echo $this->session->userdata('id_user'); ?>">
 						<?php foreach ($pertanyaanUtama as $data) { ?>
 						<div id="step-1">
 							<div class="row">
@@ -47,16 +47,20 @@
 										if ($sub->jenisinput == "File") {
 											?>
 											<div class="">
-												<input type="hidden" name="jenis[]" value="<?php echo $data->jenisinput; ?>">
-												<input type="hidden" name="id[]" value="<?php echo $data->id_pertanyaan_umum; ?>">
+												<input type="hidden" name="jenis[]"
+													value="<?php echo $data->jenisinput; ?>">
+												<input type="hidden" name="id[]"
+													value="<?php echo $data->id_pertanyaan_umum; ?>">
 												<input type="file" name="jawab[]" class="btn btn-link btn-primary" />
 											</div>
 											<?php 
 									} else {
 										?>
 											<div class="form-group">
-												<input type="hidden" name="jenis[]" value="<?php echo $data->jenisinput; ?>">
-												<input type="hidden" name="id[]" value="<?php echo $data->id_pertanyaan_umum; ?>">
+												<input type="hidden" name="jenis[]"
+													value="<?php echo $data->jenisinput; ?>">
+												<input type="hidden" name="id[]"
+													value="<?php echo $data->id_pertanyaan_umum; ?>">
 												<textarea required="required" class="form-control" name="jawab[]"
 													style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
 											</div>
@@ -70,16 +74,20 @@
 											<?php 
 										if ($data->jenisinput == "File") {
 											?>
-											<div class=""><input type="hidden" name="jenis[]" value="<?php echo $data->jenisinput; ?>">
-												<input type="hidden" name="id[]" value="<?php echo $data->id_pertanyaan_umum; ?>">
+											<div class=""><input type="hidden" name="jenis[]"
+													value="<?php echo $data->jenisinput; ?>">
+												<input type="hidden" name="id[]"
+													value="<?php echo $data->id_pertanyaan_umum; ?>">
 												<input type="file" name="jawab[]" class="btn btn-link btn-primary" />
 											</div>
 											<?php 
 									} else {
 										?>
 											<div class="form-group">
-												<input type="hidden" name="jenis[]" value="<?php echo $data->jenisinput; ?>">
-												<input type="hidden" name="id[]" value="<?php echo $data->id_pertanyaan_umum; ?>">
+												<input type="hidden" name="jenis[]"
+													value="<?php echo $data->jenisinput; ?>">
+												<input type="hidden" name="id[]"
+													value="<?php echo $data->id_pertanyaan_umum; ?>">
 												<textarea required="required" class="form-control" name="jawab[]"
 													style="margin: 0px -5.5px 0px 0px; width: 100%; height: 140px; resize: none;"></textarea>
 											</div>
@@ -96,10 +104,10 @@
 						</div>
 						<?php 
 				} ?>
-				<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-primary">Submit</button>
 					</form>
 					<div>
-						
+
 					</div>
 
 				</div>
