@@ -15,7 +15,7 @@
 				</button>
 			</div>
 			<div class="collapse navbar-collapse justify-content-end" id="navigation"
-				data-nav-image="<?php echo base_url('Asset/./assets/img/blurred-image-1.jpg') ?>">
+				data-nav-image="<?php echo site_url('Asset/./assets/img/blurred-image-1.jpg') ?>">
 				<ul class="navbar-nav">
 					<?php if ($this->session->userdata('role')
 					== "Admin") { ?>

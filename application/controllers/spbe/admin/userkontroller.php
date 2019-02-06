@@ -12,11 +12,6 @@ class Userkontroller extends MY_Controller
 		$this->load->model('spbe/pertanyaanumum_model');
 		$this->load->library('form_validation');
 
-		$this->check_login();
-		if ($this->session->userdata('role') != "Admin") {
-			redirect('login');
-		}
-
 	}
 	public function index()
 	{

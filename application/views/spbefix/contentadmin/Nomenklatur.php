@@ -61,7 +61,7 @@
 												<th scope="row"></th>
 												<td><?php echo $data->jenis ?></td>
 												<td>
-													<?php if ($data->id_user == $this->uri->segment(4)) {
+													<?php if (isset($data->id_user) == $this->uri->segment(4)) {
 													echo "<label class='label label-success'>sudah<label>";
 												} else {
 													echo "<label class='label label-danger'>Belum</label>";

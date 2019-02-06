@@ -8,10 +8,7 @@ class Controllername extends CI_Controller
 	{
 		parent::__construct();
 		//Do your magic here
-		$this->check_login();
-		if ($this->session->userdata('role') != "Admin") {
-			redirect('login');
-		}
+
 	}
 
 

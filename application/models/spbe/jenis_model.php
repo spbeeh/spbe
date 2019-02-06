@@ -14,10 +14,7 @@ class jenis_model extends CI_Model
 		return $this->db->get('jenis')->result();
 	}
 
-	public function save($table, $data)
-	{
-		return $this->db->insert($table, $data);
-	}
+
 }
 
 /* End of file jenis_model.php */

@@ -40,7 +40,7 @@ class Nomenklaturkontroller extends MY_Controller
 	public function getByIdnomen($id = null)
 	{
 		$idku['id']=$id;
-		$data['tampil'] = $this->pertanyaan_model->getById($id);
+		$data['tampil'] = $this->pertanyaan_model->getByIdnomen($id);
 		$this->load->view('spbefix/_partialadmin/header', $data , $idku);
 		$this->load->view('spbefix/_partialadmin/navigasi');
 		$this->load->view('spbefix/contentadmin/pertanyaannomenklatur');

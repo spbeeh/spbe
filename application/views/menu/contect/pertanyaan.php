@@ -1,5 +1,12 @@
 <div class="wrapper">
-	<?php $id = $this->session->userdata('id_user'); ?>
+	<?php $id = $this->session->userdata('id_user');
+$this->db->select('*')
+	->from('aplikasi_fungsional')
+	->join('jenis', 'aplikasi_fungsional.id_jenis = jenis.id_jenis')
+	->JOIN('master', 'aplikasi_fungsional.id_aplikasi_fungsional=master.id_nama_aplikasi', 'left')
+	->WHERE('master.id_user', $id);
+
+$query = $this->db->get(); ?>
 	<div class="">
 		<div class="container">
 			<div class="row">
@@ -33,17 +40,46 @@
 											<form method="POST"
 												action="<?php echo site_url('sistem/admin/isinm/store') ?>"
 												enctype="multipart/form-data">
+												<?php if (isset($query) != $id) { ?>
+												<?php foreach ($jawab as $key => $value) { ?>
+												<tr>
+													<th scope="row">
+														<?php echo ($key + 1) ?>
+													</th>
+													<td style="text-align:left;">
+														<?php echo $value->id_nama_aplikasi ?>
+													</td>
+													<td>
+														<?php echo $value->jawab ?>
+													</td>
+													<td>
+														<input id="ke<?php echo ($key + 1) ?> " class="form-control"
+															type="text" name="nama_aplikasi[]"
+															value="<?php echo $value->nama_aplikasi ?>" disabled>
+													</td>
+													<td>
+														<input id="ke<?php echo ($key + 1) ?> " class="form-control"
+															type="text" name="unit_kerja[]"
+															value="<?php echo $value->unit_kerja ?>" disabled>
+													</td>
+												</tr>
+												<?php
+
+										} ?>
+												<?php 
+										} else { ?>
 												<?php foreach ($tampil as $key => $value) { ?>
 												<tr>
 													<th scope="row">
 														<?php echo ($key + 1) ?>
 													</th>
-													<td>
+													<td style="text-align:left;">
 														<?php echo $value->aplikasi_fungsional ?>
-														<input type="hidden" name="id_nama_aplikasi"
+														<input type="hidden" name="id_nama_aplikasi[]"
 															value="<?php echo $value->id_aplikasi_fungsional ?>">
-														<input type="hidden" name="id_user"
+														<input type="hidden" name="id_user[]"
 															value="<?php echo $this->session->userdata('id_user') ?>">
+
 													</td>
 													<td>
 														<div class="form-check form-check-radio">
@@ -52,23 +88,6 @@
 																<option value="Ada">Ada</option>
 																<option value="Tidak">Tidak</option>
 															</select>
-															<!-- <label class="form-check-label">
-																<input class="form-check-input" type="radio"
-																	name="jawab"
-																	id="exampleRadios<?php echo ($key + 1) ?>"
-																	value="Ada">
-																<span class="form-check-sign"></span>
-																Ada
-															</label>
-
-															<label class="form-check-label">
-																<input class="form-check-input" type="radio"
-																	name="jawab"
-																	id="exampleRadios<?php echo ($key + 1) ?>"
-																	value="Tidak Ada">
-																<span class="form-check-sign"></span>
-																Tidak Ada
-															</label> -->
 														</div>
 
 													</td>
@@ -85,14 +104,23 @@
 												<?php
 
 										} ?>
+												<?php 
+										} ?>
 												<tr>
 													<td></td>
 													<td></td>
 													<td></td>
 													<td></td>
 													<td>
+
+														<?php if (isset($query) == $id) { ?>
 														<button type="button" class="btn btn-animate">Kembali</button>
 														<button type="submit" class="btn btn-primary">submit</button>
+
+														<?php 
+												} else { ?>
+														<?php 
+												} ?>
 													</td>
 												</tr>
 
