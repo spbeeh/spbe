@@ -32,20 +32,15 @@
 											<?php foreach ($jenis as $key => $data) { ?>
 											<tr>
 												<th scope="row"></th>
-<<<<<<< HEAD
-												<td style="text-align:left;">
-													<?php echo $data->jenis ?>
-=======
 												<td>
 												<?php echo $data->jenis ?>
->>>>>>> 3e379c9a2b35a363d89f6d072cddce2822a06f0d
 												</td>
 												<td>
 													<?php if (isset($data->id_user) == $id) {
-														echo "<label class='badge badge-success'>sudah<label>";
-													} else {
-														echo "<label class='badge badge-danger'>Belum</label>";
-													} ?>
+													echo "<label class='badge badge-success'>sudah<label>";
+												} else {
+													echo "<label class='badge badge-danger'>Belum</label>";
+												} ?>
 												</td>
 												<td>
 													<form method="post"
@@ -59,7 +54,7 @@
 											</tr>
 											<?php
 
-										} ?>
+									} ?>
 										</tbody>
 									</table>
 								</div>

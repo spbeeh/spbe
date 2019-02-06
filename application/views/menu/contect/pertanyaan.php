@@ -50,37 +50,8 @@ $query = $this->db->get(); ?>
 														<?php echo $value->id_nama_aplikasi ?>
 													</td>
 													<td>
-<<<<<<< HEAD
-														<?php echo $value->jawab ?>
-													</td>
-													<td>
-														<input id="ke<?php echo ($key + 1) ?> " class="form-control"
-															type="text" name="nama_aplikasi[]"
-															value="<?php echo $value->nama_aplikasi ?>" disabled>
-													</td>
-													<td>
-														<input id="ke<?php echo ($key + 1) ?> " class="form-control"
-															type="text" name="unit_kerja[]"
-															value="<?php echo $value->unit_kerja ?>" disabled>
-													</td>
-												</tr>
-												<?php
-
-										} ?>
-												<?php 
-										} else { ?>
-												<?php foreach ($tampil as $key => $value) { ?>
-												<tr>
-													<th scope="row">
-														<?php echo ($key + 1) ?>
-													</th>
-													<td style="text-align:left;">
-														<?php echo $value->aplikasi_fungsional ?>
-														<input type="hidden" name="id_nama_aplikasi[]"
-=======
 													 <?php echo $value->aplikasi_fungsional ?>
 														<input type="hidden" name="id_nama_aplikasi"
->>>>>>> 3e379c9a2b35a363d89f6d072cddce2822a06f0d
 															value="<?php echo $value->id_aplikasi_fungsional ?>">
 														<input type="hidden" name="id_user[]"
 															value="<?php echo $this->session->userdata('id_user') ?>">
