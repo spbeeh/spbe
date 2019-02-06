@@ -18,7 +18,7 @@ $query = $this->db->get(); ?>
 							<ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist"
 								data-background-color="orange">
 								<li class="nav-item">
-									<h1 class="nav-link">Nomen Klatur</h1>
+									<h1 class="nav-link">Nomenklatur</h1>
 								</li>
 							</ul>
 						</div>
@@ -50,6 +50,7 @@ $query = $this->db->get(); ?>
 														<?php echo $value->id_nama_aplikasi ?>
 													</td>
 													<td>
+<<<<<<< HEAD
 														<?php echo $value->jawab ?>
 													</td>
 													<td>
@@ -76,6 +77,10 @@ $query = $this->db->get(); ?>
 													<td style="text-align:left;">
 														<?php echo $value->aplikasi_fungsional ?>
 														<input type="hidden" name="id_nama_aplikasi[]"
+=======
+													 <?php echo $value->aplikasi_fungsional ?>
+														<input type="hidden" name="id_nama_aplikasi"
+>>>>>>> 3e379c9a2b35a363d89f6d072cddce2822a06f0d
 															value="<?php echo $value->id_aplikasi_fungsional ?>">
 														<input type="hidden" name="id_user[]"
 															value="<?php echo $this->session->userdata('id_user') ?>">

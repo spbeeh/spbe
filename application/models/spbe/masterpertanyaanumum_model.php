@@ -20,6 +20,14 @@ class masterpertanyaanumum_model extends CI_Model
 		return $this->db->get()->row();
 	}
 	
+	public function getAnswer($id)
+	{
+		$this->db->select('jawab');
+		$this->db->from('master_pertanyaan_umum');
+		$this->db->where('id_user', $id);
+		return $this->db->get()->result();
+	}
+	
 	public function getAll()
 	{
 		return $this->db->get('master_pertanyaan_umum')->result();
@@ -41,27 +49,6 @@ class masterpertanyaanumum_model extends CI_Model
 	{
 		return $this->db->delete("master_pertanyaan_umum", array("id_master_pertanyaan_umum" => $id));
 	}
-	
-	// public function uploadFile($data)
-	// {
-	// 	echo "oe";
-	// 	$a = uniqid();
-	// 	$config['upload_path']          = './tmp/';
-	// 	$config['file_name']            = $a;
-		
-	// 	$this->load->library('upload', $config);
-		
-		
-	// 	if ($this->upload->do_upload()) {
-	// 		//return $this->upload->data("file_name");
-	// 		echo "qweq";
-	// 	}
-	// 	else{
-	// 		echo $this->upload->display_errors(); 
-	// 	}
-		
-	// 	return "null.docx";
-	// }
 	
 }
 

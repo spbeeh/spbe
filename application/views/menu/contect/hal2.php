@@ -11,7 +11,7 @@
 							<ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist"
 								data-background-color="orange">
 								<li class="nav-item">
-									<h1 class="nav-link">Nomen Klatur</h1>
+									<h1 class="nav-link">Nomenklatur</h1>
 								</li>
 							</ul>
 						</div>
@@ -24,7 +24,7 @@
 											<tr>
 												<th></th>
 												<th>Jenis Evaluasi</th>
-												<th>status</th>
+												<th>Status</th>
 												<th>Aksi</th>
 											</tr>
 										</thead>
@@ -32,8 +32,13 @@
 											<?php foreach ($jenis as $key => $data) { ?>
 											<tr>
 												<th scope="row"></th>
+<<<<<<< HEAD
 												<td style="text-align:left;">
 													<?php echo $data->jenis ?>
+=======
+												<td>
+												<?php echo $data->jenis ?>
+>>>>>>> 3e379c9a2b35a363d89f6d072cddce2822a06f0d
 												</td>
 												<td>
 													<?php if (isset($data->id_user) == $id) {

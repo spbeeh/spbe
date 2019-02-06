@@ -72,7 +72,7 @@ class hal1 extends MY_Controller
 		 	if($jenis[$i] == 'File'){
 		 		$data['id_user'] 			= $user;
 				$data['id_pertanyaan_umum']	= $id[$i];
-				$name;
+				$filename;
 				$countfiles = count($_FILES['jawab']['name']);
 			    
 			    for($i=0;$i<$countfiles;$i++){
@@ -98,7 +98,7 @@ class hal1 extends MY_Controller
 			          	}
 			        }
 			    }
-				$data['jawab'] 	= $name;
+				$data['jawab'] = $filename;
 				
 				$this->masterpertanyaanumum_model->save('master_pertanyaan_umum',$data);
 		 	}else{
