@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Userkontroller extends MY_Controller
 {
-	
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -13,12 +13,12 @@ class Userkontroller extends MY_Controller
 		$this->load->model('spbe/masterpertanyaanumum_model');
 		$this->load->library('form_validation');
 		$this->load->helper("file");
-		
+
 		$this->check_login();
 		if ($this->session->userdata('role') != "Admin") {
 			redirect('login');
 		}
-		
+
 	}
 	public function index()
 	{
@@ -29,7 +29,7 @@ class Userkontroller extends MY_Controller
 		$this->load->view('spbefix/_partialadmin/footer');
 		$this->load->view('spbefix/_partialadmin/js');
 	}
-	
+
 	public function report($id = null)
 	{
 		$data['user'] = $this->user_model->getUser($id);
@@ -41,8 +41,8 @@ class Userkontroller extends MY_Controller
 		$this->load->view('spbefix/_partialadmin/footer');
 		$this->load->view('spbefix/_partialadmin/js');
 	}
-	
-	
+
+
 	public function destroy($id = null)
 	{
 		if (!isset($id)) {
@@ -50,18 +50,18 @@ class Userkontroller extends MY_Controller
 		}
 		$product = $this->masterpertanyaanumum_model->getAnswer($id);
 		//var_dump($product);
-		foreach($product as $data){
+		foreach ($product as $data) {
 			if ($data->jawab != null) {
 				//echo $data->jawab;
-				$path ="tmp/".$data->jawab;
+				$path = "tmp/" . $data->jawab;
 				//return array_map('unlink', glob(FCPATH."tmp/$filename.*"));
-				unlink($path); 
+				unlink($path);
 			}
 		}
-		
+
 		$this->user_model->delete($id);
 		redirect('sistem/admin/datauser');
-		
+
 	}
 }
 

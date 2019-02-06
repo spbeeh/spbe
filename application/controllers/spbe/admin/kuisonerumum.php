@@ -13,10 +13,7 @@ class kuisonerumum extends MY_Controller
 		$this->load->model('spbe/masterpertanyaanumum_model');
 		$this->load->helper(array('url', 'download'));
 
-		$this->check_login();
-		if ($this->session->userdata('role') != "Admin") {
-			redirect('login');
-		}
+
 	}
 
 	public function index()

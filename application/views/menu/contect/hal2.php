@@ -1,5 +1,5 @@
 <div class="wrapper">
-	<!-- <?php $id = $this->session->userdata('id_user'); ?> -->
+	<?php $id = $this->session->userdata('id_user'); ?>
 	<div class="">
 		<div class="container">
 			<div class="row">
@@ -36,17 +36,16 @@
 												<?php echo $data->jenis ?>
 												</td>
 												<td>
-													<?php if ($data->id_user == $id) {
-													echo "<span class='badge badge-success'>sudah<span>";
+													<?php if (isset($data->id_user) == $id) {
+													echo "<label class='badge badge-success'>sudah<label>";
 												} else {
-													echo "<span class='badge badge-danger'>Belum</span>";
+													echo "<label class='badge badge-danger'>Belum</label>";
 												} ?>
 												</td>
 												<td>
-
 													<form method="post"
 														action="<?php echo site_url('menu/hal2/isi/' . $data->id_jenis) ?>">
-														<button type="submit" class="btn btn-warning"
+														<button type="submit" class="btn btn-warning btn-sm"
 															data-toggle="tooltip" data-placement="top"
 															title="Buka"><span><i
 																	class="fa fa-edit"></i></span></button>
@@ -58,12 +57,6 @@
 									} ?>
 										</tbody>
 									</table>
-									<!-- <form method="post"
-										action="<?php echo site_url('menu/hal1/' . $this->session->userdata('id_user')) ?>">
-										<button class="btn btn-primary pull-right">
-											<font color="white">Buka</font>
-										</button>
-									</form> -->
 								</div>
 							</div>
 						</div>

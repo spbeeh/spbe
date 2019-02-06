@@ -1,11 +1,11 @@
 <div class="wrapper">
 	<div class="page-header clear-filter" filter-color="orange">
 		<div class="page-header-image" data-parallax="true"
-			style="background-image:url('<?php echo base_url('Asset/assets/img/Tugu_Malang.jpg') ?>');">
+			style="background-image:url('<?php echo site_url('Asset/assets/img/Tugu_Malang.jpg') ?>');">
 		</div>
 		<div class="container">
 			<div class="content-center brand">
-				<img class="n-logo" src="<?php echo base_url('Asset/assets/img/now-logo.png') ?>" alt="">
+				<img class="n-logo" src="<?php echo site_url('Asset/assets/img/now-logo.png') ?>" alt="">
 				<h1 class="h1-seo">SPBE</h1>
 				<h3>Sistem Pemerintahan Berbasis Elektronik</h3>
 			</div>
