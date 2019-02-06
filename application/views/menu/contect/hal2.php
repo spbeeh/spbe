@@ -11,7 +11,7 @@
 							<ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist"
 								data-background-color="orange">
 								<li class="nav-item">
-									<h1 class="nav-link">Nomen Klatur</h1>
+									<h1 class="nav-link">Nomenklatur</h1>
 								</li>
 							</ul>
 						</div>
@@ -24,7 +24,7 @@
 											<tr>
 												<th></th>
 												<th>Jenis Evaluasi</th>
-												<th>status</th>
+												<th>Status</th>
 												<th>Aksi</th>
 											</tr>
 										</thead>
@@ -33,7 +33,7 @@
 											<tr>
 												<th scope="row"></th>
 												<td>
-													<?php echo $data->jenis ?>
+												<?php echo $data->jenis ?>
 												</td>
 												<td>
 													<?php if ($data->id_user == $id) {
@@ -43,9 +43,9 @@
 												} ?>
 												</td>
 												<td>
-													
+
 													<form method="post"
-														action="<?php echo base_url('menu/hal2/isi/' . $data->id_jenis) ?>">
+														action="<?php echo site_url('menu/hal2/isi/' . $data->id_jenis) ?>">
 														<button type="submit" class="btn btn-warning"
 															data-toggle="tooltip" data-placement="top"
 															title="Buka"><span><i
@@ -59,7 +59,7 @@
 										</tbody>
 									</table>
 									<!-- <form method="post"
-										action="<?php echo base_url('menu/hal1/' . $this->session->userdata('id_user')) ?>">
+										action="<?php echo site_url('menu/hal1/' . $this->session->userdata('id_user')) ?>">
 										<button class="btn btn-primary pull-right">
 											<font color="white">Buka</font>
 										</button>

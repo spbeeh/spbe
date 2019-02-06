@@ -22,7 +22,7 @@
 								<div class="tab-pane active" id="home1" role="tabpanel">
 									<p>Evaluasi Umum</p>
 									<form method="post"
-										action="<?php echo base_url('menu/hal1/' . $this->session->userdata('id_user')) ?>">
+										action="<?php echo site_url('menu/hal1/' . $this->session->userdata('id_user')) ?>">
 										<button class="btn btn-primary pull-right">
 											<font color="white">Buka</font>
 										</button>
@@ -53,7 +53,7 @@
 									<p>Evaluasi aplikasi yang dipergunakan untuk melaksanakan manajemen internal
 										birokrasi dan pelayanan publik</p>
 									<form method="post"
-										action="<?php echo base_url('menu/hal2/' . $this->session->userdata('id_user')) ?>">
+										action="<?php echo site_url('menu/hal2/' . $this->session->userdata('id_user')) ?>">
 										<button class="btn btn-primary pull-right">
 											<font color="white">Buka</font>
 										</button>

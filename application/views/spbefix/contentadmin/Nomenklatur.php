@@ -69,7 +69,7 @@
 												</td>
 												<td>
 													<form method="post"
-														action="<?php echo base_url('sistem/admin/nomenklatur/isi/' . $data->id_jenis) ?>">
+														action="<?php echo site_url('sistem/admin/nomenklatur/isi/' . $data->id_jenis) ?>">
 														<button type="submit" class="btn btn-warning"
 															data-toggle="tooltip" data-placement="top"
 															title="Buka"><span><i

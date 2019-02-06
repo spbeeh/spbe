@@ -34,7 +34,7 @@
 									</div>
 									<div class="modal-body">
 										<form class="form-horizontal form-label-left"
-											action="<?php echo base_url('sistem/admin/datapertanyaanumum/store') ?>"
+											action="<?php echo site_url('sistem/admin/datapertanyaanumum/store') ?>"
 											method="post" enctype="multipart/form-data" novalidate>
 											<div class="item form-group">
 												<label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">
@@ -161,7 +161,7 @@
 																<div class="modal-body">
 																	<form class="form-horizontal form-label-left"
 																		method="post"
-																		action="<?php echo base_url('sistem/admin/datapertanyaanumum/edit/' . $value1->id_pertanyaan_umum) ?>"
+																		action="<?php echo site_url('sistem/admin/datapertanyaanumum/edit/' . $value1->id_pertanyaan_umum) ?>"
 																		enctype="multipart/form-data" novalidate>
 																		<div>
 																			<input type="hidden"
@@ -258,7 +258,7 @@
 																			<tr>
 																				<td>
 																					<form method="post"
-																						action="<?php echo base_url('sistem/admin/datapertanyaanumum/delete/' . $value1->id_pertanyaan_umum) ?>">
+																						action="<?php echo site_url('sistem/admin/datapertanyaanumum/delete/' . $value1->id_pertanyaan_umum) ?>">
 																						<button type="submit"
 																							class="btn btn-danger">Ya</button>
 																					</form>

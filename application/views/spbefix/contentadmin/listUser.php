@@ -214,7 +214,7 @@
 										<tr>
 											<td>
 												<form method="post"
-													action="<?php echo base_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
+													action="<?php echo site_url('sistem/admin/datauser/report/' . $value->id_user) ?>">
 													<button type="submit" class="btn btn-warning btn-sm"
 														data-toggle="tooltip" data-placement="top"
 														title="Lihat"><span><i class="fa fa-eye"></i></span></button>
@@ -250,7 +250,7 @@
 																		<tr>
 																			<td>
 																				<form method="post"
-																					action="<?php echo base_url('sistem/admin/datauser/destroy/' . $value->id_user) ?>">
+																					action="<?php echo site_url('sistem/admin/datauser/destroy/' . $value->id_user) ?>">
 																					<button type="submit"
 																						class="btn btn-danger">Ya</button>
 																				</form>
